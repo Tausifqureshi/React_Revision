@@ -2,9 +2,9 @@ import React from "react";
 export default function App() {
   return (
     <React.StrictMode>
-      <div className="container">
+      <React.Fragment>
         <h1> React code run </h1>
-      </div>
+      </React.Fragment>
     </React.StrictMode>
   );
 }
