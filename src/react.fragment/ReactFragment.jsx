@@ -27,7 +27,6 @@ function Example() {
     </React.Fragment>
   );
 }
-
 // 2. Short Syntax (Empty Tags):
 // Yeh shorthand syntax hota hai jisme hum sirf empty tags (<> </>) ka use karte hain.
 import React from 'react';
