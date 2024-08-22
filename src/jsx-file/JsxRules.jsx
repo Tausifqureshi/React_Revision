@@ -64,9 +64,6 @@ export default JsxRules
 
 
 
-
-
-
 // ============================================== JSX  Advantages ================================================ //
 // ChatGPT Se Liya Hua Syntex --->  JSX ke Advantages:
 // 1. Readable and Intuitive: Yeh aapke UI code ko readable aur samajhne me easy banata hai.
