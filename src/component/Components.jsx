@@ -92,3 +92,4 @@ function MyComponent() {
 
   return <div>Check the console for lifecycle effects</div>;
 }
+
