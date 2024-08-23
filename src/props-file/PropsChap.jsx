@@ -1,14 +1,13 @@
 // ============================================ Lifecycle Methods ================================================ //
 // ChatGPT Se Liya Hua Syntex --->
 
+
 import React from 'react'
 
 function PropsChap() {
   return (
-    <>
-      PropsChap
-    </>
+    <div>PropsChap</div>
   )
-}
+}   
 
 export default PropsChap
