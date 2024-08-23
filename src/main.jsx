@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import HelloWorld from './component/HelloWorld';
+import PropsChap from './props-file/PropsChap';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 <App/>
-<HelloWorld />
+<PropsChap />
   </React.StrictMode>
 )
