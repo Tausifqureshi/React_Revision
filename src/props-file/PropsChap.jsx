@@ -5,7 +5,9 @@ import React from 'react'
 
 function PropsChap() {
   return (
-    <div>PropsChap</div>
+    <>
+      PropsChap
+    </>
   )
 }
 
