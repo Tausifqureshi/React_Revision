@@ -8,7 +8,7 @@ export default function App() {
     <>
       <h1 className="container dymy"> Hello {firstName} </h1>
       <h1> Hello {lastName("Quraishi")} </h1>
-    
+     
     </>
   );
 }
