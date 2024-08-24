@@ -107,3 +107,21 @@ export default EventChapter;
 // }
 
 // export default App;
+
+
+
+
+// ========================================== Common React.js Events ============================================= //
+// ChatGPT Se Liya Hua Syntex ---> Common React.js Events: React.js me kuch common events hote hain.
+
+// 1. onClick: Kisi element par click hone par trigger hota hai.
+
+// 2. onChange: Input field ke value me badlav hone par trigger hota hai.
+
+// 3. onSubmit: Kisi form ko submit karne par trigger hota hai.
+
+// 4. onMouseEnter: Jab mouse cursor kisi element par aata hai.
+
+// 5. onMouseLeave: Jab mouse cursor kisi element se bahar jata hai.
+
+// 6. onKeyDown: Jab keyboard me koi key dabai jati hai.
