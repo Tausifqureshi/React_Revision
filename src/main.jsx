@@ -9,6 +9,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   {/* <PropsChap /> */}
-   <UserList />
+
+
+
+   {/* <UserList /> */}
+   {/* Render-list componet file use */}
   </React.StrictMode>
 )
