@@ -2,12 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client';
 import PropsChap from './props-file/PropsChap';
 import UserList from './render-list/UserList';
+import EventChapter from './eventChapter/EventChapter';
 // import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+
+  <EventChapter />
   {/* <PropsChap /> */}
 
 

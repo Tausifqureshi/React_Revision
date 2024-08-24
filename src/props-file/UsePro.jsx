@@ -11,7 +11,7 @@ function UsePro({firstName, age} = props) { //Parameter destructuring hai ye.
 
         <h1>Hello {firstName} {age} </h1>
      {/* Object destructuring and paramert destructuring use tu aise access kar re ge value. */}
-
+  
     </>
   );
 }
