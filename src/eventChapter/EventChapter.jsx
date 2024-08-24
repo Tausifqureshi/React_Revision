@@ -1,34 +1,36 @@
 import React from "react";
 
-function handleClick(e) {
-  console.log(e.target);
-  e.target.textContent = "React Code"; //value bhi change kar sakte hai aise
-}
-
-// Pass Argumet handleclick 2 me.
-function handleClick2(fName, lName) {
-  console.log(fName, lName);
-}
-
 function EventChapter() {
+  function handleClick(e) {
+    console.log(e.target);
+    e.target.textContent = "React Code"; //value bhi change kar sakte hai aise
+  }
+
+  // Pass Argumet handleclick 2 me.
+  function handleClick2(fName, lName) {
+    console.log(fName, lName);
+  }
+
   return (
     <>
-    {/* Value Change Function HandleClick function only */}
+      {/* Value Change Function HandleClick function only */}
       <h1> EventChapter </h1>
       <button type="button" onClick={handleClick}>
         Click me
       </button>
-
       <br /> <br />
-
       {/* Passing Argument Function This */}
-      <button type="button" onClick={function(e){ 
-        console.log(e.target)
-        handleClick2("Tausif", "Quraishi")
-        }}>
+      <button
+        type="button"
+        //onClick={handleClick2} //sirf aise function call parameter clg kar ke tu browser khud hi first function object pass kar dega. agar jitne parameter hai utne ho argumnet dege tu ham us se khud hi handle kar sakte hai is ke niche wala parfect code hai.
+
+        onClick={function (e) {
+          console.log(e.target);
+          handleClick2("Tausif", "Quraishi");
+        }}
+      >
         Click me2
       </button>
-
     </>
   );
 }
@@ -107,9 +109,6 @@ export default EventChapter;
 // }
 
 // export default App;
-
-
-
 
 // ========================================== Common React.js Events ============================================= //
 // ChatGPT Se Liya Hua Syntex ---> Common React.js Events: React.js me kuch common events hote hain.
