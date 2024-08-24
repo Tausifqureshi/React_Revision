@@ -58,6 +58,7 @@
 // ChatGPT Se Liya Hua Syntex ---> Alag Alag file se value pass karna props se.
 import React from 'react'
 import UsePro from './UsePro'
+// import ChildrenPro from './ChildrenPro'
 
 function PropsChap() {
   return (
@@ -65,7 +66,15 @@ function PropsChap() {
     <UsePro firstName = "Tausif" age={24}/>  {/* ye props use kar ke data pass hora UsePro-File me */}
     <UsePro firstName = "Quraishi" age={25}/> 
 
-    {/* <UsePro />     */}
+
+ 
+     {/* Yaha pe children props ka istemal ho raha hai */}
+     {/* <ChildrenPro >
+
+     <h1>Hello, World!</h1>
+     <p>Ye content `children` props ke through pass ho raha hai.</p>
+     
+     </ChildrenPro> */}
 
     </div>
   )
