@@ -31,25 +31,25 @@
 // 2. Readonly: Props ke values read-only hoti hain. React ka concept yeh hota hai ki data ek direction me flow kare, yani top-to-bottom (parent se child).
 
 // 3. Default Props: Agar kisi prop ke liye default value set karni ho, to defaultProps ka use kar sakte hain:
-function Welcome(props) {
-  return <h1>Hello, {props.name}!</h1>;
-}
+// function Welcome(props) {
+//   return <h1>Hello, {props.name}!</h1>;
+// }
 
-Welcome.defaultProps = {
-  name: 'Guest',
-};
+// Welcome.defaultProps = {
+//   name: 'Guest',
+// };
 
 
 // 4. Prop Types: React me prop types ko define karne ka ek tariqa hota hai jisse hum ensure karte hain ki correct data type pass ho raha hai. Ye development me debugging ke liye helpful hota hai.
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-function Welcome(props) {
-  return <h1>Hello, {props.name}!</h1>;
-}
+// function Welcome(props) {
+//   return <h1>Hello, {props.name}!</h1>;
+// }
 
-Welcome.propTypes = {
-  name: PropTypes.string,
-};
+// Welcome.propTypes = {
+//   name: PropTypes.string,
+// };
 
 
 
@@ -63,7 +63,9 @@ function PropsChap() {
   return (
     <div>
     <UsePro firstName = "Tausif" age={24}/>  {/* ye props use kar ke data pass hora UsePro-File me */}
-    <UsePro firstName = "Quraishi" age={25}/>     
+    <UsePro firstName = "Quraishi" age={25}/> 
+
+    {/* <UsePro />     */}
 
     </div>
   )
