@@ -4,15 +4,22 @@ import React, { useState } from "react";
 
 function StateExampleArray() {
   const [fruits, setFruit] = useState(["Apple", "Mango", "Banana"]);
+
+  function fruitsAdding() {
+    console.log("Add new Fruits");
+    setFruit([...fruits, "Add new fruits"]); //...old value bhi rehe gi is sprade oparetor se or new value ko add kar re hai "new value"
+  }
   return (
     <>
-     <ul>
-        {fruits.map((fruit)=>{
-           return <li key={fruit}>{fruit}</li>
+      <ul>
+        {fruits.map((fruit, index) => {
+          //'index' ko unique key ke liye use kar rahe hain duplicate value ati bhi hai tu error nhi aye ga ab console me.
+          return <li key={index}>{fruit}</li>;
         })}
-     </ul>
+      </ul>
+      <button onClick={fruitsAdding}>Add-Fruits</button>
     </>
-  );  
+  );
 }
 
 export default StateExampleArray;
