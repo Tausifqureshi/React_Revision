@@ -12,7 +12,7 @@ function StateExampleArray() {
         })}
      </ul>
     </>
-  );
+  );  
 }
 
 export default StateExampleArray;
