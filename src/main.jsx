@@ -6,6 +6,7 @@ import EventChapter from "./eventChapter/EventChapter";
 import UseStateChap from "./useState/UseStateChap";
 import PreviousState from "./useState/PreviousState";
 import StateExampleArray from "./useState/StateExampleArray";
+import StateExampleObject from "./useState/StateExampleObject";
 // import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -21,7 +22,8 @@ root.render(
     {/*useState-component-file start  */}
     {/* <UseStateChap /> */}
     {/* <PreviousState /> */}
-    <StateExampleArray />
+    {/* <StateExampleArray /> */}
+    <StateExampleObject />
     {/*useState-component-file end  */}
 
     {/* Render-list componet file */}

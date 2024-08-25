@@ -7,7 +7,15 @@ function StateExampleArray() {
 
   function fruitsAdding() {
     console.log("Add new Fruits");
-    setFruit([...fruits, "Add new fruits"]); //...old value bhi rehe gi is sprade oparetor se or new value ko add kar re hai "new value"
+    // setFruit([...fruits, "Add new fruits"]); //...old value bhi rehe gi is sprade oparetor se or new value ko add kar re hai "new value".
+
+    // setFruit([...PreviousState => {
+    //    PreviousState ,"Add new fruits"
+    // }]);
+
+    setFruit((previousState)=>{ //previousState ek callBcak function lera hai.
+      return [...previousState, "Add new fruits"]
+    })
   }
   return (
     <>
