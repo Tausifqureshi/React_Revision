@@ -1,27 +1,32 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client';
-import PropsChap from './props-file/PropsChap';
-import UserList from './render-list/UserList';
-import EventChapter from './eventChapter/EventChapter';
-import UseStateChap from './useState/UseStateChap';
-import CounterApp from './useState/CounterApp';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import PropsChap from "./props-file/PropsChap";
+import UserList from "./render-list/UserList";
+import EventChapter from "./eventChapter/EventChapter";
+import UseStateChap from "./useState/UseStateChap";
+import PreviousState from "./useState/PreviousState";
+import StateExampleArray from "./useState/StateExampleArray";
 // import App from './App';
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <>
+    {/* Evnet-componet-file */}
+    {/* <EventChapter /> */}
 
-  {/* <EventChapter /> */}
-  {/* <PropsChap /> */}
+    {/* Porps-componet-file */}
+    {/* <PropsChap /> */}
 
-  {/* <UseStateChap /> */}
-  <CounterApp />
-  
+    {/*useState-component-file start  */}
+    {/* <UseStateChap /> */}
+    {/* <PreviousState /> */}
+    <StateExampleArray />
+    {/*useState-component-file end  */}
 
+    {/* Render-list componet file */}
+    {/* <UserList /> */}
+  </>
 
-
-   {/* <UserList /> */}
-   {/* Render-list componet file use */}
-  </React.StrictMode>
-)
+  // </React.StrictMode> //duble suggestion ata hai is se console pe.
+);
