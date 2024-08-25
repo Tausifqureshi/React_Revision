@@ -53,7 +53,7 @@ export default UseStateChap;
 
 // const [state, setState] = useState(initialValue);
 // 1. state: Yeh current state ka value hold karta hai.
-// 2. setState: Yeh ek function hai jo state ka value update karne ke liye use hota hai.
+// 2. setState: Yeh ek function hai jo state ka value update karne ke liye use hota hai.Jab aap is function ko call karte ho, to React component ko re-render karta hai nayi state ke saath.
 // 3. initialValue: Yeh state ka initial value define karta hai.
 
 // ============================================= Important Points ================================================ //
