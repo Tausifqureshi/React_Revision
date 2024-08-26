@@ -9,8 +9,9 @@ import StateExampleArray from "./useState/StateExampleArray";
 import StateExampleObject from "./useState/StateExampleObject";
 import MultiStateComponent from "./useState/MultiStateComponent";
 import Form from "./form/Form";
+import PracticalUse from "./practical/PracticalUse";
 // import App from './App';
-   
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
@@ -32,9 +33,11 @@ root.render(
     {/* Render-list componet file */}
     {/* <UserList /> */}
 
-
     {/* Form-File */}
-     <Form />
+    {/* <Form /> */}
+
+    {/* Perctical-File */}
+    <PracticalUse />
   </>
 
   // </React.StrictMode> //duble suggestion ata hai is se console pe.

@@ -23,7 +23,7 @@ function UserList() {
           );
         })} */}
 
-        {items.map((valu) => (
+        {items.map((valu) => ( 
           <RenderList key={valu.id} {...valu} />
         ))}
       </>
