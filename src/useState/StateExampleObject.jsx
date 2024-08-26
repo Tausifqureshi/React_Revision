@@ -21,6 +21,7 @@ function StateExampleObject() {
        };
     });
   }
+  
   return (
     <>
       <p> FirstName : {person.firstName} </p>

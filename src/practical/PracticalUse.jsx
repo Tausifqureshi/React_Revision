@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import User from "./User";
+import Users from "./Users";
 
 // Parctical use useState array of object render difrante difrante component data passes.
 
@@ -13,8 +13,8 @@ function PracticalUse() {
 
   return (
     <>
-      <User userDetaisl={users} />
-      {/* pura ke pura users hi pass kar diye is ko User-file me ham props ya destucturing kar ke data nikale ge */}
+      <Users userDetaisl={users} />
+      {/* pura ke pura users hi pass kar diye is ko Users-file me ham props ya destucturing kar ke data nikale ge */}
     </>
   );
 }

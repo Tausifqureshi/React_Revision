@@ -7,9 +7,9 @@ const items = [
   { id: 3, name: "Cherry" },
 ];
    
-function UserList() {
+function UserList() { 
   return (
-    <>
+    <>  
       <>
         {/* Short syntax without return keyword */}
         {/* {items.map((valu) => ( <RenderList key={valu.id} number={valu.id} firstName={valu.name} />

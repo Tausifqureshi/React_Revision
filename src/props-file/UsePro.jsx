@@ -14,6 +14,6 @@ function UsePro({firstName, age} = props) { //Parameter destructuring hai ye.
   
     </>
   );
-}
+} 
 
 export default UsePro;
