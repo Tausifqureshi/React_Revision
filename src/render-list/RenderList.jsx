@@ -3,7 +3,7 @@ import React from 'react'
 
 // function RenderList({number, firstName}) {//parameter destucturing. is ki jaga props bhi nuse kar sakte te.
 // function RenderList(props) {
-function RenderList({id, name}) {
+function RenderList({id, name}) { // ...spreade oparetor use tu aisa access value.
   return (
     <div>
      {/* <h3> {props.number} {props.firstName} </h3> */}

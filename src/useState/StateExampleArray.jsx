@@ -36,8 +36,7 @@
 
 
 
-// 
-
+// Real case Example hai ye.
 import React , {useState} from 'react'
 
 function StateExampleArray() {
@@ -66,7 +65,7 @@ function StateExampleArray() {
     <>
        <h2>User List</h2>
       <ul>
-        {users.map(user => (
+        {users.map(user => ( 
           <li key={user.id}>
             {user.name} - Age: {user.age}
             <button onClick={() => updateAge(user.id, user.age + 1)}>Increase Age</button>
@@ -74,7 +73,7 @@ function StateExampleArray() {
           </li>
         ))}
       </ul>
-      {/* <button onClick={addUser}>Add User</button> */}
+    
 
 
     </>
