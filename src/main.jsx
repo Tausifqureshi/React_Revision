@@ -37,7 +37,7 @@ root.render(
     {/* <Form /> */}
 
     {/* Perctical-File */}
-    <PracticalUse />
+    {/* <PracticalUse /> */}
   </>
 
   // </React.StrictMode> //duble suggestion ata hai is se console pe.

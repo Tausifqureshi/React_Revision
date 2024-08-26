@@ -1,6 +1,7 @@
 import React from "react";
 
 function EventChapter() {
+
   function handleClick(e) {
     console.log(e.target);
     e.target.textContent = "React Code"; //value bhi change kar sakte hai aise
@@ -18,11 +19,13 @@ function EventChapter() {
       <button type="button" onClick={handleClick}>
         Click me
       </button>
+
       <br /> <br />
+      
       {/* Passing Argument Function This */}
       <button
         type="button"
-        //onClick={handleClick2} //sirf aise function call parameter clg kar ke tu browser khud hi first function object pass kar dega. agar jitne parameter hai utne ho argumnet dege tu ham us se khud hi handle kar sakte hai is ke niche wala parfect code hai.
+        //onClick={handleClick2} //sirf aise function call parameter console kar ge tu browser khud hi first function object pass kar dega. agar jitne parameter hai utne ho argumnet dege tu ham us se khud hi handle kar sakte hai is ke niche wala parfect code hai.
 
         onClick={function (e) {
           console.log(e.target);

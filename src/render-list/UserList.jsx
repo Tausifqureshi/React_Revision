@@ -21,7 +21,7 @@ function UserList() {
           return (
             <RenderList key={valu.id} number={valu.id} firstName={valu.name} />
           );
-        })} */}
+        })} */} 
 
         {items.map((valu) => ( 
           <RenderList key={valu.id} {...valu} />

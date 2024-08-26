@@ -64,7 +64,7 @@ function User({ id, name, age, click, removeUser }) {
         </p>
         <p>
           <strong>Age:</strong> {age}
-        </p>
+        </p> 
         {/* If condition use Practical file me tu is tara se call funcation */}
         <button onClick={() => { click (id);}}> Increase Age </button>
 

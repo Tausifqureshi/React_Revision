@@ -27,7 +27,7 @@ function PracticalUse() {
           return person
         }
       })
-    })
+    }) 
   }
 
   function removeUser(userId) {
