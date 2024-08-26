@@ -35,8 +35,8 @@ root.render(
 
     {/* Form-File */}
     {/* <Form /> */}
-
-    {/* Perctical-File */}
+                         
+    {/* Practical-File */}
     {/* <PracticalUse /> */}
   </>
 
