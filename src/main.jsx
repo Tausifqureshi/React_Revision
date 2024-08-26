@@ -10,6 +10,7 @@ import StateExampleObject from "./useState/StateExampleObject";
 import MultiStateComponent from "./useState/MultiStateComponent";
 import Form from "./form/Form";
 import PracticalUse from "./practical/PracticalUse";
+import ControlledComponent from "./controll vs uncontroll/ControlledComponent";
 // import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -38,6 +39,8 @@ root.render(
                          
     {/* Practical-File */}
     {/* <PracticalUse /> */}
+
+    <ControlledComponent />
   </>
 
   // </React.StrictMode> //duble suggestion ata hai is se console pe.
