@@ -11,6 +11,7 @@ import MultiStateComponent from "./useState/MultiStateComponent";
 import Form from "./form/Form";
 import PracticalUse from "./practical/PracticalUse";
 import ControlledComponent from "./controll vs uncontroll/ControlledComponent";
+import Dymi from "./practical/Dymi";
 // import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -35,13 +36,14 @@ root.render(
     {/* <UserList /> */}
 
     {/* Form-File */}
-    {/* <Form /> */}
+    <Form />
                          
     {/* Practical-File */}
     {/* <PracticalUse /> */}
+    {/* <Dymi /> */}
 
 
-    <ControlledComponent />
+    {/* <ControlledComponent /> */}
   </>
 
   // </React.StrictMode> //duble suggestion ata hai is se console pe.

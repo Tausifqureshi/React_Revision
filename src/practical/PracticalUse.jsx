@@ -36,7 +36,7 @@ function PracticalUse() {
     setUsers(filteredUsers); //Remove the user from the array.
   }
 
-  return (
+  return (  
     <>
       <Users userDetaisl={users} onClickEvent={updateAge} remove ={removeUser} />
       {/* pura ke pura users hi pass kar diye is ko Users-file me ham props ya destucturing kar ke data nikale ge.

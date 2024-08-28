@@ -12,7 +12,8 @@ function ControlledComponent() {
   const [fullName, setFullName] = useState("");
 
   const handleChange = (event) => {
-    setInputValue(event.target.value);
+    setInputValue(event.target.value); 
+    console.log(event.target.value);
   };
 
   const onSubmited = () => {
@@ -41,7 +42,7 @@ function ControlledComponent() {
           marginBottom: "20px",
         }}
       >
-        Input Value: {fullName}
+        Input Value: {fullName.toUpperCase()}
       </h1>
       {/* Jab bhi submit pe click tab ye value ake yaha print hogi. */}
 

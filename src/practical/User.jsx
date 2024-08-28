@@ -54,7 +54,7 @@ function User({ id, name, age, click, removeUser }) {
           textAlign: "center",
           backgroundColor: "#292929",
           color: "#efefef",
-        }}
+        }} 
       >
         <p>
           <strong>User ID:</strong> {id}

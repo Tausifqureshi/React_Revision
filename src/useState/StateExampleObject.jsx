@@ -10,7 +10,7 @@ function StateExampleObject() {
     age: 24,
   });
 
-  function increaseAge() {
+  function increaseAge() {  
     console.log("increaseAge");
     // setPerson({ ...person, age: person.age + 1 });  //...old value bhi rehe gi is spreade oparetor se.
 
