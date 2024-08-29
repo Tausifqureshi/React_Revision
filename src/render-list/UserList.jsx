@@ -8,20 +8,20 @@ const items = [
 ];
    
 function UserList() { 
-  return (
+  return (  
     <>  
       <>
         {/* Short syntax without return keyword */}
         {/* {items.map((valu) => ( <RenderList key={valu.id} number={valu.id} firstName={valu.name} />
       ))} */}
 
+
         {/* Full syntax with return keyword */}
-  
         {/* {items.map((valu) => {
           return (
             <RenderList key={valu.id} number={valu.id} firstName={valu.name} />
           );
-        })} */} 
+        })}  */}
 
         {items.map((valu) => ( 
           <RenderList key={valu.id} {...valu} />
