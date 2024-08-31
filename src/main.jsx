@@ -36,11 +36,11 @@ root.render(
     {/* <UserList /> */}
 
     {/* Form-File */}
-    <Form />
+    {/* <Form /> */}
                          
     {/* Practical-File */}
     {/* <PracticalUse /> */}
-    {/* <Dymi /> */}
+    <Dymi />
 
 
     {/* <ControlledComponent /> */}
