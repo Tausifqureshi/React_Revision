@@ -12,7 +12,7 @@ function Form() {
     event.preventDefault();
     console.log("Submit the Form");
     alert("Submit the Form",name);
-    setName(" ")
+    setName("")
   }
   return (
     <>
