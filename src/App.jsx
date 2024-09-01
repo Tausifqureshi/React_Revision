@@ -11,6 +11,7 @@ import PracticalUse from "./practical/PracticalUse";
 import ControlledComponent from "./controll vs uncontroll/ControlledComponent";
 import Dymi from "./practical/Dymi";
 import Form from "./form/Form";
+import StyleComponents from "./style-Rules/StyleComponents";
 
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
@@ -38,13 +39,17 @@ export default function App() {
       {/* <UserList /> */}
 
       {/* Form-File */}
-      <Form />
+      {/* <Form /> */}
 
       {/* Practical-File */}
       {/* <PracticalUse /> */}
       {/* <Dymi /> */}
 
       {/* <ControlledComponent /> */}
+
+
+      {/* Style Components */}
+      <StyleComponents />
     </>
   );
 }
