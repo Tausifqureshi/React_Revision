@@ -12,6 +12,8 @@ import ControlledComponent from "./controll vs uncontroll/ControlledComponent";
 import Dymi from "./practical/Dymi";
 import Form from "./form/Form";
 import StyleComponents from "./style-Rules/StyleComponents";
+import RadioButton from "./form/RadioButton";
+import MultiInputForm from "./form/MultiInputForm";
 
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
@@ -39,7 +41,9 @@ export default function App() {
       {/* <UserList /> */}
 
       {/* Form-File */}
-      <Form />
+      {/* <Form /> */}
+      {/* <RadioButton /> */}
+      <MultiInputForm />
 
       {/* Practical-File */}
       {/* <PracticalUse /> */}

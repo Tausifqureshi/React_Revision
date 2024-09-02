@@ -1,0 +1,12 @@
+import React from 'react'
+
+function MultiInputForm() {
+  return (
+    <>
+    <h1>MultiPul Input field Handl One Function Handle</h1>
+
+    </>
+  )
+}
+
+export default MultiInputForm
