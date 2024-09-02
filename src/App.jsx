@@ -39,7 +39,7 @@ export default function App() {
       {/* <UserList /> */}
 
       {/* Form-File */}
-      {/* <Form /> */}
+      <Form />
 
       {/* Practical-File */}
       {/* <PracticalUse /> */}
@@ -49,7 +49,7 @@ export default function App() {
 
 
       {/* Style Components */}
-      <StyleComponents />
+      {/* <StyleComponents /> */}
     </>
   );
 }
