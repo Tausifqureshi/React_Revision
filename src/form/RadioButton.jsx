@@ -60,7 +60,7 @@ function RadioButtonExample() {
 
 <h2>Select an option:</h2>
 
-<input type="radio" name="option" value="Option 1" checked={selectedOption === 'Option 1'} onChange={handleOptionChange} /> <label>Option 1</label>
+<input type="radio" name="option" value="Option 1" checkfed={selectedOption === 'Option 1'} onChange={handleOptionChange} /> <label>Option 1</label>
 
 <input type="radio" name="option" value="Option 2" checked={selectedOption === 'Option 2'} onChange={handleOptionChange} /> <label>Option 2</label>
 

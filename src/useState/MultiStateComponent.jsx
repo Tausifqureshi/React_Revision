@@ -10,7 +10,7 @@ const MultiStateComponent = () => {
   const increaseAge = () => {
     setAge(prevAge => prevAge + 1);
   };
-
+  
   // Function to update name
   const changeName = (newName) => {
     setName(newName);
@@ -27,8 +27,12 @@ const MultiStateComponent = () => {
       <button onClick={increaseAge}>Increase Age</button>
 
       <h2>Name: {name}</h2>
-      {/* <button onClick={() => changeName('Alice')}>Change Name to Alice</button> */}
+
+      {/* no short arrow function this */}
       <button onClick={() => {changeName('Alice')}}>Change Name to Alice</button>
+
+      {/* Both the onClick Short Arrow function line 34 and 35  * /}
+      {/* <button onClick={() => changeName('Alice')}>Change Name to Alice</button> */}
       <button onClick={() => changeName('Bob')}>Change Name to Bob</button>
 
       <h3>Married: {isMarried ? 'Yes' : 'No'}</h3>
