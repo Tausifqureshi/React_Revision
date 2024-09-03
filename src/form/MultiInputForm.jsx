@@ -57,8 +57,8 @@ function MultiInputForm() {
           <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange}/>
         </label>
       </div>
-
-      <div>
+  
+      <div>   
         <label>
           Email:
           <input type="email" name="email" value={formData.email} onChange={handleInputChange} />
