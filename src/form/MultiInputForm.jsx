@@ -13,9 +13,8 @@
 
 // 3. Form Submission: Form submit hone par handleSubmit function call hota hai jo formData ko process karta hai. Aap is function mein formData ko console par print kar sakte hain ya server par send kar sakte hain.
 
-
 import React, { useState } from "react";
-import PreviousState from "../useState/PreviousState";
+import PreviousState from "../useState Hook/PreviousState";
 
 function MultiInputForm() {
   const [formData, setFormData] = useState({
@@ -30,64 +29,75 @@ function MultiInputForm() {
     // console.log(event.target);
     // console.log(event.target.value);
     // console.log(event.target.name);
-     
+
     // setFormData({ ...formData, [name]: value,}); // computed property use hori hai [name] . formData object ki saari properties ko nayi object mein copy kar rega spread operator (...) ka use kar ke.
 
-
- setFormData((PreviousState)=>{ //is tara se bhi kar sakte state change multipul input field ki value.
-  return {...PreviousState, [event.target.name]: event.target.value}
- })
- console.log(event.target);
-  console.log(event.target.name);
-  console.log(event.target.value);
+    setFormData((PreviousState) => {
+      //is tara se bhi kar sakte state change multipul input field ki value.
+      return { ...PreviousState, [event.target.name]: event.target.value };
+    });
+    console.log(event.target);
+    console.log(event.target.name);
+    console.log(event.target.value);
   };
 
-  
-  
-  
-  
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form Data Submitted:", formData);
   };
 
-
-
-
   //  FormData me se.
-  const {firstName, lastName, email, password,} = formData; 
+  const { firstName, lastName, email, password } = formData;
   return (
     <form onSubmit={handleSubmit}>
-        <h1> Multiple Input Field Handle One Function Handle </h1>
+      <h1> Multiple Input Field Handle One Function Handle </h1>
       <div>
         <label>
           First Name:
           {/*FormData me se Destructuring use tu aisa hi firstName Print */}
-          <input type="text" name="firstName" value={firstName} onChange={handleInputChange} />
-
+          <input
+            type="text"
+            name="firstName"
+            value={firstName}
+            onChange={handleInputChange}
+          />
           {/* <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} /> */}
         </label>
-
       </div>
 
       <div>
         <label>
           Last Name:
-          <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange}/>
+          <input
+            type="text"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleInputChange}
+          />
         </label>
       </div>
-  
-      <div>   
+
+      <div>
         <label>
           Email:
-          <input type="email" name="email" value={formData.email} onChange={handleInputChange} />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+          />
         </label>
       </div>
 
       <div>
         <label>
           Password:
-          <input  type="password"  name="password"  value={formData.password} onChange={handleInputChange} />
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleInputChange}
+          />
         </label>
       </div>
 
