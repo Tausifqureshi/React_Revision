@@ -29,10 +29,9 @@ function MultiInputForm() {
     console.log(event.target);
     console.log(event.target.value);
     console.log(event.target.name);
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+     
+    setFormData({ ...formData, [name]: value,});
+
   };
 
   const handleSubmit = (event) => {

@@ -34,7 +34,7 @@ export default function App() {
       {/* <PreviousState /> */}
       {/* <StateExampleArray /> */}
       {/* <StateExampleObject /> */}
-      <MultiStateComponent />
+      {/* <MultiStateComponent /> */}
       {/*useState-component-file end  */}
 
       {/* Render-list componet file */}
@@ -43,7 +43,7 @@ export default function App() {
       {/* Form-File */}
       {/* <Form /> */}
       {/* <RadioButton /> */}
-      {/* <MultiInputForm /> */}
+      <MultiInputForm />
 
       {/* Practical-File */}
       {/* <PracticalUse /> */}
