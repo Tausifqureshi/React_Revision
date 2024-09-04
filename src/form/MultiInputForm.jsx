@@ -54,15 +54,15 @@ function MultiInputForm() {
 
 
 
-  // Destucturing FormData.
-  const {firstName, lastName, email, password,} = formData
+  //  FormData me se.
+  const {firstName, lastName, email, password,} = formData; 
   return (
     <form onSubmit={handleSubmit}>
         <h1> Multiple Input Field Handle One Function Handle </h1>
       <div>
         <label>
           First Name:
-          {/*FormData me se Destucturing use tu aisa hi firstName Print */}
+          {/*FormData me se Destructuring use tu aisa hi firstName Print */}
           <input type="text" name="firstName" value={firstName} onChange={handleInputChange} />
 
           {/* <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} /> */}
