@@ -15,6 +15,7 @@
 
 
 import React, { useState } from "react";
+import PreviousState from "../useState/PreviousState";
 
 function MultiInputForm() {
   const [formData, setFormData] = useState({
@@ -25,27 +26,46 @@ function MultiInputForm() {
   });
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    console.log(event.target);
-    console.log(event.target.value);
-    console.log(event.target.name);
+    // const { name, value } = event.target;
+    // console.log(event.target);
+    // console.log(event.target.value);
+    // console.log(event.target.name);
      
-    setFormData({ ...formData, [name]: value,});
+    // setFormData({ ...formData, [name]: value,}); // computed property use hori hai [name] . formData object ki saari properties ko nayi object mein copy kar rega spread operator (...) ka use kar ke.
 
+
+ setFormData((PreviousState)=>{ //is tara se bhi kar sakte state change multipul input field ki value.
+  return {...PreviousState, [event.target.name]: event.target.value}
+ })
+ console.log(event.target);
+  console.log(event.target.name);
+  console.log(event.target.value);
   };
 
+  
+  
+  
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form Data Submitted:", formData);
   };
 
+
+
+
+  // Destucturing FormData.
+  const {firstName, lastName, email, password,} = formData
   return (
     <form onSubmit={handleSubmit}>
         <h1> Multiple Input Field Handle One Function Handle </h1>
       <div>
         <label>
           First Name:
-          <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} />
+          {/*FormData me se Destucturing use tu aisa hi firstName Print */}
+          <input type="text" name="firstName" value={firstName} onChange={handleInputChange} />
+
+          {/* <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} /> */}
         </label>
 
       </div>
