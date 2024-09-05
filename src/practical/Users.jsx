@@ -11,7 +11,7 @@ function Users({ userDetaisl , onClickEvent, remove}) {
             <p> userId: {userValue.id}</p>
             <p> FirstName: {userValue.name}</p>
             <p> userAge: {userValue.age}</p> 
-          </div>
+          </div>  
         ); */
         }  
   

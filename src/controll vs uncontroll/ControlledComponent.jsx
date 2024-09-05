@@ -8,21 +8,31 @@
 import React, { useState } from "react";
 
 function ControlledComponent() {
-  const [inputValue, setInputValue] = useState("");
-  const [fullName, setFullName] = useState("");
 
+  console.log("Components re-render");
+
+  // Create All useState.
+  const [inputValue, setInputValue] = useState("");
+  // const [fullName, setFullName] = useState(""); // is state ko create kiya bina bhi full name ki value print karwa sakte hai.
+  const fullName = inputValue; // jise state create karne se full name ki value change hori ti componets re-render hote hai same yahi kaam variable create kar ke bhi full name ki value change hogi jab components re-render hoga. re-render means clg karwaye hai upper.
+
+
+  // Handle Input Function.
   const handleChange = (event) => {
-    setInputValue(event.target.value); 
+    setInputValue(event.target.value);
     console.log(event.target.value);
   };
 
+
+  // Submit Function.
   const onSubmited = () => {
     console.log("Submited Form");
-    
-    setFullName(inputValue); // setFullName me jo inputValue ane wali hai hamne us se hi setFullName me pass kiya tab hi o <h1>{fullName}</h1> me show hogi.
+
+    // setFullName(inputValue); // setFullName me jo inputValue ane wali hai hamne us se hi setFullName me pass kiya tab hi o <h1>{fullName}</h1> me show hogi.
 
     setInputValue(""); // is se jab aap form submit karoge, to input ki value empty ho jayegi, aur input field clear ho jayega. Yeh best practice hai jab aap user se new data lena chahte ho after form submission.
   };
+
   return (
     <div
       style={{
@@ -42,9 +52,11 @@ function ControlledComponent() {
           marginBottom: "20px",
         }}
       >
-        Input Value: {fullName.toUpperCase()}
+        {/* Input Value: {fullName.toUpperCase()} */}
+        Input Value: {fullName}
+
       </h1>
-      {/* Jab bhi submit pe click tab ye value ake yaha print hogi. */}
+      {/* Jab bhi submit pe click tab ye value ake yaha print hogi toUpperCase Wali. */}
 
       <input
         type="text"

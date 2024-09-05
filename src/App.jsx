@@ -50,7 +50,7 @@ export default function App() {
       {/* <PracticalUse /> */}
       {/* <Dymi /> */}
 
-      {/* <ControlledComponent /> */}
+      <ControlledComponent />
 
       {/* Style Components */}
       {/* <StyleComponents /> */}
@@ -58,7 +58,7 @@ export default function App() {
 
 
       {/* UseRef Hook */}
-       <UseRefHook />
+       {/* <UseRefHook /> */}
 
 
 

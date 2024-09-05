@@ -35,7 +35,7 @@ function PracticalUse() {
     const filteredUsers = users.filter((pers) => pers.id !== userId);
     setUsers(filteredUsers); //Remove the user from the array.
   }   
-
+  
   return (  
     <>
       <Users userDetaisl={users} onClickEvent={updateAge} remove ={removeUser} />
