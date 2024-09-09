@@ -15,6 +15,7 @@ import StyleComponents from "./style-Rules/StyleComponents";
 import RadioButton from "./form/RadioButton";
 import MultiInputForm from "./form/MultiInputForm";
 import UseRefHook from "./useRef Hooks/UseRefHook";
+import UseEffect from "./useEffect Hook/UseEffect";
 
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
@@ -50,7 +51,7 @@ export default function App() {
       {/* <PracticalUse /> */}
       {/* <Dymi /> */}
 
-      <ControlledComponent />
+      {/* <ControlledComponent /> */}
 
       {/* Style Components */}
       {/* <StyleComponents /> */}
@@ -59,6 +60,10 @@ export default function App() {
 
       {/* UseRef Hook */}
        {/* <UseRefHook /> */}
+
+
+       {/* UseEffect Hook-File */}
+       <UseEffect />
 
 
 
