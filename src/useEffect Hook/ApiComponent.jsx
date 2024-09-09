@@ -12,10 +12,12 @@ const ApiComponent = () => {
     const fetchData = async () => {
       try {
         const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        console.log(response);
         if (!response.ok) {
           throw new Error(`${response.status} Network response was not ok.`);
         }
         const result = await response.json();
+        console.log(result);
         setData(result);
       } catch (error) {
         setError(error.message);
@@ -44,7 +46,30 @@ const ApiComponent = () => {
     <div>
       <h1>Data from API:</h1>
       <div>
-        {data.map((item) => <h3 key={item.id}>{item.name}</h3>)}
+      {/* Without return keyword use Short Syntext */}
+        {/* {data.map((item) => <div key={item.id}>
+            <h3>FirstNamae: {item.name}</h3>
+        </div>)} */}
+
+        {/* Return keyword use  */}
+        {data.map((item)=>{
+           return <div key={item.id} style={{
+            margin: "1rem",
+            padding: "1rem",
+            background: "#292929",
+            color: "#efefef",
+            textAlign: "center",
+            border: "3px solid  brown",
+           
+           }}>
+            <h3>Name{item.name}</h3>
+            <h4>City{item.address.city}</h4>
+            <h3>Name{item.email}</h3>
+            <h5>{item.username}</h5>
+
+            </div>
+         
+        })}
       </div>
     </div>
   );
