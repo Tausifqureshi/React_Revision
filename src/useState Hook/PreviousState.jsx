@@ -42,7 +42,7 @@ function PreviousState() {
       
       {/* PreviousState use in inline function create */}
      <button onClick={() => { setCounter((previousState) => previousState + 1);}}> Increase</button>
-
+  
 
         {/* <button onClick={increaseCount}>Increase</button> */}
         <button onClick={decreaseCount}>Decrease</button>

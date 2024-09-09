@@ -59,7 +59,7 @@ const App = () => {
 
   return (
     <div>
-      <ul>
+      <ul> 
         {data.map(item => (
           <li key={item.id}>{item.name}</li>
         ))}
