@@ -1,4 +1,4 @@
-// ChatGPT Se Liya Hua Syntex ---> Example.
+// ChatGPT Se Liya Hua Syntex ---> Example.dono tarika sahi hai jo eyse pade o karo koi issu nhi hai is me.
 
 import React, { useState, useEffect } from "react";
 import "./ApiComponent.css"; // Import CSS for styling
@@ -6,7 +6,7 @@ import "./ApiComponent.css"; // Import CSS for styling
 const ApiComponent = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); // Error message ke liye
+  const [error, setError] = useState(''); // Error message ke liye
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,7 +57,7 @@ export default ApiComponent;
 
 
 
-// Harshit Vashit se karya hua Example hai ye.
+// Harshit Vashit se karya hua Example hai ye. dono tarika sahi hai jo eyse pade o karo koi issu nhi hai is me.
 
 // import React, { useState, useEffect } from "react";
 // import "./ApiComponent.css"; // Import CSS for styling
