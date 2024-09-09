@@ -1,0 +1,40 @@
+/* Container for centering the loader */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f8ff; /* Light blue background */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Spring loader styling */
+  .spring-loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db; /* Blue color */
+    border-radius: 50%;
+    animation: spin 1.5s ease-in-out infinite;
+    margin-bottom: 10px;
+  }
+  
+  /* Keyframes for the spring-like spinning animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+  p {
+    color: #555;
+    font-size: 1.2rem;
+  }
+  
