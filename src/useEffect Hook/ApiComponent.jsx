@@ -9,9 +9,12 @@ const ApiComponent = () => {
   const [error, setError] = useState(''); // Error message ke liye
 
   useEffect(() => {
+     // Create an AbortController instance
+     const controller = new AbortController();
+     const signal  = controller.signal;
     const fetchData = async () => {
       try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        const response = await fetch("https://jsonplaceholder.typicode.com/users", { signal: signal });
         console.log(response);
         if (!response.ok) {
           throw new Error(`${response.status} Network response was not ok.`);
@@ -27,6 +30,13 @@ const ApiComponent = () => {
     };
 
     fetchData();
+
+
+    // Cleanup function to abort the request on component unmount
+      return () => {
+        console.log("...abort call")
+        controller.abort();
+      };
   }, []);
 
   if (loading) {
