@@ -2,12 +2,14 @@
 
 import React from 'react'
 import ApiComponent from './ApiComponent'
+import CleanUP from './CleanUP'
 
 function UseEffect() {
 
   return (
     <>
-    <ApiComponent />
+    {/* <ApiComponent /> */}
+    <CleanUP/>
     </>
   )
 }
