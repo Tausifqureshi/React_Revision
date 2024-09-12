@@ -14,6 +14,7 @@ function ExampleUseReducer() {
   const decreaseHandle = () => {
     setCounter(counter - 1);
   };
+
   return (
     <div>
       <h1>Application</h1>
@@ -22,11 +23,13 @@ function ExampleUseReducer() {
         <button style={{ margin: "0 10px" }} onClick={increaseHandle}>
           Increase
         </button>
-        <button style={{ margin: "0 10px" }} onClick={resetHandle}>
-          Reset
-        </button>
+
         <button style={{ margin: "0 10px" }} onClick={decreaseHandle}>
           Decrease
+        </button>
+
+        <button style={{ margin: "0 10px" }} onClick={resetHandle}>
+          Reset
         </button>
       </div>
     </div>
