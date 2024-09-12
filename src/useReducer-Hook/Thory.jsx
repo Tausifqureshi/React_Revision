@@ -33,7 +33,7 @@ function reducer(state, action) {
 
 
 
-//  ChatGPT Se Liya Hua Syntex ---> Full Example:
+// ChatGPT Se Liya Hua Syntex ---> Full Example:
 import React, { useReducer } from 'react';
 
 // Initial state
