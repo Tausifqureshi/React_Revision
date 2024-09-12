@@ -1,0 +1,15 @@
+/* CSS module */
+::selection {
+  color: red;
+  background: yellow;
+}
+
+
+.wrapper{
+  text-align: center;
+
+}
+
+.useReducer {
+  background-color: #929292;
+}

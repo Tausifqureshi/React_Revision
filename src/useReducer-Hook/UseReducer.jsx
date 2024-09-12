@@ -1,21 +1,18 @@
 //userReducer-Hook ka use ---> is use ham karte hai complex state ko mange karne ke liye.
 
 
-
-import React from 'react'
-import ExampleUseReducer from './ExampleUseReducer'
+import React from "react";
+import ExampleUseReducer from "./ExampleUseReducer";
+import styles from "./useReducer.module.css";
 
 function UseReducer() {
-
   return (
-    <div style={{textAlign:"center"}}>
-
-    <h2 style={{backgroundColor: "#929292"}}>Use Reducer Hook</h2>
-    <hr />
-    <ExampleUseReducer />
-       
+    <div className={styles.wrapper}>
+      <h2 className={styles.useReducer}>Use Reducer Hook</h2>
+      <hr />
+      <ExampleUseReducer />
     </div>
-  )
+  );
 }
 
-export default UseReducer
+export default UseReducer;
