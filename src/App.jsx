@@ -5,7 +5,7 @@ import EventChapter from "./eventChapter/EventChapter";
 import UseStateChap from "./useState Hook/UseStateChap";
 import PreviousState from "./useState Hook/PreviousState";
 import StateExampleArray from "./useState Hook/StateExampleArray";
-import StateExampleObject from "./useState Hook/StateExampleObject";
+import StateExampleObject from "./useState Hook/StateExampleObject"; 
 import MultiStateComponent from "./useState Hook/MultiStateComponent";
 import PracticalUse from "./practical/PracticalUse";
 import ControlledComponent from "./controll vs uncontroll/ControlledComponent";
@@ -69,6 +69,10 @@ export default function App() {
 
        {/* UseReducer Hook-File */}
        <UseReducer />
+
+
+       {/* useContext Hook-File */}
+       
 
 
 
