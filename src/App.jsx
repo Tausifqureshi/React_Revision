@@ -17,6 +17,7 @@ import MultiInputForm from "./form/MultiInputForm";
 import UseRefHook from "./useRef Hooks/UseRefHook";
 import UseEffect from "./useEffect Hook/UseEffect";
 import UseReducer from "./useReducer-Hook/UseReducer";
+import UseContext from "./useContext.jsx/useContext";
 
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
@@ -68,11 +69,11 @@ export default function App() {
 
 
        {/* UseReducer Hook-File */}
-       <UseReducer />
+       {/* <UseReducer /> */}
 
 
        {/* useContext Hook-File */}
-       
+        <UseContext />
 
 
 
