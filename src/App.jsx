@@ -31,7 +31,7 @@ export default function App() {
       {/* <EventChapter /> */}
 
       {/* Porps-componet-file */}
-      <PropsChap />
+      {/* <PropsChap /> */}
 
       {/*useState Hook-component-file start  */}
       {/* <UseStateChap /> */}
@@ -72,8 +72,8 @@ export default function App() {
        {/* <UseReducer /> */}
 
 
-       {/* useContext Hook-File */}
-        {/* <UseContext /> */}
+       {/* Context-API and useContext Hook-File */}
+        <UseContext />
 
 
 
