@@ -1,12 +1,11 @@
 import React from 'react'
-import UseContextExample from './useContextExample'
+import ContextAPI from './ContextAPI'
 
 function UseContext() {
+    
   return (
     <div style={{textAlign: "center"}}>
-    <h1 > useContext Hook</h1>
-     <UseContextExample />
-     
+     <ContextAPI />
     </div>
   )
 }

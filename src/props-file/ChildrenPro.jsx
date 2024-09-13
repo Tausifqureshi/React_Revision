@@ -4,12 +4,14 @@ function ChildrenPro(props) {
   return (
     <>
 
-      {props.children}{/* Yaha pe children props ka istemal ho raha hai */}
+   {props.children}{/* Yaha pe children props ka istemal ho raha hai */}
+
+
 
     </>
   );
 }
-
+  
 export default ChildrenPro;
 
 

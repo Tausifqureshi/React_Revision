@@ -8,7 +8,7 @@ function UsePro({firstName, age} = props) { //Parameter destructuring hai ye.
     <>
       {/* <h1>{props.firstName} {props.age}</h1> */}
       {/* props se data access kar re hai ham PropsChap-File se. */}
-
+  
         <h1>Hello {firstName} {age} </h1>
      {/* Object destructuring and paramert destructuring use tu aise access kar re ge value. */}
   
