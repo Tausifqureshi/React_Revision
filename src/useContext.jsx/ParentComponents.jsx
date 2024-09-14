@@ -1,13 +1,19 @@
-import React from 'react'
-import ChaildCopmonets from './ChaildCopmonets'
+import React from "react";
+import ChaildCopmonets from "./ChaildCopmonets";
 
-function ParentComponents() {
+function ParentComponents({ myFun}) {
   return (
-    <>
-  
-   <ChaildCopmonets />
-    </>
-  )
+    <div
+      style={{
+        backgroundColor: "#9ED2BE",
+        padding: "2rem",
+      }}
+    >
+      <h1>Prarend-Components</h1>
+
+      <ChaildCopmonets  myFun={ myFun}/>
+    </div>
+  );
 }
 
-export default ParentComponents
+export default ParentComponents;

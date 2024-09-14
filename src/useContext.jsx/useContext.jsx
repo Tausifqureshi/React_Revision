@@ -4,7 +4,13 @@ import ContextAPI from './ContextAPI'
 function UseContext() {
     
   return (
-    <div style={{textAlign: "center"}}>
+    <div style={{
+      margin: "0 auto",
+      display: 'flex',
+      justifyContent: "center"
+    }}>
+
+    
      <ContextAPI />
     </div>
   )
