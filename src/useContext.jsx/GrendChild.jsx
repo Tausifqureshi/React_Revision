@@ -15,7 +15,6 @@ function GrendChild() {
       }}
     >
       <h1>GrendChaild-Components</h1>
-      {/* <button >Call My Fun</button> */}
       <button onClick={someFunction}>Call My Fun</button>
       <p>{key1} {key2}</p>
     </div>
