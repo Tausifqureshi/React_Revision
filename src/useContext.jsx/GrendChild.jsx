@@ -8,7 +8,7 @@ function GrendChild() {
    const { someFunction, key1, key2 } = useContext(MyContext); //MyComponents se jo milra hai us ko ham destructuring kar ke myFun lie.
 
   return (
-    <div
+    <div  
       style={{
         padding: "2rem",
         backgroundColor: "#FFD9B7",
