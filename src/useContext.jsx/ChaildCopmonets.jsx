@@ -4,9 +4,8 @@ function ChaildCopmonets() {
   return (
     <>
 
-   <h1> ChaildCopmonets </h1>
-    
-    </>
+   
+    </>  
   )
 }
 
