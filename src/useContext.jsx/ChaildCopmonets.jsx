@@ -1,7 +1,7 @@
 import React from "react";
 import GrendChild from "./GrendChild";
 
-function ChaildCopmonets({ myFun}) {
+function ChaildCopmonets() {
   return (
     <div
       style={{
@@ -10,7 +10,7 @@ function ChaildCopmonets({ myFun}) {
       }}
     >
       <h1>Chaild-Components</h1>
-      <GrendChild myFun={myFun}/>
+      <GrendChild />
     </div>
   );
 }

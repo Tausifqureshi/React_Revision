@@ -1,7 +1,10 @@
 import React from "react";
 import ChaildCopmonets from "./ChaildCopmonets";
 
-function ParentComponents({ myFun}) {
+
+
+function ParentComponents() {
+  
   return (
     <div
       style={{
@@ -11,7 +14,7 @@ function ParentComponents({ myFun}) {
     >
       <h1>Prarend-Components</h1>
 
-      <ChaildCopmonets  myFun={ myFun}/>
+      <ChaildCopmonets  />
     </div>
   );
 }
