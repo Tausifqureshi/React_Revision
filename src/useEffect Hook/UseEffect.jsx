@@ -11,7 +11,7 @@ function UseEffect() {
   const handleToggle = () => {
     // setShowComponents(!showcomponents ); //true tu false kar re ga ! not oparetor false ko ture ulta work karta hai.
     setShowComponents((PreviousState)=> !PreviousState );  //aisa bhi kar sakte hai.
-  };
+  };  
 
   return (
     <div>
