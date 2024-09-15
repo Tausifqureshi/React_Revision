@@ -13,6 +13,6 @@ function UseReducer() {
       <ExampleUseReducer />
     </div>
   );
-}
+} 
 
 export default UseReducer;

@@ -18,6 +18,7 @@ import UseRefHook from "./useRef Hooks/UseRefHook";
 import UseEffect from "./useEffect Hook/UseEffect";
 import UseReducer from "./useReducer-Hook/UseReducer";
 import UseContext from "./useContext.jsx/useContext";
+import CustomHook from "./custom Hook/CustomHook";
 
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
@@ -73,7 +74,11 @@ export default function App() {
 
 
        {/* Context-API and useContext Hook-File */}
-        <UseContext />
+        {/* <UseContext /> */}
+
+
+        {/* Custom-Hook File*/}
+        <CustomHook />
 
 
 
