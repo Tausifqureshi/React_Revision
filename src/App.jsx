@@ -5,7 +5,7 @@ import EventChapter from "./eventChapter/EventChapter";
 import UseStateChap from "./useState Hook/UseStateChap";
 import PreviousState from "./useState Hook/PreviousState";
 import StateExampleArray from "./useState Hook/StateExampleArray";
-import StateExampleObject from "./useState Hook/StateExampleObject"; 
+import StateExampleObject from "./useState Hook/StateExampleObject";
 import MultiStateComponent from "./useState Hook/MultiStateComponent";
 import PracticalUse from "./practical/PracticalUse";
 import ControlledComponent from "./controll vs uncontroll/ControlledComponent";
@@ -19,6 +19,7 @@ import UseEffect from "./useEffect Hook/UseEffect";
 import UseReducer from "./useReducer-Hook/UseReducer";
 import UseContext from "./useContext.jsx/useContext";
 import CustomHook from "./custom Hook/CustomHook";
+import BasicForm from "./custom Hook/BasicForm";
 
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
@@ -58,31 +59,23 @@ export default function App() {
 
       {/* Style Components */}
       {/* <StyleComponents /> */}
-      
-
 
       {/* UseRef Hook */}
-       {/* <UseRefHook /> */}
+      {/* <UseRefHook /> */}
 
+      {/* UseEffect Hook-File */}
+      {/* <UseEffect /> */}
 
-       {/* UseEffect Hook-File */}
-       {/* <UseEffect /> */}
+      {/* UseReducer Hook-File */}
+      {/* <UseReducer /> */}
 
+      {/* Context-API and useContext Hook-File */}
+      {/* <UseContext /> */}
 
-       {/* UseReducer Hook-File */}
-       {/* <UseReducer /> */}
-
-
-       {/* Context-API and useContext Hook-File */}
-        {/* <UseContext /> */}
-
-
-        {/* Custom-Hook File*/}
-        <CustomHook />
-
-
-
-
+      {/* Custom-Hook File*/}
+      {/* <CustomHook /> */}
+      <BasicForm />
+      
     </div>
   );
 }
