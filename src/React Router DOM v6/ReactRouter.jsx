@@ -5,26 +5,27 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import Home from "./page/Home";
 import About from "./page/About";
 import Error from "./page/Error";
+import Contact from "./page/Contact";
+import Post from "./page/Post";
 
-function ReactRouter() {
-  //Create Routers.
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <>
-        <Route path="/" element={<h1>Home-Page </h1>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/error" element={<Error />} />
-      </>
-    )
-  );
-
-  return (
+//Create Routers.
+const router = createBrowserRouter(
+  createRoutesFromElements(
     <>
-      <RouterProvider router={router} />
+      {/* First Home page hi show hoga us me koi path nhi diye hai sirf / is liye hompage hi show hoga phele */}
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/post" element={<Post />} />
+      <Route path="*" element={<Error />} />
     </>
-  );
+  )
+);
+function ReactRouter() {
+  return <RouterProvider router={router} />;
 }
 
 export default ReactRouter;
