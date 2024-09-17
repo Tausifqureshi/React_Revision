@@ -77,12 +77,8 @@ export default function App() {
       {/* <CustomHook /> */}
       {/* <BasicForm /> */}
 
-
       {/* React-Router-File */}
       <ReactRouter />
-     
-
-      
     </div>
   );
 }
