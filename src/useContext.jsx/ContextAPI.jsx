@@ -7,7 +7,7 @@ function ContextAPI() {
   const myFun = () => {
     console.log("Function Called");
   };
-
+     
 
   return (
     <MyContext.Provider value={{

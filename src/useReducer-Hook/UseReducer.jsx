@@ -6,7 +6,7 @@ import ExampleUseReducer from "./ExampleUseReducer";
 import styles from "./useReducer.module.css";
 
 function UseReducer() {
-  return (
+  return ( 
     <div className={styles.wrapper}>
       <h2 className={styles.useReducer}>Use Reducer Hook</h2>
       <hr />

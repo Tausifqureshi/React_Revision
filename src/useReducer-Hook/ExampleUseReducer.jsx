@@ -42,13 +42,17 @@ function ExampleUseReducer() {
 
   const [count, setCount] = useState(0);
 
+  // Increase Function.
   const increaseHandle = () => {
     dispatch({ type: "increment" }); //dispatch function call hora hai jo hame useReducer se 1index me milra hai kisi bhi cheez ko update karne ke liye hame dispatch function call karna hoga. ye dispatch function call kare ga reducer function ko.
   };
 
+  //Decrase  Function.
   const decreaseHandle = () => {
     dispatch({ type: "decrement" });
   };
+
+  //Resate Function.
   const resetHandle = () => {
     dispatch({ type: "reset" });
   };
