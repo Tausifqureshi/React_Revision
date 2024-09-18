@@ -1,4 +1,4 @@
-.navbarContainer {
+/* .navbarContainer {
     background-color: #f4f4f4;
     padding: 10px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -42,7 +42,77 @@
   }
   
 
+ */
 
 
 
-  
+
+
+ /* Styling for the overall layout */
+ .container {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar container */
+.navbarContainer {
+  background-color: #1f1f3a; /* Rich dark indigo */
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navigation list */
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* List item (nav links) */
+.navList li {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navList li a {
+  text-decoration: none;
+  color: #ffcc00; /* Vibrant gold for the links */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+/* Hover effect with color and smooth underline */
+.navList li a:hover {
+  color: #ff4500; /* Bold orange-red on hover */
+  border-bottom: 2px solid #ff4500; /* Bold underline effect */
+  transform: translateY(-3px);
+}
+
+/* Main content area */
+.mainContent {
+  padding: 20px;
+  background-color: #f3f4f6; /* Light background for contrast */
+  min-height: calc(100vh - 70px); /* Fill the remaining height */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .navbarContainer {
+    padding: 10px 20px;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}

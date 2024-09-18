@@ -113,7 +113,7 @@ export default ApiComponent;
 //         setErrorMessage(`${response.status} Network response was not ok`)
 //         setLoading(false)
 //         return;
-//       }
+//       } 
 
 //       const result = await response.json();
 //       setData(result); 

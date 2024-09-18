@@ -8,7 +8,7 @@ function ContextAPI() {
     console.log("Function Called");
   };
      
-
+  
   return (
     <MyContext.Provider value={{
        key1: "value1",

@@ -4,7 +4,7 @@ function useFetch(url) {
   const [pending, setPending] = useState(false);
   const [isError, setIsError] = useState(null);
 
-  useEffect(() => {
+  useEffect(() => { 
     setPending(true);
     const controller = new AbortController(); // Yaha controller ko define karna zaruri hai
     const signal = controller.signal; // Ab signal ko fetch ke sath use karenge
@@ -39,3 +39,5 @@ function useFetch(url) {
 }
 
 export default useFetch;
+// Is useHook ke sath CustomeCompoents use hora hai.
+

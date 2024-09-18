@@ -3,7 +3,7 @@ let dynamicKey2 = "phoneNumber";
 
 let person = {
   firstName: "Tausif",
-  lastName: "Khan",
+  lastName: "Quraishi",
   [dynamicKey1]: "tausif@example.com",
   [dynamicKey2]: "1234567890"
 };
