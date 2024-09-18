@@ -1,5 +1,11 @@
-// =============================================== Context API =================================================== //
-// ChatGPT Se Liya Hua Syntex ---> React.js me Context API ka use tab hota hai jab hume prop drilling se bachna hota hai. Prop drilling ka matlab hai, jab ek prop ko bahut saari components ke through pass karna padta hai, chahe beech ke components ko us prop ki zarurat na ho. Isse bachne ke liye Context API ka istemal kiya jata hai, jo React ke andar ek tarike ka global state management system jaisa kaam karta hai.
+// =============================================== useContext =================================================== //
+// ChatGPT Se Liya Hua Syntex ---> useContext React ka ek hook hai jo React me context API ke sath use hota hai. Ye tumhe components ke beech state ya data ko easily share karne ka tareeqa provide karta hai, bina prop drilling ki zarurat ke. 
+
+
+
+
+// =========================================== Context API Kya Hai? ============================================== //
+// ChatGPT Se Liya Hua Syntex ---> Context API Kya Hai: Context API React me ek powerful feature hai jo tumhe global state ya data ko directly kisi bhi component me access karne ki facility deta hai. Normally agar tumhe parent component se child component tak data pass karna hota hai to tum props use karte ho, lekin agar structure deep ho to data ko har level par pass karna padta hai, jise hum prop drilling kehte hain. Is problem ko solve karne ke liye Context API ka use hota hai.
 
 
 
