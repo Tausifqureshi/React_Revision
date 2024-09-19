@@ -7,7 +7,7 @@ function ChaildCopmonets() {
       style={{  
         padding: "2rem",
         backgroundColor: "#7EAA92",
-      }}
+      }}    
     >
       <h1>Chaild-Components</h1>
       <GrendChild />

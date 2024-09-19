@@ -17,6 +17,6 @@ function ParentComponents() {
       <ChaildCopmonets  />
     </div>
   );
-}
+}  
 
 export default ParentComponents;

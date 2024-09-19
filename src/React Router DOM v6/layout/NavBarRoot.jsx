@@ -7,7 +7,7 @@ function NavBarRoot() {
       <header className={styles.navbarContainer}>
         <nav>
           <ul className={styles.navList}>
-            <li><Link to="/">Home</Link></li> {/* Yeh component ek link create karta hai jo user ko Home page par le jayega. 'to' prop se hum specify karte hain ki user ko kis page par redirect karna hai. */}
+            <li><Link to="/home">Home</Link></li> {/* Yeh component ek link create karta hai jo user ko Home page par le jayega. 'to' prop se hum specify karte hain ki user ko kis page par redirect karna hai. */}
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/post">Post</Link></li>

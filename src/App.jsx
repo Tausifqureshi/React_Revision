@@ -72,17 +72,14 @@ export default function App() {
       {/* <UseReducer /> */}
 
       {/* Context-API and useContext Hook-File */}
-      {/* <UseContext /> */}
+      <UseContext />
 
       {/* Custom-Hook File*/}
       {/* <CustomHook /> */}
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}
-      
-   
-
-      <ReactRouter />
+      {/* <ReactRouter /> */}
     </div>
   );
 }

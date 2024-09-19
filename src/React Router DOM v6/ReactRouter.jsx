@@ -18,7 +18,7 @@ const router = createBrowserRouter(
     {/* NavBarRoot component page ke har route me show hoga kyunki yeh parent component hai */}
   
       {/* Pehli baar jab koi page load hota hai, tab "/" path ki wajah se Home component hi dikhai dega, kyunki "/" root path ko represent karta hai.agar home type karte ho tu home nhi dhake ka click kane pe hi dehake ga */}
-      <Route path="/" element={<Home />} />
+      <Route path="home" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
       <Route path="post" element={<Post />} />

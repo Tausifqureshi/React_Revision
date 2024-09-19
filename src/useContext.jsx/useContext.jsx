@@ -2,7 +2,7 @@ import React from 'react'
 import ContextAPI from './ContextAPI'
 
 function UseContext() {
-    
+     
   return (
     <div style={{
       margin: "0 auto",
@@ -12,6 +12,7 @@ function UseContext() {
 
     
      <ContextAPI />
+     
     </div>
   )
 }

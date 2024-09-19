@@ -7,7 +7,7 @@ function ContextAPI() {
   const myFun = () => {
     console.log("Function Called");
   };
-     
+        
   
   return (
     <MyContext.Provider value={{
@@ -15,7 +15,7 @@ function ContextAPI() {
        key2: "value2",
       someFunction: myFun,
       }}>
-      
+          
       <div
         style={{
           padding: "2rem",
