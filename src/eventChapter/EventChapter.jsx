@@ -25,7 +25,7 @@ function EventChapter() {
       {/* Passing Argument Function This */}
       <button
         type="button"
-        //onClick={handleClick2} //sirf aise function call parameter console kar ge tu browser khud hi first function object pass kar dega. agar jitne parameter hai utne ho argumnet dege tu ham us se khud hi handle kar sakte hai is ke niche wala parfect code hai.
+        //onClick={handleClick2} //sirf aise function call parameter console kar ge tu browser khud hi first parameter ek function object pass kar deta hai. agar jitne parameter hai utne ho argumnet dege tu ham us se khud hi handle kar sakte hai is ke niche wala parfect code hai.
 
         onClick={function (e) {
           console.log(e.target);

@@ -32,7 +32,7 @@ export default function App() {
       <h1> Hello {lastName("Quraishi")} </h1> */}
 
       {/* Evnet-componet-file */}
-      {/* <EventChapter /> */}
+      <EventChapter />
 
       {/* Porps-componet-file */}
       {/* <PropsChap /> */}
