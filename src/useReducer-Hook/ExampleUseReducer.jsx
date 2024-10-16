@@ -37,7 +37,7 @@ function ExampleUseReducer() {
     //     return state; //agar kuch value nhi match to purani state return ho jaye gi.
     // }
   }
-
+  
   const [state, dispatch] = useReducer(reducer, initialState); //useReducer 2 argumnet first function 2 initialState.
 
   const [count, setCount] = useState(0);

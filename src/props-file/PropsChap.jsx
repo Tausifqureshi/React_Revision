@@ -62,7 +62,7 @@ import ChildrenPro from './ChildrenPro'
 
 function PropsChap() {
   return ( 
-    <div>
+    <div> 
     <UsePro firstName = "Tausif" age={24}/>  {/* ye props use kar ke data pass hora UsePro-File me */}
     <UsePro firstName = "Quraishi" age={25}/> 
     

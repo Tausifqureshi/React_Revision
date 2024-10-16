@@ -15,7 +15,7 @@ function ContextAPI() {
        key2: "value2",
       someFunction: myFun,
       }}>
-          
+           
       <div
         style={{
           padding: "2rem",

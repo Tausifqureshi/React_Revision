@@ -28,7 +28,7 @@ function PracticalUse() {
         }
       })
     }) 
-  }
+  } 
 
   function removeUser(userId) {
     console.log("userRemove");

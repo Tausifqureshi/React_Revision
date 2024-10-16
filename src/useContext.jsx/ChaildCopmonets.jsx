@@ -12,7 +12,7 @@ function ChaildCopmonets() {
       <h1>Chaild-Components</h1>
       <GrendChild />
     </div>
-  );
+  );  
 }
 
 export default ChaildCopmonets;
