@@ -45,6 +45,7 @@ import React, { useState } from 'react';
 
 function RadioButtonExample() {
   const [selectedOption, setSelectedOption] = useState('Option 1');
+  const [optionSelect, setOptionSelect] = useState("");
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
@@ -53,6 +54,7 @@ function RadioButtonExample() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // alert(`You have selected: ${selectedOption}`);
+    setOptionSelect(selectedOption)
   };
 
   return (
@@ -60,14 +62,14 @@ function RadioButtonExample() {
 
 <h2>Select an option:</h2>
 
-<input type="radio" name="option" value="Option 1" checkfed={selectedOption === 'Option 1'} onChange={handleOptionChange} /> <label>Option 1</label>
+<input type="radio" name="option" value="Option 1" checked={selectedOption === 'Option 1'} onChange={handleOptionChange} /> <label>Option 1</label>
 
 <input type="radio" name="option" value="Option 2" checked={selectedOption === 'Option 2'} onChange={handleOptionChange} /> <label>Option 2</label>
 
 
 <input type="radio" name="option" value="Option 3" checked={selectedOption === 'Option 3'}onChange={handleOptionChange} /> <label>Option 3</label>
 
-<p>You have selected: {selectedOption}</p>
+<p>You have selected: {optionSelect}</p>
 
  <br /> <br /> 
 <button type="submit">Submit</button>

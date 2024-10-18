@@ -32,7 +32,7 @@ export default function App() {
       <h1> Hello {lastName("Quraishi")} </h1> */}
 
       {/* Evnet-componet-file */}
-      <EventChapter />
+      {/* <EventChapter /> */}
 
       {/* Porps-componet-file */}
       {/* <PropsChap /> */}
@@ -50,7 +50,7 @@ export default function App() {
 
       {/* Form-File */}
       {/* <Form /> */}
-      {/* <RadioButton /> */}
+      <RadioButton />
       {/* <MultiInputForm /> */}
 
       {/* Practical-File */}
@@ -72,7 +72,7 @@ export default function App() {
       {/* <UseReducer /> */}
 
       {/* Context-API and useContext Hook-File */}
-      <UseContext />
+      {/* <UseContext /> */}
 
       {/* Custom-Hook File*/}
       {/* <CustomHook /> */}

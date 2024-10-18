@@ -28,7 +28,7 @@ function Form() {
           textAlign: "center",
         }}
       >
-        <h1>Form: {name}</h1>
+        <h1> Form: {name}</h1>
         <form action="" onSubmit={handleSubmit} method="GET">
           <label htmlFor="userName">FirstName: </label>
           <input
