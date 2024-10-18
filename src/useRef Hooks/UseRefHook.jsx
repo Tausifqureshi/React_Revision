@@ -25,8 +25,9 @@ import React, { useRef } from "react";
 
 
 
-// Example off useRef use HTML Dom Referance Store
+// Example off useRef use HTML Dom Referance Store.
 function UseRefHook() {
+  console.log("Components Rerender"); // useRef ke time components rerender nhi hota hai.
  const h1Ref = useRef(); //h1 ki referance store.
  
     function handleClick (){
