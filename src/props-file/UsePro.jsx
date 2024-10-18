@@ -1,7 +1,8 @@
 import React from "react";
 
 function UsePro({firstName, age} = props) { //Parameter destructuring hai ye.
-//   console.log(props); //ek object mile ga return me.
+//   console.log(props); //ek object mile ga return me. 
+ //props.age = 23; //props Immutableis ki vlue change nhi kar sakte hai.
 
 // const {firstName, age} = props;// object destructuring.
   return (
