@@ -11,7 +11,7 @@ function MouseMoveEvent() {
         document.addEventListener("mousemove",handleMouseEvent);
         return ()=>{
             console.log("Cleanup Function Return Call");// Jab bhi components ko hide kar re ge cleanup function call hoga or mouseEvent bhi remove hoga q ke cleanup function ke ander hi removeAdd evntlistener lagaye hai.
-            
+             
             document.removeEventListener("mousemove",handleMouseEvent);// jab bhi checkbox pe click kar re components hide hoga tab ye event bhi remove ho jkaye gi mouseEvent work bhi nhi kar re ga X and Y direction me.
         }
     
