@@ -4,12 +4,12 @@ import styles from "./BasicForm.module.css";
 function BasicForm() {
   
     // first time user aye ga empty '' mile ga local storage. lekin kuch add kar re ge add hoga lekin is me add kar re ge jayge ga usename wale key me q ke new user ake apni value add kar sake.
-  const [firstName, setFirstName] = useLocalStorage ("User", ""); //USElocalstorage function hamne parameter pass kiye na key initail vlue us ko hi ham parameter me dere key User, initalValue "",. jo ham firstname and setFirtname uselocslstorage se dectcuturing kar re hai matlab useState-hook us ke ander hai is liye ham us ko  dectcuturing ke nikal re hai.
+  const [firstName, setFirstName] = useLocalStorage ("Person", ""); //USElocalstorage function hamne parameter pass kiye na key initail vlue us ko hi ham parameter me dere key User, initalValue "",. jo ham firstname and setFirtname uselocslstorage se dectcuturing kar re hai matlab useState-hook us ke ander hai is liye ham us ko  dectcuturing ke nikal re hai.
 
   //Ek ke baad ek value aye gi.
   const [names, setNames] = useLocalStorage("UserNames", []); //same upper wale ki tara is k bhi useState localStorage me defiend useLocalStorage ke function se parameter and argumnet se lere hai username firast key hsi initail value empty [] is me. is function ka use hai setName ka ek ke baad ek value add kar re gi.
 
-
+     
 
    // input ko cantroll bana ke liye ye function use.
   const handleInput = (e) => {
@@ -42,7 +42,7 @@ function BasicForm() {
         <button type="submit">Submit</button>
       </form>
       <div>
-        <h3>Submitted Names:</h3>
+        <h3> Person Name:</h3>
         <ul>
           {names.map((name, index) => (
             <li key={index}>{name}</li>

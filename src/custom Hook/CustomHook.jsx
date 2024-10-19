@@ -5,10 +5,10 @@ function CustomHook() {
   if(pending){
     return <h1>Loading</h1>
   }
- 
+   
   if(isError){
     // return <h1>{isError}</h1>
-  }
+  } 
 
   return (
     <>

@@ -9,7 +9,7 @@ export default function useLocalStorage(key, initialValue) {
       console.error(error);
       return initialValue;
     }
-  });
+  });  
 
   useEffect(() => {
     // Update localStorage Jitne bar Firstname change hoga utne bar localStorage me data change hoga automatically os liye ham is useEffect ka use karte hai.  React ka useEffect hook side-effects ko handle karne ke liye use hota hai, jaise DOM updates, API calls, ya localStorage updates.

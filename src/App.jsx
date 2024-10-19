@@ -69,13 +69,13 @@ export default function App() {
       {/* <UseEffect /> */}
 
       {/* UseReducer Hook-File */}
-      <UseReducer />
+      {/* <UseReducer /> */}
 
       {/* Context-API and useContext Hook-File */}
       {/* <UseContext /> */}
 
       {/* Custom-Hook File*/}
-      {/* <CustomHook /> */}
+      <CustomHook />
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}

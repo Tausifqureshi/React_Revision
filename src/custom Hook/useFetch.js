@@ -14,7 +14,7 @@ function useFetch(url) {
           const res = await fetch(url, { signal: signal });
           if (!res.ok) {
             throw new Error(`Something went wrong: ${res.status}`);
-          }
+          } 
           const data = await res.json();
           console.log(data);
           setData(data);

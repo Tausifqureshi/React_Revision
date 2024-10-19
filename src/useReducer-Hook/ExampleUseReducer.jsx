@@ -40,11 +40,11 @@ function ExampleUseReducer() {
   
   const [state, dispatch] = useReducer(reducer, initialState); //useReducer 2 argumnet first function 2 initialState.
 
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   // Increase Function.
   const increaseHandle = () => {
-    dispatch({ type: "increment" }); //dispatch function call hora hai jo hame useReducer se 1index me milra hai kisi bhi cheez ko update karne ke liye hame dispatch function call karna hoga. ye dispatch function call kare ga reducer function ko.
+    dispatch({ type: "increment" }); //dispatch function call hora hai jo hame useReducer se 1index me milra hai kisi bhi cheez ko update karne ke liye hame dispatch function call karna hoga. ye dispatch function call kare ga reducer function ko. jab bhi dispatch function call hota hai us me ek object me ek argument dena hota hai jo action type hota hai ye action bata hai kya action perform karma hai example hame action { type: "increment" } ye argumnet upper usereducer function  me action use hoga. action.type wala.
   };
 
   //Decrase  Function.

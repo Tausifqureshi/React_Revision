@@ -19,6 +19,6 @@ function GrendChild() {
       <p>{key1} {key2}</p>
     </div>
   );  
-}
+}    
 
 export default GrendChild;

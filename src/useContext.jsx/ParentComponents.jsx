@@ -6,7 +6,7 @@ import ChaildCopmonets from "./ChaildCopmonets";
 function ParentComponents() {
   
   return (
-    <div
+    <div  
       style={{
         backgroundColor: "#9ED2BE",
         padding: "2rem",
