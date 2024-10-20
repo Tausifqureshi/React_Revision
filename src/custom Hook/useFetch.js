@@ -18,7 +18,7 @@ function useFetch(url) {
           const data = await res.json();
           console.log(data);
           setData(data);
-          setPending(false);
+          setPending(false); //data milne ke baad padding false hori hai.
         } catch (error) {
             console.dir(error)
           setIsError(error.message);
