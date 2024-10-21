@@ -12,7 +12,7 @@ import NavBarRoot from "./layout/NavBarRoot";
 // Humne "./page/index.js" file me saare components ko export kiya hai. Yahaan, hum destructuring ka use karke unhe import kar rahe hain, jise hum routes me use karenge.
 
 //Create Routers.
-const router = createBrowserRouter(
+const router = createBrowserRouter( 
   createRoutesFromElements(
     <Route path="/" element={<NavBarRoot />}>
     {/* NavBarRoot component page ke har route me show hoga kyunki yeh parent component hai */}
