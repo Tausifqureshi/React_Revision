@@ -106,18 +106,15 @@
 // }
 
 
-
-
 // ================================================ useParams =================================================== //
 //  ChatGPT Se Liya Hua Syntex ---> 9. useParams.
 // Method: useParams ek hook hai jo URL ke parameters ko access karne ka tarika provide karta hai. Ye dynamic URLs me helpful hota hai.
 
 
-
-
 // =============================================== useLocation =================================================== //
 //  ChatGPT Se Liya Hua Syntex ---> 10. useLocation.
 // Method: useLocation hook current location (URL path, search params, hash) ko return karta hai. Iska use URL ko inspect karne ke liye hota hai.
+
 
 
 
