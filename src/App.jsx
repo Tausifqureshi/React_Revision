@@ -76,10 +76,10 @@ export default function App() {
 
       {/* Custom-Hook File*/}
       {/* <CustomHook /> */}
-      <BasicForm />
+      {/* <BasicForm /> */}
 
       {/* React-Router-File */}
-      {/* <ReactRouter /> */}
+      <ReactRouter />
     </div>
   );
 }
