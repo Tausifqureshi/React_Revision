@@ -1,10 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Posts({id, name}) {
-  return <div>
+  return <div style={{
+    border: "1px solid #232323"
+  }}>
 
-  <h1>{name}</h1>
 
+<Link to={id.toString()}>
+<h1>
+{name}
+</h1>
+</Link>
+ 
   <h1>{id}</h1>
 
   </div>;
