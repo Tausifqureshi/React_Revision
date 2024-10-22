@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Posts from "../components/Posts";
 
 const URL = "https://jsonplaceholder.typicode.com/users";
 function Post() {
@@ -24,10 +25,13 @@ function Post() {
   }, []);
   return (
       <div className="">
-      {isError ? <p style={{ color: "red", textAlign: "center" }}>{isError}</p>: // Agar error hai to error message  dikhana
+      {isError ? <p style={{ color: "red", textAlign: "center" }}>{isError}</p>: // Agar error hai to error message  dikhana warna username show hoga
         <div>
           <h1>Post Page Welcome</h1>
-        {data && <ul>{data.map((user) => <li key={user.id}>{user.name}</li> )} </ul> }
+        {/* {data && <ul>{data.map((user) => <li key={user.id}>{user.name}</li> )} </ul> } */}
+
+        {data && <>{data.map((user) => <Posts key={user.id} {...user}/> )} </> }
+       
         </div>
       }
     </div>
