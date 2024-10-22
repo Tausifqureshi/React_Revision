@@ -70,7 +70,7 @@
 
 // Difference:
 // 1. Link normal link ke liye use hota hai.
-// 2. NavLink active state ke sath aata hai jo usko current active link me style karne ki suvidha deta hai.
+// 2. NavLink-Compontents hai : NavLink active state ke sath aata hai jo usko current active link me style karne ki suvidha deta hai.
 
 
 // ================================================= Navigate ==================================================== //
