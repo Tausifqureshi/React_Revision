@@ -1,52 +1,3 @@
-/* .navbarContainer {
-    background-color: #f4f4f4;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-    transition: color 0.3s, transform 0.3s;
-  }
-  
-  li:hover {
-    color: #007bff;
-    transform: scale(1.1);
-  }
-  
-  @media (max-width: 600px) {
-    .navbarContainer {
-      padding: 10px;
-    }
-  
-    ul {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  
-
- */
-
-
-
-
 
  /* Styling for the overall layout */
  .container {
@@ -55,9 +6,10 @@
 
 /* Navbar container */
 .navbarContainer {
-  background-color: #1f1f3a; /* Rich dark indigo */
+  background-color: #1f1f3a; 
+
   padding: 15px 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +36,7 @@
 
 .navList li a {
   text-decoration: none;
-  color: #ffcc00; /* Vibrant gold for the links */
+
   transition: color 0.3s ease, border-bottom 0.3s ease;
   padding-bottom: 4px;
   position: relative;
@@ -92,17 +44,26 @@
 
 /* Hover effect with color and smooth underline */
 .navList li a:hover {
-  color: #ff4500; /* Bold orange-red on hover */
-  border-bottom: 2px solid #ff4500; /* Bold underline effect */
+  /* border-bottom: 2px solid #ff4500;  */
   transform: translateY(-3px);
+  color: brown;
 }
+
 
 /* Main content area */
 .mainContent {
   padding: 20px;
-  background-color: #f3f4f6; /* Light background for contrast */
-  min-height: calc(100vh - 70px); /* Fill the remaining height */
+  background-color: #f3f4f6; 
+  min-height: calc(100vh - 70px); 
 }
+
+/* Active state ke liye styling */
+.active {
+  color: red; /* Active link ka color */
+  border-bottom: 2px solid #ff4500; /* Active underline effect */
+  font-weight: bold; /* Bold text for active link */
+}
+
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {

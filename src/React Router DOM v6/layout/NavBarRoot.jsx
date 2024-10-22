@@ -24,3 +24,36 @@ function NavBarRoot() {
 }
 
 export default NavBarRoot;
+
+
+
+// Navlink Code.
+// import React from "react";
+// import styles from "./NavBarRoot.module.css";
+// import { Outlet, NavLink } from "react-router-dom";
+// NavLink me inta fark hai bus ya active class deta hai navlik and link or same hi hai work karte hai.
+
+// function NavBarRoot() {
+//   return (
+//     <div className={styles.container}>
+//       <header className={styles.navbarContainer}>
+//         <nav>
+//           <ul className={styles.navList}>
+//             {/* NavLink ka use karein aur 'activeClassName' ya 'className' me active class ko handle karein */}
+//             <li><NavLink to="/home" className={({ isActive }) => isActive ? styles.active : ""}>Home</NavLink></li>
+//             <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.active : ""}>About</NavLink></li>
+//             <li><NavLink to="/contact" className={({ isActive }) => isActive ? styles.active : ""}>Contact</NavLink></li>
+//             <li><NavLink to="/post" className={({ isActive }) => isActive ? styles.active : ""}>Post</NavLink></li>
+//           </ul>
+//         </nav>
+//       </header>
+
+//       <main className={styles.mainContent}>
+//         <h1>Main Content</h1>
+//         <Outlet /> {/* Nested Routes ke liye */}
+//       </main>
+//     </div>
+//   );
+// }
+
+// export default NavBarRoot;
