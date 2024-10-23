@@ -22,10 +22,12 @@ const router = createBrowserRouter(
       <Route path="home" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
+      
       <Route path="post" element={<Post />} />
+
       <Route path="post/:id" element={<PostDetails/>} />
       {/* /* Ye route "/post/:id" dynamic parameter ko match karta hai, jab ID match hoti hai to PostDetails component open hota hai aur sirf usi ID wali post ka data display karta hai PostDetails Page pe. */ }
-      
+
 
       <Route path="*" element={<Error />} />
       {/* Agar koi path match nahi hota, to Error component dikhai dega. "*" wildcard path ko represent karta hai */}
