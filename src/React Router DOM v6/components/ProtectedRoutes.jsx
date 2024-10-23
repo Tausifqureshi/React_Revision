@@ -1,8 +1,9 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
+import { useAuth } from "../context API/ContextAuth";
 function ProtectedRoutes({children}) {
-    let user = false;
-    if(user){
+    const { isLogin, setIsLogin} = useAuth();
+    if(isLogin){
         return children;// Children Post components  hai is protectedRoutes components ka.
 
     } else {
