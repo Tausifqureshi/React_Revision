@@ -137,8 +137,28 @@
 
 // =============================================== useLocation =================================================== //
 //  ChatGPT Se Liya Hua Syntex ---> 10. useLocation.
-// Method: useLocation hook current location (URL path, search params, hash) ko return karta hai. Iska use URL ko inspect karne ke liye hota hai.
+// React Router me useLocation ek hook hai jo aapko current location (URL path) ke bare me information provide karta hai. Iska istemal aapko pata lagane ke liye karte hain ki user abhi kis route par hai ya kis page par hai.
 
+// useLocation ka use:
+// Is hook se aapko ek object milta hai jo current location ke bare me detailed information deta hai, jaise:
+
+// 1. pathname: current URL ka path (e.g., /dashboard).
+// 2. search: URL query string (e.g., ?id=123).
+// 3. hash: URL me anchor (#section).
+// 4. state: aap additional state pass kar sakte hain jab user ek route se doosre route par navigate karta hai.
+
+
+// import { useLocation } from 'react-router-dom';
+
+// function HomePage() {
+//   const location = useLocation();
+
+//   if (location.pathname === '/dashboard') {
+//     return <h1>Welcome to Dashboard</h1>;
+//   } else {
+//     return <h1>Welcome to Home Page</h1>;
+//   }
+// }
 
 
 
