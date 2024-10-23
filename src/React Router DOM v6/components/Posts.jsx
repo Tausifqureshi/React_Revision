@@ -7,11 +7,7 @@ function Posts({id, name}) {
   }}>
 
 
-<Link to={id.toString()}>
-<h1>
-{name}
-</h1>
-</Link>
+<Link to={id.toString()}> <h1> {name}</h1> </Link>
  
   <h1>{id}</h1>
 
