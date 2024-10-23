@@ -111,6 +111,30 @@
 // Method: useParams ek hook hai jo URL ke parameters ko access karne ka tarika provide karta hai. Ye dynamic URLs me helpful hota hai.
 
 
+//  ChatGPT Se Liya Hua Syntex ---> Kaise kaam karta hai useParams.
+// Jab aap React Router ke routes define karte ho, to aap kuch routes ko dynamic bana sakte ho, jisme URL ke kuch parts changeable hote hain. Example ke liye:
+
+
+// Dynamic Route Define karna: Aapko route me :id define karna padta hai jo ek dynamic parameter hota hai.
+{/* <Route path="/product/:id" element={<ProductDetails />} /> */}
+
+// import React from "react";
+// import { useParams } from "react-router-dom";
+
+// function ProductDetails() {
+//   // useParams hook ko use karke URL se 'id' ko access kar rahe hain
+//   const { id } = useParams();
+
+//   return (
+//     <div>
+//       <h2>Product ID: {id}</h2>
+//       {/* Yaha aap is 'id' ke base par API call ya data fetch kar sakte ho */}
+//     </div>
+//   );
+// }
+
+
+
 // =============================================== useLocation =================================================== //
 //  ChatGPT Se Liya Hua Syntex ---> 10. useLocation.
 // Method: useLocation hook current location (URL path, search params, hash) ko return karta hai. Iska use URL ko inspect karne ke liye hota hai.
