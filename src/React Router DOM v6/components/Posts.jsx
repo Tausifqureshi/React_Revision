@@ -6,8 +6,7 @@ function Posts({id, name}) {
     border: "1px solid #232323"
   }}>
 
-
-<Link to={id.toString()}> <h1> {name}</h1> </Link>
+  <Link to={id.toString()}> <h1> {name}</h1> </Link>
  
   <h1>{id}</h1>
 
