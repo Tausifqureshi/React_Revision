@@ -21,6 +21,7 @@ import UseContext from "./useContext.jsx/useContext";
 import CustomHook from "./custom Hook/CustomHook";
 import BasicForm from "./custom Hook/BasicForm";
 import ReactRouter from "./React Router DOM v6/ReactRouter";
+import NewFeatures from "./React Router New features/NewFeatures";
 
 
 export default function App() {
@@ -79,7 +80,11 @@ export default function App() {
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}
-      <ReactRouter />
+      {/* <ReactRouter /> */}
+
+      {/* React-Router New Features File */}
+      <NewFeatures />
+
       
     </div>
   );
