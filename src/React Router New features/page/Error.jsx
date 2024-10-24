@@ -4,10 +4,10 @@ import { useRouteError } from 'react-router-dom'
 function Error() {
   const error = useRouteError();
   console.dir(error);
-  
+
   return (
     <div>
-     <h1>Please Someting Error Create </h1>
+     <h1> {error.message} </h1>
      
     </div>
   )
