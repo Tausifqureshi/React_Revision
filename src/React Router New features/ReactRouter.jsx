@@ -15,8 +15,13 @@ import Login from "./page/Login";
 import ContextAuth from "./context API/ContextAuth";
 import { fetchData } from "./page/Post";
 import { fetchSinglePost } from "./components/PostDetails";
+import { useAuth } from "./context API/ContextAuth";
 
-//Create Routers.
+
+
+function ReactRouter() {
+  const {isLogin} = useAuth();
+  //Create Routers.
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<NavBarRoot />}>
@@ -29,7 +34,8 @@ const router = createBrowserRouter(
 
       <Route
         path="post"
-        loader = {fetchData}
+        loader = {(arg)=>{
+          return fetchData(arg, {isLogin: isLogin})}}
         errorElement={<Error/>}
         element={
           <ProtectedRoutes>
@@ -54,12 +60,10 @@ const router = createBrowserRouter(
     </Route>
   )
 );
-
-function ReactRouter() {
   return (
-    <ContextAuth>
-      <RouterProvider router={router} />;
-    </ContextAuth>
+    // <ContextAuth>
+      <RouterProvider router={router} />
+    // </ContextAuth>
   );
 }
 

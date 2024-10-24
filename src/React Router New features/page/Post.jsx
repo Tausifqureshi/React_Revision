@@ -3,7 +3,7 @@ import Posts from "../components/Posts";
 import { useLoaderData } from "react-router-dom";
 
 export async function fetchData() {
-  const URL = "https://jsonplaceholder.typicode.com/userss";
+  const URL = "https://jsonplaceholder.typicode.com/users";
     const response = await fetch(URL);
     if (!response.ok) {
     

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+// single post ke liye ye components hai jo od macth hogi o post is pe show hoga.
+
 export async function fetchSinglePost({params}) { // React Router DOM hi parameters provide karta hai. Isme se hum kisi bhi parameter ko extract kar sakte hain. Jab console log karenge, to ek params object milega, jisme id jaise values hongi. useLoader ke time id isi params object se milti hai.params se id ko destucturing  kar re hai.
  const url = "https://jsonplaceholder.typicode.com/users"
  console.log(params);
