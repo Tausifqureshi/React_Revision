@@ -7,6 +7,7 @@ function Posts({id, name}) {
   }}>
 
   <Link to={id.toString()}> <h1> {name}</h1> </Link>
+  {/* Id ko string me chang kar re hai q ke o integer me mil rim hai */}
  
   <h1>{id}</h1>
 

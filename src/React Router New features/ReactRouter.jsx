@@ -7,12 +7,14 @@ import {
 } from "react-router-dom"; //React-Router-Dom Import.
 
 import { Home, About, Contact, Post, Error } from "./page";
+// Humne "./page/index.js" file me saare components ko export kiya hai. Yahaan, hum destructuring ka use karke unhe import kar rahe hain, jise hum routes me use karenge.
 import NavBarRoot from "./layout/NavBarRoot";
 import PostDetails from "./components/PostDetails";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import Login from "./page/Login";
 import ContextAuth from "./context API/ContextAuth";
-// Humne "./page/index.js" file me saare components ko export kiya hai. Yahaan, hum destructuring ka use karke unhe import kar rahe hain, jise hum routes me use karenge.
+import { fetchData } from "./page/Post";
+import { fetchSinglePost } from "./components/PostDetails";
 
 //Create Routers.
 const router = createBrowserRouter(
@@ -27,6 +29,8 @@ const router = createBrowserRouter(
 
       <Route
         path="post"
+        loader = {fetchData}
+        errorElement={<Error/>}
         element={
           <ProtectedRoutes>
             <Post />
@@ -35,7 +39,9 @@ const router = createBrowserRouter(
       />
       {/* Is component ko ProtectedRoutes se wrap kar rahe hain. Agar user logged in hai, to hi post page show hoga, warna user ko login page par redirect kar diya jayega. */}
 
-      <Route path="post/:id" element={
+      <Route path="post/:id" 
+      loader = { fetchSinglePost}
+      element={
        <ProtectedRoutes>
        <PostDetails /> 
        </ProtectedRoutes>} />
