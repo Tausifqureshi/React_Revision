@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import Posts from "../components/Posts";
 import { useLoaderData } from "react-router-dom";
 
-export async function fetchData() {
+export async function fetchData(arg, obj) {
+  console.log("Arguments Prints",arg);
+  console.log("object Print",obj);
   const URL = "https://jsonplaceholder.typicode.com/users";
     const response = await fetch(URL);
     if (!response.ok) {
