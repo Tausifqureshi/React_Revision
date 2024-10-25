@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./NavBarRoot.module.css";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link , useNavigation} from "react-router-dom";
 import { useAuth } from "../context API/ContextAuth";
 function NavBarRoot() {
   const {isLogin, setIsLogin} = useAuth();
   function logOut (){
     setIsLogin(false); //Post ka data show nhi hoga LogIn button dehke ga false kara se.
   }
-
+  const navigation = useNavigation();
+  console.log("Use Navigation" ,navigation);
   return (
     <div className={styles.container}>
       <header className={styles.navbarContainer}>
@@ -18,7 +19,7 @@ function NavBarRoot() {
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/post">Post</Link></li>
             {!isLogin &&  <li><Link to="/login">Login</Link></li>}
-            {/* User login nhi tu login page pe bheje ga ye logic */}
+            {/* User login nhi tu hi login page pe bheje ga ye logic */}
            
             {isLogin &&  <li onClick={logOut}>LogOut</li>}
             {/* User Login tohi logout ka button show hoga warna login button show hoga */}

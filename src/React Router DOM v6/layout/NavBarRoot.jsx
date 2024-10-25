@@ -4,10 +4,14 @@ import { Outlet, Link, useNavigation } from "react-router-dom";
 import { useAuth } from "../context API/ContextAuth";
 function NavBarRoot() {
   const {isLogin, setIsLogin} = useAuth();
-  function logOut (){
-    setIsLogin(false); //Post ka data show nhi hoga LogIn button dehke ga false kara se.
-  }
+  // const navigation = useNavigation();
+  // console.log("Use Navigation" ,navigation);
 
+  function logOut (){
+    setIsLogin(false); // Agar user login hai, toh navbar mein logout button dikhai dega. Logout karne par post components ka data nahi dikhai dega; user ko pehle login karna hoga.
+
+  }
+ 
   return (
     <div className={styles.container}>
       <header className={styles.navbarContainer}>
@@ -30,6 +34,7 @@ function NavBarRoot() {
       <main className={styles.mainContent}>
         <h1>Main Content</h1>
         <Outlet /> {/* Yeh component current route ke andar jo bhi child route hoga, uska component yahan render karega yani dikhayega. Iska use nested routes dikhane ke liye hota hai. Note karein ki yeh 'children' prop se alag hai. */}
+        
       </main>
     </div>
   );
