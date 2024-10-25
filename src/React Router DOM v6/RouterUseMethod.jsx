@@ -148,6 +148,22 @@
 // 4. state: aap additional state pass kar sakte hain jab user ek route se doosre route par navigate karta hai.
 
 
+// ChatGPT Se Liya Hua Syntex ---> location object ke properties:
+// pathname: Current URL ka path deta hai.
+
+// Example: /about ya /dashboard.
+// search: Query string ko represent karta hai jo ? ke baad hota hai URL me.
+
+// Example: ?name=john&age=30.
+// hash: URL me anchor point ko represent karta hai, jo # ke baad hota hai.
+
+// Example: #section1.
+// state: Aap jab navigation karte ho toh kuch extra data pass kar sakte ho iske through.
+
+// Example: Agar aap state pass karte ho navigate('/about', { state: { from: 'home' } }), toh yeh location.state me accessible hota hai.
+
+
+
 // import { useLocation } from 'react-router-dom';
 
 // function HomePage() {
