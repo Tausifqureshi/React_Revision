@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { redirect, useLoaderData } from "react-router-dom";
 // single post ke liye ye components hai jo od macth hogi o post is pe show hoga.
 
-export async function fetchSinglePost({params}) { // React Router DOM hi parameters provide karta hai. Isme se hum kisi bhi parameter ko extract kar sakte hain. Jab console log karenge, to ek params object milega, jisme id jaise values hongi. useLoader ke time id isi params object se milti hai.params se id ko destucturing  kar re hai.
- const url = "https://jsonplaceholder.typicode.com/users"
- console.log(params);
+export async function fetchSinglePost({params}, {islogin}) { // React Router DOM hi parameters provide karta hai. Isme se hum kisi bhi parameter ko extract kar sakte hain. Jab console log karenge, to ek params object milega, jisme id jaise values hongi. useLoader ke time id isi params object se milti hai.params se id ko destucturing  kar re hai.
+  if (!islogin) {
+    return redirect('/login');
+   }
+   console.log(params);
+   console.log(islogin);
+   
+ const url = "https://jsonplaceholder.typicode.com/users";
     const response = await fetch(`${url}/${params.id}`);
+  
     if (!response.ok) {
       throw Error(`Data not found this page`);
     }

@@ -80,10 +80,10 @@ export default function App() {
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}
-      {/* <ReactRouter /> */}
+      <ReactRouter />
 
       {/* React-Router New Features File */}
-      <NewFeatures />
+      {/* <NewFeatures /> */}
 
       
     </div>

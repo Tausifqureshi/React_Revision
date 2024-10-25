@@ -30,7 +30,7 @@ const router = createBrowserRouter(
         element={
           <ProtectedRoutes>
             <Post />
-          </ProtectedRoutes>
+          </ProtectedRoutes> 
         }
       />
       {/* Is component ko ProtectedRoutes se wrap kar rahe hain. Agar user logged in hai, to hi post page show hoga, warna user ko login page par redirect kar diya jayega. */}

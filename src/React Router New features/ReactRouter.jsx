@@ -21,6 +21,8 @@ import { useAuth } from "./context API/ContextAuth";
 
 function ReactRouter() {
   const {isLogin} = useAuth();
+  // console.log(isLogin);
+
   //Create Routers.
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,25 +34,29 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
 
-      <Route
+      <Route 
         path="post"
         loader = {(arg)=>{
           return fetchData(arg, {isLogin: isLogin})}}
         errorElement={<Error/>}
         element={
-          <ProtectedRoutes>
+          // <ProtectedRoutes>
             <Post />
-          </ProtectedRoutes>
+          // </ProtectedRoutes>
         }
       />
       {/* Is component ko ProtectedRoutes se wrap kar rahe hain. Agar user logged in hai, to hi post page show hoga, warna user ko login page par redirect kar diya jayega. */}
 
       <Route path="post/:id" 
-      loader = { fetchSinglePost}
+      loader = {(arg)=>{
+          return fetchSinglePost(arg, {isLogin: isLogin})}}
       element={
-       <ProtectedRoutes>
-       <PostDetails /> 
-       </ProtectedRoutes>} />
+      //  <ProtectedRoutes>
+        <PostDetails /> 
+      //  </ProtectedRoutes>
+       
+       } />
+       
       {/* /* Ye route "/post/:id" dynamic parameter ko match karta hai, jab ID match hoti hai to PostDetails component open hota hai aur sirf usi ID wali post ka data display karta hai PostDetails Page pe. */}
 
        <Route path="login" element={<Login />} />
