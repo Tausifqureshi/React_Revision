@@ -22,6 +22,7 @@ import CustomHook from "./custom Hook/CustomHook";
 import BasicForm from "./custom Hook/BasicForm";
 import ReactRouter from "./React Router DOM v6/ReactRouter";
 import NewFeatures from "./React Router New features/NewFeatures";
+import Performance from "./React Perfomance and Advance Hook/Performance";
 
 
 export default function App() {
@@ -84,6 +85,9 @@ export default function App() {
 
       {/* React-Router New Features File */}
       {/* <NewFeatures /> */}
+
+      {/* React Performance and Advance Hook File use */}
+      <Performance />
 
       
     </div>
