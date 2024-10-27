@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import InputForm from "./IIInputForm";
+import InputForm from "./InputForm";
 import ExtraComponents from "./ExtraComponents";
 
 function BasicApp() {
