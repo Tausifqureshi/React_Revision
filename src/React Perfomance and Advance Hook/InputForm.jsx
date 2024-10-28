@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./InputForm.module.css";
 
 function InputForm( {userName , setUserName} ) {
+  console.log("Input Form Components");
   function inputHandler(e){
     setUserName(e.target.value);
     console.log(e.target);

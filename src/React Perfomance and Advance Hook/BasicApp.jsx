@@ -3,7 +3,9 @@ import InputForm from "./InputForm";
 import ExtraComponents from "./ExtraComponents";
 
 function BasicApp() {
-    const [userName, setUserName] = useState("")
+    const [userName, setUserName] = useState("");
+    console.log("Basic App Render");
+    
   return <div>
 
   <h1> BasicApp </h1>
