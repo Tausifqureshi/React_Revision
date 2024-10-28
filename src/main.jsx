@@ -6,7 +6,7 @@ import ContextAuth from "./React Router New features/context API/ContextAuth";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
   <>
   {/* <ContextAuth> */}
   <App />
@@ -15,6 +15,6 @@ root.render(
     
   </>
 
-   </React.StrictMode> 
+  //  </React.StrictMode> 
   // duble suggestion ata hai is se console pe. 
 );

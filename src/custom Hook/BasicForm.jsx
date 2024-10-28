@@ -41,7 +41,7 @@ function BasicForm() {
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <label>First Name:</label>
+        <label className={styles.label}>First Name:</label>
         <input type="text" value={state} onChange={handleInput} />
         <button type="submit">Submit</button>
       </form>
