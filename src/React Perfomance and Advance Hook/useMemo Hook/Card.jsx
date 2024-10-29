@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 function Card({state1}) {
     console.log("Card Components");
@@ -6,7 +6,7 @@ function Card({state1}) {
   return <div
   style={{
     background: state1 ?"green" : "red",
-    width: "200px",
+    width: "300px",
     height: "150px",
     color: "white",
     fontWeight: "bold",
@@ -18,9 +18,13 @@ function Card({state1}) {
 
   }}>
 
- 
+ <h3 style={{color:"white"}}>Card based on state1</h3>
+
 
   </div>;
 }
 
-export default Card;
+export default memo (Card); // `memo` ka use yaha isliye kiya gaya hai, taaki jab `Card` component ko `state1` ke props milein, sirf tab hi yeh re-render ho. Agar hum `state2` ko check/change kar rahe hain, toh yeh component render nahi hoga, kyunki `memo` ke saath ye optimization hoti hai. 
+
+// `useMemo` hook ka bhi yeh hi fayda hai, par uska use tab kiya jata hai jab kisi calculation ya expensive function ko repeatedly run hone se rokna ho. `memo` puri component re-rendering ko control karta hai, jabki `useMemo` specific values ko memoize karke React ki performance enhance karta hai.
+
