@@ -51,11 +51,6 @@ function UseMemoExample1() {
       </button>
 
 
-
-
-
-
-
     </div>
   );
 }
