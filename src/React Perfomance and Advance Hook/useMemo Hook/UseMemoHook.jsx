@@ -1,5 +1,4 @@
 import React from "react";
-import Demo from "./Demo";
 import UseMemoExample1 from "./useMemo Hook/UseMemoExample1";
 
 function UseMemoHook() {
@@ -7,9 +6,8 @@ function UseMemoHook() {
 
   return <div>
    {/* <h1> UseMemoHook </h1> */}
-   {/* <Demo /> */}
-   <UseMemoExample1 />
-
+   {/* <UseMemoExample1 /> */}
+  
   </div>;
 }
 

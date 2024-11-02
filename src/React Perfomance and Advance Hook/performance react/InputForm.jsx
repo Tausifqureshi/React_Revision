@@ -10,9 +10,9 @@ function InputForm() {
 
   function inputHandler(e) {
     setUserName(e.target.value);
-    console.log(e.target);
-    console.log(e.target.name);
-    console.log(e.target.value);
+    console.log("Target Elements Prints",e.target);
+    console.log("Target Name",e.target.name);
+    console.log("Target Value Print",e.target.value);
   }
 
   return (

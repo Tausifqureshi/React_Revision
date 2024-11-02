@@ -16,7 +16,8 @@ function BasicApp() {
       {/* <ExtraComponents /> */}
       {/* is ke ander bhi aisa childr propes use tobhi compoennts render nhi hoga ExtracOmpoemnts only ohi compoenngs render jin ka state change hoga bus  */}
       {/* </InputForm> */}
-      <ExtraComponents />
+       <ExtraComponents />
+
     </div>
   );
 }

@@ -22,8 +22,10 @@ import CustomHook from "./custom Hook/CustomHook";
 import BasicForm from "./custom Hook/BasicForm";
 import ReactRouter from "./React Router DOM v6/ReactRouter";
 import NewFeatures from "./React Router New features/NewFeatures";
-import Performance from "./React Perfomance and Advance Hook/Performance";
+import Performance from "./React Perfomance and Advance Hook/MemoizeAllConsept";
 import Z from "./Z";
+import Memoize_React from "./React Perfomance and Advance Hook/MemoizeAllConsept";
+import MemoizeAllConsept from "./React Perfomance and Advance Hook/MemoizeAllConsept";
 
 
 export default function App() {
@@ -87,8 +89,8 @@ export default function App() {
       {/* React-Router New Features File */}
       {/* <NewFeatures /> */}
 
-      {/* React Performance and Advance Hook File use  useMemo Hook*/}
-       <Performance />
+      {/* React Performance and Advance Hook and Memoize*/}
+      <MemoizeAllConsept/>
 
 
       {/* <Z /> */}

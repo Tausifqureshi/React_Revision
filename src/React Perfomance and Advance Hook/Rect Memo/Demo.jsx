@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Card from "../Card";
+import Card from "./Card";
+
 
 function Demo() {
   console.log("Demo Component");
@@ -8,8 +9,9 @@ function Demo() {
 
   function checkboxHandle(event) {
     const { name, checked } = event.target;
-    console.log("Name Render", event.target.name);
-    console.log("Checked Render", event.target.checked);
+    // console.log("Name Render", event.target.name);
+    // console.log("Checked Render", event.target.checked);.
+    
     if (name === "state1") {
       setState1(checked);
     } else if (name === "state2") {
