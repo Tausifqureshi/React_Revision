@@ -3,6 +3,7 @@ import React from "react";
 function EventChapter() {
 
   function handleClick(e) {
+    console.log(e);
     console.log(e.target);
     e.target.textContent = "React Code"; //value bhi change kar sakte hai aise
   }

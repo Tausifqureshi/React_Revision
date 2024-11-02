@@ -3,7 +3,7 @@ function useFetch(url) {
   const [data, setData] = useState(null);
   const [pending, setPending] = useState(false);
   const [isError, setIsError] = useState(null);
- 
+   
   useEffect(() => { 
     setPending(true);
     const controller = new AbortController(); // Yaha controller ko define karna zaruri hai

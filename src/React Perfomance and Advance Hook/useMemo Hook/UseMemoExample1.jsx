@@ -1,34 +1,53 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 function UseMemoExample1() {
-  const [counter, setCounter] = useState(0);
-  const [toggle, setToggle] = useState(false);
+  const [addition , setAddition] = useState(0);
+  const [minus, setMinus] = useState(20);
 
+
+
+  const multipluction = useMemo(function multiply(){ // Ye function bas ek example hai, koi use case nahi hai, React mein state change par har function re-render hota hai. is se rukne ke liye hi hai useMemo ka use karta hai taki parfomance pe issu na ho.
+
+    console.log(" Multiply Function Called ");// Minus function click par bhi yaha baar-baar call ho raha hai, jo React ki performance pe impact daal sakta hai. Is issue ko avoid karne ke liye, hum useMemo ka use kar sakte hain taaki ye function tabhi re-render ho jab dependencies change ho.
+
+   return addition *10
+
+  }, [addition]); // Ye function tabhi call hoga jab `addition` ki value change hoti hai, aur kisi aur state change pe yeh trigger nahi hoga.
+  
   function counterIncrease() {
-    setCounter((prevState) => prevState + 1);
+    setAddition ((prevState) => prevState + 1);
   }
 
-  const countNumber = (num)=>{
-    console.log("Count Function Called", num);
-    for (let i = 0; i < 1000; i++) {}
-    
-    return num;
+  function counterDecrease () {    
+    if(addition > 0){
+      setAddition((prevState) => prevState - 1)
+    }
   }
 
-  const saveCountValue = countNumber(counter);
-
-
+  function minusHandle(){
+    if (minus > 1) {
+    setMinus(minus - 1);
+      
+    }
+  }
+  
   return (
     <div>
       <h1> UseMemoExample1 </h1> <br />
-      <p> My Number : {saveCountValue} </p>
-      <button onClick={counterIncrease} style={{ background: "red", display: "block", margin: "auto", }}>
-        Counter
+     <h1> Multiply Function Called : {multipluction} </h1>
+      <br /> <br />
+      <p> Additions Number : { addition } </p>
+      <button  onClick={counterIncrease}  style={{ background: "red", display: "block", margin: "auto", }}>
+       Addition
       </button> <br /> <br />
 
-      <button onClick={()=>setToggle(!toggle)} style={{ background: "#323232", display: "block", margin: "auto", }}>
-        {toggle? "You Clicked": "Please Cliked Now"}
-
+      <button  onClick={counterDecrease}  style={{ background: "red", display: "block", margin: "auto", }}>
+      Minus-2
+      </button> <br /> <br />
+            
+      <p> Minus Number : { minus } </p>
+      <button onClick={ minusHandle } style={{ background: "#323232", display: "block", margin: "auto", }}>
+         Minus
       </button>
 
 

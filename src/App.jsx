@@ -23,13 +23,14 @@ import BasicForm from "./custom Hook/BasicForm";
 import ReactRouter from "./React Router DOM v6/ReactRouter";
 import NewFeatures from "./React Router New features/NewFeatures";
 import Performance from "./React Perfomance and Advance Hook/Performance";
+import Z from "./Z";
 
 
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
   let firstName = "Tausif";
   return (
-    <div>
+    <div className="app">
       {/* <h1 className="container dymy"> Hello {firstName} </h1>
       <h1> Hello {lastName("Quraishi")} </h1> */}
 
@@ -86,8 +87,11 @@ export default function App() {
       {/* React-Router New Features File */}
       {/* <NewFeatures /> */}
 
-      {/* React Performance and Advance Hook File use */}
+      {/* React Performance and Advance Hook File use  useMemo Hook*/}
       <Performance />
+
+
+      {/* <Z /> */}
 
       
     </div>

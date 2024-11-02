@@ -2,9 +2,6 @@
 // ChatGPT Se Liya Hua Syntex ---> 1. useMemo hook kya hai.
 // React ka useMemo hook ek aisa hook hai jo humein kisi calculation (ya function) ka result memoize (yaad) karne mein madad karta hai. Simple shabdon mein, useMemo ka use tab kiya jata hai jab humein koi complex ya heavy calculation baar-baar run nahi karwani ho. Yeh calculation ek baar run hokar result ko yaad (cache) rakh leti hai, aur agar koi dependency (jo hum specify karte hain) nahi badalti, toh React wahi result use karta hai bina calculation ko repeat kiye.
 
-
-
-
 // ============================================= UseMemo Hook use ================================================ //
 // ChatGPT Se Liya Hua Syntex --->  Kab aur kyun use karte hain. useMemo ka use tab hota hai jab:
 
@@ -13,8 +10,6 @@
 // 2. Koi component baar-baar render ho raha ho unnecessary calculations ke wajah se.
 
 // 3. Kisi value ko recompute karna time-consuming ho aur woh value tab tak same rahe jab tak specific dependencies nahi badalte.
-
-
 
 
 // ====================================== UseMemo Hook Syntax aur usage ========================================== //
@@ -26,9 +21,13 @@
 
 
 
-// 1. useMemo ek function ko as input leta hai, aur is function ka jo return hota hai woh memoizedValue mein store ho jata hai.
+// const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 
-// 2. Second argument ek dependency array hoti hai (jaise [dependency1, dependency2]). Yeh batati hai ki kab useMemo ko phir se calculate karna hai.
+// useMemo do arguments leta hai:
+
+// 1. Pehla argument ek function hai jo wo calculation perform karega jise hume memoize karna hai.
+
+// 2. Dusra argument ek array hai jisme dependencies list hoti hai. Ye dependencies batati hai ki kab calculation dobara perform karni hai.
 
 
 
@@ -47,7 +46,7 @@
 //     const expensiveCalculation = useMemo(() => {
 //         console.log("Running expensive calculation...");
 //         return items.length * 1000;  // Suppose it's an expensive operation
-//     }, [items]); // yeh sirf items ke change hone par re-run hoga
+//     }, [items]); // yeh sirf items ke change hone par retrun hoga
 
 //     return (
 //         <div>
