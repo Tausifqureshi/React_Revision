@@ -30,9 +30,6 @@
 // 2. Dusra argument ek array hai jisme dependencies list hoti hai. Ye dependencies batati hai ki kab calculation dobara perform karni hai.
 
 
-
-
-
 // ========================================== UseMemo Hook  in action ============================================ //
 // ChatGPT Se Liya Hua Syntex ---> useMemo in action.
 
@@ -70,7 +67,6 @@
 
 
 
-
 // ==================================== UseMemo Hook aayde aur limitations ======================================= //
 // ChatGPT Se Liya Hua Syntex ---> 
 
@@ -82,3 +78,12 @@
 // 1. Har chhoti calculation mein useMemo ka use nahi karna chahiye kyunki useMemo ka apna bhi overhead hota hai. Bas heavy calculations yaa baar-baar change hone wale data mein hi use karo.
 
 // 2. Over-optimization se bachein, kyunki agar zaroorat nahi hai toh useMemo fayda ki jagah nuksaan bhi kar sakta hai.
+
+
+
+
+
+
+
+
+
