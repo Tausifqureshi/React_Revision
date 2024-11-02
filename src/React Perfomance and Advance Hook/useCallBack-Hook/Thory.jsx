@@ -48,5 +48,11 @@
 
 
 
+// ======================================== Benefits and Drawbacks =========================================== //
+// ChatGPT Se Liya Hua Syntex ---> Benefits and Drawbacks.
+// 1. Benefits: Yeh hook performance ko improve karta hai jab baar-baar reference change hona zaroori nahi hota.
+
+// 2. Drawbacks: Overusing useCallback bhi overhead create kar sakta hai aur readability ko complex bana sakta hai, toh use karte waqt yeh sochna zaroori hai ki kya actual me optimization zaroori hai.
+
 
 

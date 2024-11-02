@@ -55,22 +55,40 @@
 
 
 
-// import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
+function ExpensiveCalculationComponent() {
+  const [count, setCount] = useState(0);
+  const [input, setInput] = useState('');
 
-// function App() {
-//   const [count, setCount] = useState(0);
-//   const [items, setItems] = useState([5, 4, 3, 2, 1]);
+  // Ye function slow hai aur baar-baar calculate nahi karna chahte
+  const expensiveCalculation = (num) => {
+    console.log("Calculating...");
+    for (let i = 0; i < 1000000000; i++) {} // Dummy loop for slow calculation
+    return num * 2;
+  };
 
-//   const sortedItems = useMemo(() => {
-//     console.log("Sorting items...");
-//     return items.sort((a, b) => a - b);
-//   }, [items]);
+  // `useMemo` ka istemal karke hum calculation ko memoize kar rahe hain
+  const memoizedValue = useMemo(() => expensiveCalculation(count), [count]);
 
-//   return (
-//     <div>
-//       <h1>Count: {count}</h1>
-//       <button onClick={() => setCount(count + 1)}>Increment Count</button>
-//       <div>Sorted Items: {sortedItems.join(", ")}</div>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <p>Expensive Calculation Result: {memoizedValue}</p>
+
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Type something..."
+      />
+    </div>
+  );
+}
+
+export default ExpensiveCalculationComponent;
+
+
+
+
