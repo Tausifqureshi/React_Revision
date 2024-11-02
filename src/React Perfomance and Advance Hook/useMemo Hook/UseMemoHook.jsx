@@ -6,7 +6,7 @@ function UseMemoHook() {
 
   return <div>
    {/* <h1> UseMemoHook </h1> */}
-   {/* <UseMemoExample1 /> */}
+   <UseMemoExample1 />
   
   </div>;
 }
