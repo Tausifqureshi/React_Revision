@@ -88,7 +88,7 @@ export default function App() {
       {/* <NewFeatures /> */}
 
       {/* React Performance and Advance Hook File use  useMemo Hook*/}
-      <Performance />
+       <Performance />
 
 
       {/* <Z /> */}

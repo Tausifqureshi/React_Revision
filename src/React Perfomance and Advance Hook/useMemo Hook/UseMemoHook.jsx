@@ -1,6 +1,6 @@
 import React from "react";
 import Demo from "./Demo";
-import UseMemoExample1 from "./UseMemoExample1";
+import UseMemoExample1 from "./useMemo Hook/UseMemoExample1";
 
 function UseMemoHook() {
   // useMemo Hook to increase performance in react Application.

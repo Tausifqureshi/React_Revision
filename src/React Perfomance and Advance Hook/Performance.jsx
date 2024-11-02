@@ -7,7 +7,7 @@ function Performance() {
     <h1> React Performance and Advance Hook </h1>
     {/* <BasicApp /> */}
     <UseMemoHook />
-    
+           
   </div>;
 }
 
