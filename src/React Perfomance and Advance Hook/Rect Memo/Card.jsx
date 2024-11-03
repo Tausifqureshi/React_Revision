@@ -1,11 +1,10 @@
 import React, { memo } from "react";
-// import { useTime } from "./useTime";
-// import { format } from "date-fns";
 
 function Card({ state1 }) {
+  // React.memo component ko unnecessary re-renders se roknay ke liye use hota hai. Yeh tabhi re-render hota hai jab props change hote hain, is tarah performance improve hoti hai.
   console.log("Card Components");
   // const time = useTime();
-
+  
   return (
     <div
       style={{

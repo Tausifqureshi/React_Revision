@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+// useMemo ka use kisi computed value ko cache karne ke liye kiya jata hai, taaki wo value unnecessary re-calculations se bachi rahe. Yeh value tabhi re-compute hoti hai jab specified dependencies change hoti hain, jo performance optimize karne mein madadgar hai.
 
 function UseMemoExample1() {
   const [addition , setAddition] = useState(0);
@@ -31,6 +32,7 @@ function UseMemoExample1() {
     }
   }
   
+ 
   return (
     <div>
       <h1> UseMemoExample1 </h1> <br />

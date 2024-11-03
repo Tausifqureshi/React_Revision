@@ -44,8 +44,9 @@
 
 
 // Return Type:
-// 1. useCallback ek function reference return karta hai.
-// 2. useMemo calculated value return karta hai.
+// 1. useMemo: Ye ek value return karta hai.
+// 2. useCallback: Ye ek memoized function return karta hai.
+
 
 
 // Use-case:

@@ -2,7 +2,7 @@
 // ChatGPT Se Liya Hua Syntex --->  React Memo ek higher-order component (HOC) hai jo functional components ke liye re-rendering ko optimize karne me madad karta hai. Agar aapke paas ek functional component hai jo baar-baar re-render ho raha hai bina kisi prop ya state ke change ke, toh React.memo use karna ek accha option ho sakta hai.
 
 
-// =================================== Kaise kaam karta hai React Memo= ====================================== //
+// =================================== Kaise kaam karta hai React Memo ======================================= //
 // ChatGPT Se Liya Hua Syntex ---> Kaise kaam karta hai React Memo.
 // Jab hum kisi component ko React.memo me wrap karte hain, toh React us component ko sirf tab re-render karega jab uske props me koi change aata hai. Ye optimization React ke "shallow comparison" par adharit hai, jo sirf primitive types (jaise strings, numbers) ko compare karta hai. Agar props me koi object ya array pass kar rahe hain, toh React unhe sirf reference ke basis par compare karta hai, na ki unke values ke.
 
