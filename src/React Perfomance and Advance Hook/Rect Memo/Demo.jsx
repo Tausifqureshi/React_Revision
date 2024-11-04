@@ -18,34 +18,7 @@ function Demo() {
     }
   }  
 
-  let result = () =>{
-    let fruits = ["apple","mango","banana","orange","kiwi"];
-  //  fruits.forEach((value, index)=>{
-  //   console.log(`index ${index} Value ${value}`);
-  //  })
 
-
-  // for(let i = 0; i < fruits.length; i++){
-  //   console.log(`Index ${i} Value ${fruits[i]}`);
-  // }
-     
-  // for(let frus in fruits){
-  //   console.log(`Index ${frus} Value ${fruits[frus]}`);
-  // }
-
-   for( let fu in fruits){
-    if(fruits[fu] === "banana"){
-      // break;
-      continue;
-    }
-    console.log(`Index Of ${fu} Value ${fruits[fu]}`);
-    console.log(fruits[fu]);
-   }
-
-     
-   }
- 
-   result()
   return (
     <>
       <div style={{ background: "#efefef", padding: "2rem", margin: "1rem" }}>
@@ -79,5 +52,33 @@ export default Demo;
 
 
 
+
+
+// let result = () =>{
+//   let fruits = ["apple","mango","banana","orange","kiwi"];
+// //  fruits.forEach((value, index)=>{
+// //   console.log(`index ${index} Value ${value}`);
+// //  })
+
+// // for(let i = 0; i < fruits.length; i++){
+// //   console.log(`Index ${i} Value ${fruits[i]}`);
+// // }
+   
+// // for(let frus in fruits){
+// //   console.log(`Index ${frus} Value ${fruits[frus]}`);
+// // }
+
+//  for( let fu in fruits){
+//   if(fruits[fu] === "banana"){
+//     // break;
+//     continue;
+//   }
+//   console.log(`Index Of ${fu} Value ${fruits[fu]}`);
+//   console.log(fruits[fu]);
+//  }
+
+   
+//  }
+//  result()
 
 

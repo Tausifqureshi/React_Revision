@@ -35,7 +35,6 @@ function UseMemoExample1() {
  
   return (
     <div>
-      <h1> UseMemoExample1 </h1> <br />
      <h1> Multiply Function Called : {multipluction} </h1>
       <br /> <br />
       <p> Additions Number : { addition } </p>

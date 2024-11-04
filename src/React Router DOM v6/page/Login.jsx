@@ -12,7 +12,7 @@ function Login() {
  
  function userLogin (){
      setIsLogin(true); // Login ture hoga Navbar se Login bhi nhi show ho ga us ki jaga logout show hoga .
-
+  
     navigate( PreviousPathname, {replace: true}); // Replace ka use isliye hota hai taake agar user logged in hai, to browser ke back button se login page par wapas na ja sake, jab tak user logout na kare.
 
  }

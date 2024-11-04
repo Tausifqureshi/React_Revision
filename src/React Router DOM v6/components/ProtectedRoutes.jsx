@@ -6,7 +6,7 @@ function ProtectedRoutes({children}) {
     const { isLogin, setIsLogin} = useAuth();
     const location = useLocation();  // useLocation hook ka use isliye hota hai taake user ko login karne ke baad wahi page par wapas bheja ja sake jahan se wo aaya tha, na ki home page par. Yeh ensure karta hai ke login ke baad user ko uske previous location par redirect kiya jaye. ye ek Object return karta hai.
     console.log("Project Routes Components",location);
-
+  
     if(isLogin){
         return children;// Children Post components  hai is protectedRoutes components ka.user Login tohi Post components show hoga warna loginpage pe navigate kar dega else wala first login karna hoga.
 

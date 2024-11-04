@@ -1,10 +1,24 @@
 // ============================================== React.Memo ================================================= //
-// ChatGPT Se Liya Hua Syntex --->  React Memo ek higher-order component (HOC) hai jo functional components ke liye re-rendering ko optimize karne me madad karta hai. Agar aapke paas ek functional component hai jo baar-baar re-render ho raha hai bina kisi prop ya state ke change ke, toh React.memo use karna ek accha option ho sakta hai.
+// ChatGPT Se Liya Hua Syntex ---> React.memo ek higher-order component (HOC) hai jo React mein functional components ke performance ko improve karne ke liye use hota hai. Yeh mainly tab useful hota hai jab aapka component baar-baar render ho raha ho bina kisi zarurat ke, aur aap is render ko avoid karna chahte ho.
+
+// ========================================== React.memo Kya Hai ============================================= //
+// ChatGPT Se Liya Hua Syntex ---> React.memo Kya Hai?
+// React mein, jab parent component re-render hota hai toh uske saare child components bhi re-render hote hain, chahe unke props change hue ho ya nahi. Yeh behavior unnecessarily performance pe asar daal sakta hai. Is problem ko solve karne ke liye, React.memo ko use kiya jata hai.
+
+// React.memo ek higher-order component hai jo functional components ke liye shallow comparison perform karta hai. Agar component ke props mein koi change nahi hai, toh React.memo us component ko re-render hone se rokta hai aur last rendered output ko use karta hai.
 
 
-// =================================== Kaise kaam karta hai React Memo ======================================= //
-// ChatGPT Se Liya Hua Syntex ---> Kaise kaam karta hai React Memo.
-// Jab hum kisi component ko React.memo me wrap karte hain, toh React us component ko sirf tab re-render karega jab uske props me koi change aata hai. Ye optimization React ke "shallow comparison" par adharit hai, jo sirf primitive types (jaise strings, numbers) ko compare karta hai. Agar props me koi object ya array pass kar rahe hain, toh React unhe sirf reference ke basis par compare karta hai, na ki unke values ke.
+
+// =================================== Kaise Kaam Karta Hai React.memo  ====================================== //
+// ChatGPT Se Liya Hua Syntex ---> Kaise Kaam Karta Hai React.memo
+
+// 1. Jab aap React.memo ko kisi functional component pe apply karte hain, toh React pehli baar component ko render karta hai aur uska output store kar leta hai.
+
+// 2.Jab bhi parent component dubara render hota hai, toh React ye check karta hai ki kya props mein koi changes hain.
+
+// 3.Agar props mein koi change nahi hota (shallow comparison ke hisaab se), toh React.memo component ko re-render hone se rokta hai.
+
+// 4. Agar props mein koi change hota hai, toh component re-render hota hai aur naye output ko store kiya jata hai.
 
 
 
@@ -27,33 +41,50 @@
 
 // 3. Child components jo parent ke re-render hone par bina wajah re-render ho rahe hain, lekin unke props change nahi ho rahe.
 
-// ========================================= React.Memo Ka Usage ============================================ //
+// ======================================== React.Memo Limitations =========================================== //
 // ChatGPT Se Liya Hua Syntex ---> React.memo ke Benefits aur Limitations:
 // 1. Benefits: Ye performance ko improve karta hai, especially jab unnecessary re-renders ko avoid karna ho.
 
 // 2. Limitations: Agar props ke andar deep nested objects hain, ya arrays hain jo har render me nayi reference lete hain, to ye re-render ko avoid nahi kar sakta. Isme shallow comparison hoti hai.
 
 
-// const ParentComponent = () => {
-//     const [count, setCount] = React.useState(0);
-//     const data = { value: "Hello World" };
-  
-//     return (
-//       <div>
-//         <button onClick={() => setCount(count + 1)}>Increment</button>
-//         <MemoizedChildComponent data={data} />
-//       </div>
-//     );
-//   };
-  
-//   const ChildComponent = ({ data }) => {
-//     console.log("Child Component re-rendered!");
-//     return <div>{data.value}</div>;
-//   };
-  
-//   const MemoizedChildComponent = React.memo(ChildComponent);
-  
 
 
 
 
+import React, { useState } from 'react';
+
+const Counter = React.memo(({ count }) => {
+    console.log('Counter re-render');
+    return <div>Count: {count}</div>;
+});
+
+function App() {
+    const [count, setCount] = useState(0);
+    const [text, setText] = useState("");
+
+    return (
+        <div>
+            <Counter count={count} />
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+            <input 
+                type="text" 
+                value={text} 
+                onChange={(e) => setText(e.target.value)}
+                placeholder="Type something" 
+            />
+        </div>
+    );
+}
+
+export default App;
+
+
+
+// Is example me:
+
+// 1. Counter component ko React.memo se wrap kiya gaya hai.
+
+// 2. Jab aap button click karte hain aur count update hota hai, tab Counter re-render hoga kyunki count me change aaya hai.
+
+// 3. Lekin jab aap input field me kuch type karte hain, toh Counter re-render nahi hoga kyunki count prop me koi change nahi aaya hai.
