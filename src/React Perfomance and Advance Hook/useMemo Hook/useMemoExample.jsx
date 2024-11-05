@@ -1,7 +1,10 @@
 import React from "react";
 
-function useMemoExample() {
-  return <div>useMemoExample</div>;
-}
+function UseMemoExample() {
+  return <div>
+ 
+  </div>;
 
-export default useMemoExample;
+}   
+
+export default UseMemoExample;
