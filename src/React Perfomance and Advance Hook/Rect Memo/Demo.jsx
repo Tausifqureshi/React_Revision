@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Card from "./Card";
 
-function Demo() {
-  console.log("Demo Component");
+function Demo() { 
+  console.log("Demo Component");  
   const [state1, setState1] = useState(false);
   const [state2, setState2] = useState(false);
 
