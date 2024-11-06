@@ -8,7 +8,7 @@ function UseMemoHook() {
    <h1> UseMemoHook </h1>
    {/* <UseMemoExample1 /> */}
 
-<UseMemoExample />
+   <UseMemoExample />
   
   </div>;
 }
