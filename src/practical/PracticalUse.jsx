@@ -37,7 +37,7 @@ function PracticalUse() {
   }   
   
   return (  
-    <>
+    <>   
       <Users userDetaisl={users} onClickEvent={updateAge} remove ={removeUser} />
       {/* pura ke pura users hi pass kar diye is ko Users-file me ham props ya destucturing kar ke data nikale ge.
       onclickEvnet pass kar re hai ham props me updateAge function ka referance Users.file me.

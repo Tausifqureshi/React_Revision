@@ -11,7 +11,7 @@ function UseMemoExample1() {
 
     console.log(" Multiply Function Called ");// Minus function click par bhi yaha baar-baar call ho raha hai, jo React ki performance pe impact daal sakta hai. Is issue ko avoid karne ke liye, hum useMemo ka use kar sakte hain taaki ye function tabhi re-render ho jab dependencies change ho.
 
-   return addition *10
+   return addition *10 //Memoize vaule retrun hori hai. useMemo Memoize value return karta hai.
 
   }, [addition]); // Ye function tabhi call hoga jab `addition` ki value change hoti hai, aur kisi aur state change pe yeh trigger nahi hoga.
   
