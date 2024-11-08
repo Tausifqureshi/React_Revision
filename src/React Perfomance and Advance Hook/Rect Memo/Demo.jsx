@@ -52,7 +52,7 @@ export default Demo;
 
 
 
-
+ 
 
 // let result = () =>{
 //   let fruits = ["apple","mango","banana","orange","kiwi"];
