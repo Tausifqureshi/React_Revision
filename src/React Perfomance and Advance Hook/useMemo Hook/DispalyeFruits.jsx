@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 function DispalyeFruits({fruit}) {
     console.log("Dispaly Fruits Components Call");
@@ -15,4 +15,4 @@ function DispalyeFruits({fruit}) {
   </div>;
 }
 
-export default DispalyeFruits;
+export default memo ( DispalyeFruits);

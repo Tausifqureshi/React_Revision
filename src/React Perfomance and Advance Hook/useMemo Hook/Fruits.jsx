@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import DispalyeFruits from "./DispalyeFruits";
 
 // Harshit ka Example karwaya hua.
 function Fruits() {
+
  console.log("Fruit Compoennts Called");
   const [userName, setUserName] = useState("");
 
-  const fruit = [
-    { firstName: "apple", emoji: "🍎" },
-    { firstName: "banan", emoji: "🍌" },
-    { firstName: "mango", emoji: "🥭" },
-  ];
+  const fruit = useMemo(()=>{ // "fruits" bar-bar re-render ho raha hai kyunki ye ek reference type hai, jo parent state change par naya memory reference banata hai; ise rokne ke liye `useMemo` ka use karein.
+
+   return [
+        { firstName: "apple", emoji: "🍎" },
+        { firstName: "banan", emoji: "🍌" },
+        { firstName: "mango", emoji: "🥭" },
+      ];
+   }, [])
+
 
   return (
     <div>
