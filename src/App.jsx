@@ -90,7 +90,7 @@ export default function App() {
       {/* <NewFeatures /> */}
 
       {/* React Performance and Advance Hook and Memoize*/}
-      {/* <MemoizeAllConsept/> */}
+      <MemoizeAllConsept/>
 
 
       {/* <Z /> */}
