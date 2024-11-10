@@ -74,7 +74,7 @@ export default function App() {
       {/* <UseEffect /> */}
 
       {/* UseReducer Hook-File */}
-      {/* <UseReducer /> */}
+      <UseReducer />
 
       {/* Context-API and useContext Hook-File */}
       {/* <UseContext /> */}
@@ -90,7 +90,7 @@ export default function App() {
       {/* <NewFeatures /> */}
 
       {/* React Performance and Advance Hook and Memoize*/}
-      <MemoizeAllConsept/>
+      {/* <MemoizeAllConsept/> */}
 
 
       {/* <Z /> */}

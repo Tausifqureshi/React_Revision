@@ -7,7 +7,7 @@ function ExampleUseReducer() {
 
   const initialState = { count: 0 }; // initialState ye ek object hai.
 
-  function reducer(state, action) {//ye function 2parameter leta hai first state dusra action
+  function reducer(state, action) {//ye function 2parameter leta hai first state dusra action.action jo hai ohi nich dispacth function is se call lar rha hai. dispatch: Ye ek function hai jo actions ko trigger karta hai.
 
     // If statement use kar ke.
     if(action.type === "increment"){
@@ -15,7 +15,11 @@ function ExampleUseReducer() {
     }
 
     else if(action.type === "decrement"){
-      return ({...state, count: state.count - 1})
+      // return ({...state, count: state.count - 1})
+      if (state.count > 0) {
+        return { ...state, count: state.count - 1 };
+      }
+      return state; // agar count 0 hai, toh wahi state return hogi
     }
     else if(action.type === "reset"){
       return ({...state, count: 0})

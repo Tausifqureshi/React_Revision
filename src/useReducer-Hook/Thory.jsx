@@ -7,9 +7,9 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
 // 1. state: Ye current state value ko represent karta hai.
 
-// 2. dispatch: Ye ek function hai jo actions ko trigger karta hai.
+// 2. dispatch: ek function hai jo actions ko trigger karta hai, jisse state ko update kiya ja sakta hai.
 
-// 3. reducer: Ye ek function hai jo previous state aur ek action ko input ke roop mein leta hai aur ek nai state return karta hai.
+// 3. reducer: ek function hai jo har state update ko handle karta hai. Isme state aur action parameters hote hain.
 
 // 4. initialState: Ye initial state ko define karta hai.
 
@@ -43,7 +43,7 @@ const initialState = { count: 0 };
 function reducer(state, action) {
   switch (action.type) {
     case 'increment':
-      return { count: state.count + 1 };
+      return { count: state.count +  1 };
     case 'decrement':
       return { count: state.count - 1 };
     default:
