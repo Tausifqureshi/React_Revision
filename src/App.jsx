@@ -26,6 +26,7 @@ import Performance from "./React Perfomance and Advance Hook/MemoizeAllConsept";
 import Z from "./Z";
 import Memoize_React from "./React Perfomance and Advance Hook/MemoizeAllConsept";
 import MemoizeAllConsept from "./React Perfomance and Advance Hook/MemoizeAllConsept";
+import Redux from "./Redux/Redux";
 
 
 export default function App() {
@@ -91,6 +92,11 @@ export default function App() {
 
       {/* React Performance and Advance Hook and Memoize*/}
       {/* <MemoizeAllConsept/> */}
+
+       
+       {/* Redux File use */}
+       <Redux />
+
 
 
       {/* <Z /> */}
