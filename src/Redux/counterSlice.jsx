@@ -7,17 +7,20 @@ export const counterSlice = createSlice({
   initialState: initialState,
 
   reducers: {
-    increment: (state) => {
-      state.count += 1;
-    },
+    increment: (state,action) => {
+        return { ...state, count: state.count + 1 };
+      },
 
-    decrement: (state) => {
-      state.count -= 1;
-    },
+      decrement: (state,action) => {
+        if (state.count > 0) {
+          return { ...state, count: state.count - 1 };
+        }
+        return state; // agar count 0 ya usse chhota ho, toh same state return karega
+      },
 
-    reset: (state) => {
-      state.count = 0;
-    },
+    reset: (state,action) => {
+        return { ...state, count: 0 };
+      },
   },
 });
 
