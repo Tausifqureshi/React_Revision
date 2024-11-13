@@ -12,7 +12,7 @@ function ExampleUseReducer() {
     // If statement use kar ke.
     if(action.type === "increment"){
       return ({...state, count: state.count + 1})
-    }
+    } 
 
     else if(action.type === "decrement"){
       // return ({...state, count: state.count - 1})
