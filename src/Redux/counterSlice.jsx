@@ -5,18 +5,21 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = { count: 0 };
 
 // Ek slice bana rahe hain jo `counterSlice` ke naam se export hoga
+// `createSlice` ek Redux Toolkit ka function hai jo aapko reducers aur actions ko ek hi jagah define karne ki suvidha deta hai.
 export const counterSlice = createSlice({
   // Slice ka naam `counter` rakha hai, jo state tree me bhi is naam se save hoga
-  name: "counter",
+  name: "counter", // Yeh slice ka naam hai, aur jab aap store ko access karenge toh yeh key ke naam se access hoga (state.counter)
   
   // Initial state define kar rahe hain jo slice ki shuruaati value hogi
+  // `initialState` me humne `count` ki initial value 0 set ki hai. Yeh store me default value hogi.
   initialState: initialState,
 
   // Reducers: Yeh functions hain jo state ko update karte hain based on actions
   reducers: {
     
     // Increment reducer: `count` ko 1 se badhata hai
-    increment: (state, action) => {
+    increment: (state, action) => {  // state ko increment kar raha hai
+      
       // State ko shallow copy karke `count` me 1 add karke naya state return kar rahe hain
       return { ...state, count: state.count + 1 }; // `count` ki value ko badha rahe hain
     },

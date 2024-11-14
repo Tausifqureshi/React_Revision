@@ -9,9 +9,10 @@ function CounterRedux() {
   // Yahan `state.counter.count` ko access kar rahe hain, jisme `counter` slice ke andar `count` value stored hai.
   const count = useSelector((state) => state.counter.count); // yahan 'count' safe access ho raha hai
   
-  // `useDispatch` hook ka use karte hue Redux store ko action dispatch karne ke liye dispatch function ko access kar rahe hain
-  // `useDispatch` hook hume dispatch function deta hai, jise hum actions ko store mein send karne ke liye use karte hain.
-  const dispatch = useDispatch(); // `useDispatch` hook se dispatch function ko get kar rahe hain
+  // `useDispatch` hook ka use kar rahe hain taaki Redux store se actions dispatch kiye ja sakein
+  // `useDispatch` ko hum action creators (jaise increment, decrement, reset) ko call karne ke liye use karte hain
+  // Jab aap koi action dispatch karte hain, toh Redux store update hota hai aur component re-render hota hai.
+  const dispatch = useDispatch(); // `dispatch` function ka use state ko change karne ke liye hota hai.
 
   return (
     // Counter component ka layout define kar rahe hain
