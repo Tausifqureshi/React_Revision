@@ -10,7 +10,7 @@ function CounterRedux() {
   // const {count} = useSelector((state) => state.myCounterState); // yahan 'count' safe access ho raha hai
 
   const {count} = useSelector((state) => {  //useSelector se koi bhi state ko slect kar sakte hai. count kodestructure  ke nikal re hai. aisa bhi kar sakte hai jaisa upper ai vaisa bbi kar sakte hai
-    console.log("state mile gi yaha se myCounterState hai",state);
+    console.log("state mile gi yaha se myCounterState state hai",state);
     return state.myCounterState
 
   })
