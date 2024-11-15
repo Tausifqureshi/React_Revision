@@ -12,7 +12,7 @@ function CounterRedux() {
   // `useDispatch` hook ka use kar rahe hain taaki Redux store se actions dispatch kiye ja sakein
   // `useDispatch` ko hum action creators (jaise increment, decrement, reset) ko call karne ke liye use karte hain
   // Jab aap koi action dispatch karte hain, toh Redux store update hota hai aur component re-render hota hai.
-  const dispatch = useDispatch(); // `dispatch` function ka use state ko change karne ke liye hota hai.
+  const dispatch = useDispatch(); // `dispatch` function ka use state ko updatef karne ke liye hota hai. disptach function hi reducer ko call karta hai kuch bbiu state ko update karen ke liye.
 
   return (
     // Counter component ka layout define kar rahe hain

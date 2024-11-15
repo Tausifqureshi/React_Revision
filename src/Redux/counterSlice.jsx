@@ -1,3 +1,5 @@
+// Slic ko aisa samj sakte ho ek application ,me kafi sahre feutre ho sakte hai.har ek feayure ke liye alag alag action ho sakte hai and alag aalg  reducercs ho sakte hai
+
 // Redux Toolkit se `createSlice` ko import kar rahe hain
 import { createSlice } from "@reduxjs/toolkit";
 
