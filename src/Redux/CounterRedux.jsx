@@ -7,7 +7,11 @@ function CounterRedux() {
   // `useSelector` hook ka use karte hue Redux store se `count` value ko access kar rahe hain
   // `useSelector` ko use karte hain taaki hum Redux store se required state ko safely read kar sakein.
   // Yahan `state.counter.count` ko access kar rahe hain, jisme `counter` slice ke andar `count` value stored hai.
-  const count = useSelector((state) => state.counter.count); // yahan 'count' safe access ho raha hai
+  const {count} = useSelector((state) => state.myCounterStatet); // yahan 'count' safe access ho raha hai
+
+  // useSelector((state) => {  //useSelector se koi bhi state ko slect kar sakte hai.
+  //   console.log("State mile gi",state);
+  // })
   
   // `useDispatch` hook ka use kar rahe hain taaki Redux store se actions dispatch kiye ja sakein
   // `useDispatch` ko hum action creators (jaise increment, decrement, reset) ko call karne ke liye use karte hain
@@ -20,7 +24,8 @@ function CounterRedux() {
       <h1>Counter App</h1>
       
       {/* Displaying the `count` value */}
-      <span style={{ fontSize: "2rem" }}>{count}</span> {/* yahan count value display ho rahi hai */}
+      <span style={{ fontSize: "2rem" }}>{count}</span>
+      {/* yahan count value display ho rahi hai  */}
 
       <div style={{ display: "flex", gap: "1rem" }}>
         {/* Increment button */}
