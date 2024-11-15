@@ -24,7 +24,9 @@ export const counterSlice = createSlice({
   // Reducers: Yeh functions hain jo state ko update karte hain based on actions
   reducers: {
     // Increment reducer: `count` ko 1 se badhata hai
-    increment: (state, action) => {
+
+    increment: (state, action) => { // ye share function ke pass state ka acces hoga pura and action ka bhi hotahai. dispatch: Ye ek function hai jo actions ko trigger karta hai.action { type: "increment" } aisa 
+
       // state ko increment kar raha hai
 
       // State ko shallow copy karke `count` me 1 add karke naya state return kar rahe hain
