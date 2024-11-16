@@ -21,9 +21,10 @@
 
 
 // ========================================== Redux ki Basic Concepts ============================================ //
-// ChatGPT Se Liya Hua Syntex ---> Redux ki Basic Concepts. Redux mein kuch basic concepts hote hain jo aapko samajhna zaroori hai.
+// ChatGPT Se Liya Hua Syntex ---> Redux ki Basic Concepts. 
+// Redux mein state ka flow ek unidirectional hota hai, iska matlab hai ki data ek hi direction mein flow karta hai. Yeh flow 5 main cheezon pe based hota hai:  Actions, Reducers, Store ,Dispatch, Selector
 
-// 1.  Store: Redux mein store wo central location hai jahan aapke application ki state rakhi jati hai. Ye ek object hota hai jo aapke entire application ke state ko contain karta hai. Is store ko hum global state bhi keh sakte hain.
+// 1. Store: Redux mein store wo central location hai jahan aapke application ki state rakhi jati hai. Ye ek object hota hai jo aapke entire application ke state ko contain karta hai. Is store ko hum global state bhi keh sakte hain.
 
 // import { createStore } from 'redux';
 
@@ -47,14 +48,21 @@
 
 // 3. Reducer: Reducer ek function hota hai jo action ke basis par state ko update karta hai. Jab action dispatch hota hai, reducer ko call kiya jaata hai. Reducer ek "pure function" hota hai, jo ek state aur ek action ko input ke roop me leta hai aur naya state return karta hai. Yeh state ko directly modify nahi karta, balki ek naya object return karta hai.
 
-// const itemsReducer = (state = [], action) => {
-//   switch (action.type) {
-//     case 'ADD_ITEM':
-//       return [...state, action.payload];
-//     default:
-//       return state;
+// const initialState = {
+//     todos: []
+//   };
+//   function todoReducer(state = initialState, action) {
+//     switch (action.type) {
+//       case 'ADD_TODO':
+//         return {
+//           ...state,
+//           todos: [...state.todos, action.payload]
+//         };
+//       default:
+//         return state;
+//     }
 //   }
-// };
+  
 
 
 
