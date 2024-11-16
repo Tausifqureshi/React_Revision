@@ -10,8 +10,8 @@
 // Redux ko 2015 me Dan Abramov aur Andrew Clark ne develop kiya tha. Redux ka creation React ke ek major problem ko solve karne ke liye kiya gaya tha: state management. React me state ko manage karna kabhi kabhi complex ho sakta tha jab app bada ho jaata tha, aur components ke beech data share karna difficult hota tha. Redux ne is issue ko solve kiya aur ek predictable way me state ko manage kiya jisme ek centralized store rakha jaata hai.
 
 
-// ========================================== Redux Ki Key Concepts ============================================= //
-// ChatGPT Se Liya Hua Syntex ---> Redux Ka Core Principle.
+// ========================================= Redux Ka Core Principle: ============================================ //
+// ChatGPT Se Liya Hua Syntex ---> Redux Ka Core Principl.
 
 // 1. Single Source of Truth: Redux mein pura application ka state ek single store mein rakha jata hai.
 
@@ -21,9 +21,35 @@
 
 
 // ========================================== Redux ki Basic Concepts ============================================ //
-// ChatGPT Se Liya Hua Syntex ---> Redux ki Basic Concepts.
+// ChatGPT Se Liya Hua Syntex ---> Redux ki Basic Concepts. Redux mein kuch basic concepts hote hain jo aapko samajhna zaroori hai.
 
-// 1. 
+// 1.  Store: Redux mein store wo central location hai jahan aapke application ki state rakhi jati hai. Ye ek object hota hai jo aapke entire application ke state ko contain karta hai. Is store ko hum global state bhi keh sakte hain.
+
+// import { createStore } from 'redux';
+
+// const store = createStore(itemsReducer);
+// store.dispatch(addItemAction('Apple'));
+
+
+
+// 2. Action: Action ek plain JavaScript object hota hai jo state me changes karne ke liye dispatched kiya jaata hai. Action me do cheezein hoti hain:
+// type: Yeh string hota hai jo action ko define karta hai (for example, "ADD_ITEM").
+// payload: Yeh optional hota hai aur jo data action ke sath send kiya jaata hai (for example, ek new item jo add karna hai).
+
+// const addTodoAction = {
+//     type: 'ADD_TODO',
+//     payload: {
+//       id: 1,
+//       text: 'Learn Redux'
+//     }
+//   };
+  
+
+
+
+
+
+
 
 
 
