@@ -16,7 +16,7 @@ const store = configureStore({
     myCounterState: counterSlice,  // `counter` state ko manage karne ke liye humne `counterReducer` ko bind kiya hai.
     // Jab bhi `counter` state ko modify karne ka action dispatch hoga,
     // toh Redux us action ko `counterReducer` ke madhyam se samajhkar aur usko apply karke state ko update karega.
-
+  
   },
 });
 
