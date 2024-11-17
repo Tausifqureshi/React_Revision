@@ -50,7 +50,7 @@ export const counterSlice = createSlice({
 
       return { ...state, count: 0 }; // State ko reset karke count ko 0 set kar rahe hain
     },
-  },
+  },     
 });
 
 // Action creators ko export karte hain jisse components me inhe dispatch kar sakte hain
