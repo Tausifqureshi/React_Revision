@@ -49,7 +49,7 @@ export const counterSlice = createSlice({
       // state ko reset kar raha hai
 
       return { ...state, count: 0 }; // State ko reset karke count ko 0 set kar rahe hain
-    },
+    },   
   },     
 });
 
