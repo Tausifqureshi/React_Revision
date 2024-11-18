@@ -14,7 +14,7 @@ function MyComponent() {
     return <div style={divStyle}>Hello, Tausif!</div>;
   }
   
-
+    
 // ============================================== CSS Stylesheets ================================================ //
 // ChatGPT Se Liya Hua Syntex ---> 2. CSS Stylesheets: React.js me normal CSS files ko import karke use kiya ja sakta hai. Ye traditional approach hai aur React me bhi ye kaafi common hai.
 
