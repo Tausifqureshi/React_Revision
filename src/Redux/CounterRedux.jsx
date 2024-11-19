@@ -23,7 +23,6 @@ function CounterRedux() {
 
   const dispatch = useDispatch(); // `dispatch` function ko state ko update karne ke liye use kiya jata hai. Yeh function reducer ko call karta hai, jisse state update hoti hai. Jab bhi `dispatch` ko call kiya jata hai, woh ek action trigger karta hai jo action ke roop mein function incremnet or bhi jitne function  // Halaanki abhi hum action ko use nahi kar rahe, lekin yeh action milta hai aur process hota hai. ya malum hona chachiye ke parameter me milta hai
 
-
  
   
   return (
