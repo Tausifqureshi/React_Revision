@@ -181,20 +181,79 @@ const rootReducer = combineReducers({
 
 
 
-// =============================================================================================================== //
+// ================================================ useSelector ================================================== //
+// ChatGPT Se Liya Hua Syntex ---> useSelector - Redux Store se Data Fetch Karne Ka Tareeka.
+
+// useSelector ek hook hai jo directly Redux store se data fetch karta hai aur us data ko React component me use karne ke liye provide karta hai.
 
 
 
+import React from 'react';
+import { useSelector } from 'react-redux';
+
+const TodoList = () => {
+  const todos = useSelector((state) => state.todos);
+
+  return (
+    <div>
+      <h2>Todo List</h2>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id}>{todo.text}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+// ChatGPT Se Liya Hua Syntex ---> Kaise Kaam Karta Hai.
+// 1. useSelector ko ek callback function pass kiya jata hai (state) => state.todos, jisme state Redux store ki state hai.
+
+// 2. Ye Redux store se todos wala part uthata hai aur todos variable me daal deta hai.
+
+// 3. Jab bhi todos data me koi update hota hai, toh ye component automatically re-render ho jata hai, yani screen par naya data reflect ho jata hai.
 
 
 
+// =============================================== useDispatch =================================================== //
+// ChatGPT Se Liya Hua Syntex ---> useDispatch - Actions Dispatch Karne Ka Tareeka
+
+// useDispatch ek hook hai jo Redux store ko update karne ke liye actions dispatch (bhejne) ka tareeka provide karta hai. Iska kaam ye hai ki jab bhi aapko Redux store me koi data change karna ho, toh aap useDispatch se ek action bhejte hain jo reducer me jakar kaam karta hai aur state ko modify kar deta hai.
+
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTodo } from './todoSlice';
+
+const AddTodo = () => {
+  const [todoText, setTodoText] = useState('');
+  const dispatch = useDispatch();
+
+  const handleAddTodo = () => {
+    dispatch(addTodo({ id: Date.now(), text: todoText }));
+    setTodoText(''); // Input field reset
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={todoText}
+        onChange={(e) => setTodoText(e.target.value)}
+      />
+      <button onClick={handleAddTodo}>Add Todo</button>
+    </div>
+  );
+};
 
 
+// ChatGPT Se Liya Hua Syntex ---> Kaise Kaam Karta Hai.
 
+// 1. useDispatch ek function hai jo dispatch function return karta hai.
 
+// 2. dispatch ka use karke aap actions ko Redux store tak pohcha sakte hain.
 
+// 3. handleAddTodo function me dispatch(addTodo({ id, text })) se addTodo action ko bheja jata hai.
 
-
+// 4. Ye addTodo action todoSlice me jakar store me ek naya todo item add kar deta hai.
 
 
 
