@@ -25,9 +25,10 @@ export const counterSlice = createSlice({
   reducers: {
     // Increment reducer: `count` ko 1 se badhata hai
 
-    increment: (state, action) => { // ye share function ke pass state ka acces hoga pura and action ka bhi hotahai. dispatch: Ye ek function hai jo actions ko trigger karta hai.action { type: "increment" } aisa 
-
+    increment: (state, action) => { // ye share function ke pass state ka acces hoga pura and action ka bhi hota hai. 
       // state ko increment kar raha hai
+
+      // state.count += 1; // aisa bhi kar sakte hai
 
       // State ko shallow copy karke `count` me 1 add karke naya state return kar rahe hain
       return { ...state, count: state.count + 1 }; // `count` ki value ko badha rahe hain
@@ -39,7 +40,10 @@ export const counterSlice = createSlice({
 
       // Agar `count` 0 se bada hai to 1 minus karta hai, warna state change nahi hoti
       if (state.count > 0) {
+        // state.count -= 1; // aisa bhi kar sakte hai
+
         return { ...state, count: state.count - 1 }; // `count` ko decrease kar rahe hain
+
       }
       return state; // Agar `count` 0 hai to wahi state return kar dete hain bina kisi change ke
     },
@@ -47,6 +51,8 @@ export const counterSlice = createSlice({
     // Reset reducer: `count` ko dobara 0 par set kar deta hai
     reset: (state, action) => {
       // state ko reset kar raha hai
+
+      // state.count = 0; // aisa bhi kar sakte hai
 
       return { ...state, count: 0 }; // State ko reset karke count ko 0 set kar rahe hain
     },   

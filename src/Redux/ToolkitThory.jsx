@@ -258,11 +258,52 @@ const AddTodo = () => {
 
 
 
+// =================================================== Name ====================================================== //
+// ChatGPT Se Liya Hua Syntex --->  Redux Toolkit me name ka use aksar slice ke naam ko define karne ke liye kiya jata hai. Ye ek property hoti hai jo Redux ke slice ko identify karne ka kaam karti hai.
+
+// ChatGPT Se Liya Hua Syntex ---> name ka use case.
+// 1. Jab aap Redux Toolkit ka slice banate ho, to aapko createSlice function ka use karte waqt name ki property specify karni hoti hai.
+
+// 2. name slice ke actions aur reducers ko uniquely identify karne me madad karta hai.
+
+// 3. Ye reducer ke action type ko create karne me bhi madad karta hai
+
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+  value: 0,
+};
+
+const counterSlices = createSlice({
+  name: 'counter',  // name property ka use
+  initialState,
+  reducers: {
+    increment: (state) => {
+      state.value += 1;
+    },
+    decrement: (state) => {
+      state.value -= 1;
+    },
+  },
+});
+
+// export const { increment, decrement } = counterSlice.actions;
+// export default counterSlice.reducer;
 
 
 
+// ChatGPT Se Liya Hua Syntex ---> Key Points:
+// 1. Slice identification: name slice ko identify karne ke liye use hota hai, jisse action types generate karte waqt uniquely identify kiya jata hai.
 
+// 2. Action Types Generation: Agar aap name: 'counter' rakhte ho, to actions ke types kuch is tarah generate honge:
+// 'counter/increment'
+// 'counter/decrement'
 
+// 3. Code clarity: Ye name property se Redux store mein aapke slice ka purpose clear hota hai aur maintain karne mein asani hoti hai.
+
+// 4. Debugging: name se actions aur reducers ko easily debug kiya ja sakta hai, kyunki action type ko trace karna simple hota hai.
+
+// =============================================================================================================== //
 
 
 
