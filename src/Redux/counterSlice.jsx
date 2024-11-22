@@ -4,7 +4,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // Counter ka initial state set kar rahe hain jisme `count` ki shuruaat 0 se ho rahi hai
-const initialState = { count: 0 };
+const initialState = { count: 0 }; 
 
 // Ek slice bana rahe hain jo `counterSlice` ke naam se export hoga
 // `createSlice` ek Redux Toolkit ka function hai jo aapko reducers aur actions ko ek hi jagah define karne ki suvidha deta hai.
