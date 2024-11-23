@@ -61,7 +61,7 @@ export const counterSlice = createSlice({
 
 // Action creators ko export karte hain jisse components me inhe dispatch kar sakte hain
 export const { increment, decrement, reset } = counterSlice.actions;
-console.log(counterSlice.actions); //Actions mile ga yaha se kya action perform karn hai.
+//console.log(counterSlice.actions); //Actions mile ga yaha se kya action perform karn hai.
 
 // Reducer ko export karte hain jisse store me use kar sakein
 export default counterSlice.reducer;
