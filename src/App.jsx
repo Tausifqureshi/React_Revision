@@ -27,6 +27,7 @@ import Z from "./Z";
 import Memoize_React from "./React Perfomance and Advance Hook/MemoizeAllConsept";
 import MemoizeAllConsept from "./React Perfomance and Advance Hook/MemoizeAllConsept";
 import Redux from "./Redux/Redux";
+import ReduxThunk from "./Redux Thunk/ReduxThunk";
 
 
 export default function App() {
@@ -95,7 +96,10 @@ export default function App() {
 
        
        {/* Redux File use */}
-       <Redux />
+       {/* <Redux /> */}
+
+       {/* Redux Thunk File use */}
+       <ReduxThunk />
 
 
 
