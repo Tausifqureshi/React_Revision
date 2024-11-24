@@ -162,7 +162,7 @@ const rootReducer = combineReducers({
 // =================================== Differences Redux and Redux ToolKit ====================================== //
 // ChatGPT Se Liya Hua Syntex --->  Differences Redux and Redux ToolKit.
 
-// Redux:
+// Redux: 
 // 1. Manual setup: Actions, reducers, aur store manually setup karna padta hai.
 
 // 2. Boilerplate code: Redux me kaafi boilerplate code likhna padta hai.

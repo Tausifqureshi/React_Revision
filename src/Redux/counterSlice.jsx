@@ -19,7 +19,7 @@ export const counterSlice = createSlice({
 
   // Initial state define kar rahe hain jo slice ki shuruaati value hogi
   // `initialState` me humne `count` ki initial value 0 set ki hai. Yeh store me default value hogi.
-  initialState: initialState,
+  initialState: initialState, 
 
   // Reducers: Yeh functions hain jo state ko update karte hain based on actions
   reducers: {

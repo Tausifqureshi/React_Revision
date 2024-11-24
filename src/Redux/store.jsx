@@ -5,7 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 // `counterSlice` se `counterSlice` ko import kar rahe hain. Yeh counter ki state aur uske changes (increment, decrement) ko control karta hai.
 import counterSlice from "./counterSlice"; 
-
+ 
 // Redux store ko configure aur banate hain
 const store = configureStore({
 
