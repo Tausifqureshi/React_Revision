@@ -96,10 +96,10 @@ export default function App() {
 
        
        {/* Redux File use */}
-       <Redux />
+       {/* <Redux /> */}
 
        {/* Redux Thunk File use */}
-       {/* <ReduxThunk /> */}
+       <ReduxThunk />
 
 
 
