@@ -5,15 +5,16 @@
       "title": "book tickets",
       "completed" : false
     },
-    
+
     {
       "id": 2,
-      "title": "book tickets",
+      "title": "play cricket",
       "completed" : true
     },
+
     {
       "id": 3,
-      "title": "book tickets",
+      "title": "play game",
       "completed" : false
     }
 
