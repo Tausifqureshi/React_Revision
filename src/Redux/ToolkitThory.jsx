@@ -305,13 +305,10 @@ const counterSlices = createSlice({
 
 
 
-// =============================================================================================================== //
 // ChatGPT Se Liya Hua Syntex ---> Haan, bilkul sahi samjha aapne.
-
 // name ka use sirf createSlice ke andar hota hai. Yeh slice ka naam hota hai, jo aapke actions aur reducers ko identify karne mein help karta hai. Yeh dispatching actions aur slice ke actions ke liye use hota hai.
 
 // reducer ke andar, jab aap store configure karte hain, toh jo key (e.g., myCounterState) aap configureStore mein define karte hain, wahi key state ko represent karti hai Redux store mein. Is key se hi aap state ko access karte hain.
-
 
 // ChatGPT Se Liya Hua Syntex ---> Clear explanation:
 // 1. name in createSlice:
