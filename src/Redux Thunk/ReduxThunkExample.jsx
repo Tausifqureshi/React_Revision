@@ -1,15 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
-
-
-
+import FormTodos from "./FormTodos";
+import ListTodos from "./ListTodos";
 function ReduxThunkExample() {
-  useSelector((state)=>{
-    console.log("state mil ri hai", state);
-  })
-  return <div>
-     <h1> ReduxThunkExample </h1>
-  </div>; 
+  return (
+    <div>
+      <FormTodos />
+      <ListTodos />
+    </div>
+  );
 }
 
 export default ReduxThunkExample;
