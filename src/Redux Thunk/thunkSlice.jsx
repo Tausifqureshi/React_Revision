@@ -7,7 +7,7 @@ const thunkSlice = createSlice({
     error: null,
 },
 
-
+  
 reducers: {},
 })
 
