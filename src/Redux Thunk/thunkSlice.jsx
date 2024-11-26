@@ -15,7 +15,7 @@ import axios from "axios";
 
 export const fetchDatat = createAsyncThunk("todos/fetch", async()=>{
 const response = await axios.get("http://localhost:8001/todo");
-console.log(response);
+console.log("Respons Data Get",response.data);
 return response.data;  // Response ke data ko return karein
 })
 
