@@ -21,7 +21,7 @@ function ListTodos() {
   if (error) return <p>Error: {error}</p>;
   return <div>
     <h1>Todos List</h1>
-      <ul>
+      <ul>   
         {todos.length === 0 ? (
           <p>No todos available.</p>
         ) : (
