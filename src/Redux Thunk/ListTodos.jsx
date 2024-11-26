@@ -16,7 +16,18 @@ function ListTodos() {
     dispatch(fetchDatat()); // Thunk function ko dispatch karenge
   }, [dispatch]); // dispatch ko dependency array mein dena zaroori hai
 
-  return <div>ListTodos</div>;
+  return <div>
+    <h1>Todos List</h1>
+      <ul>
+        {todos.length === 0 ? (
+          <p>No todos available.</p>
+        ) : (
+          todos.map((todo) => (
+            <li key={todo.id}>{todo.title}</li> // Map kar ke todos ko display karenge
+          ))
+        )}
+      </ul>
+  </div>;
 }
 
 export default ListTodos;
