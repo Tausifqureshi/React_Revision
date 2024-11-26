@@ -19,6 +19,12 @@ console.log("Respons Data Get",response.data);
 return response.data;  // Response ke data ko return karein
 })
 
+export const addTodos = createAsyncThunk("todos/add", async()=>{
+const response = await axios.post("http://localhost:8001/todo");
+console.log("Respons Data Get",response.data);
+return response.data;  // Response ke data ko return karein
+})
+
 const thunkSlice = createSlice({
   name: "todos",
   initialState: { data: [], loading: false, error: null },
