@@ -1,7 +1,12 @@
 import React from "react";
-import { Provider } from "react-redux";
+import { useSelector } from "react-redux";
+
+
 
 function ReduxThunkExample() {
+  useSelector((state)=>{
+    console.log(state);
+  })
   return <div>
      <h1> ReduxThunkExample </h1>
   </div>; 
