@@ -1,14 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodos } from "./thunkSlice";
 
 function FormTodos() {
+ const dispatch = useDispatch();
   const [title, setTitle] = useState("");
-  function addTodos(e){
-    e.preventDefault()
 
+  function submitHandler(e){
+    e.preventDefault();
+    dispatch(addTodos(title))
+    setTitle("");
   }
 
   return (
-    <form onSubmit={addTodos}>
+    <form onSubmit={submitHandler}>
       <div style={{width: "20rem", margin: "1rem"}}>
       <input 
         type="text"
