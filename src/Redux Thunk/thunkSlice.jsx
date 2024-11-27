@@ -29,8 +29,8 @@ export const addTodos = createAsyncThunk("todos/add", async (title) => {
 });
 
 export const deleteTodos = createAsyncThunk("todos/delete", async (id) => {
-  const response = await axios.patch(`http://localhost:8001/todo/${id}`);
-  console.log("Delete Datat", response.data);
+  const response = await axios.delete(`http://localhost:8001/todo/${id}`);
+  console.log("Delete Datat", response);
   return id; // Sirf ID return karein
 });
 
@@ -85,7 +85,6 @@ const thunkSlice = createSlice({
         state.loading = true; // Jab tak data load ho raha hai
         console.log("padding state addTodos...");
       })
-
       // `fulfilled` case, jab data successfully fetch ho gaya ho
       .addCase(addTodos.fulfilled, (state, action) => {
         // jo uperr axios me datat return kar re hai o is fulfiled wale me mile ga action.payload me
@@ -115,7 +114,7 @@ const thunkSlice = createSlice({
         // jo uperr axios me datat return kar re hai o is fulfiled wale me mile ga action.payload me
         console.log("actions mil ra hai yaha se fulfiled ka Delete", action);
         state.loading = false; // Loading ko false set karna.
-        state.data = state.data.filter((todo) => todo.id !== action.meta.arg); // Deleted item ko state se hataen
+        state.data = state.data.filter((todo) => todo.id !== action.payload); // Deleted item ko state se hataen
       })
       // `rejected` case, jab data fetch mein error aaye
       .addCase(deleteTodos.rejected, (state, action) => {
