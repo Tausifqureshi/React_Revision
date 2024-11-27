@@ -140,8 +140,7 @@ const thunkSlice = createSlice({
         state.loading = false; // Loading ko false set karna.
         state.data.forEach((todo) => {
             if (todo.id === action.payload.id) {
-              todo.completed  = todo.completed ; // `completed` status toggle karein
-             
+              todo.completed  = action.payload.completed ; // `completed` status toggle karein
             }
           });
       })
