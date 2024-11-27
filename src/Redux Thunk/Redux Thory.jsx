@@ -14,5 +14,6 @@
 
 
 
-// ============================================= Redux Middleware =============================================== //
-// ChatGPT Se Liya Hua Syntex ---> 
+// ====================================== Redux Middleware Kya hota hai ========================================= //
+// ChatGPT Se Liya Hua Syntex --->  Middleware kya hota hai Redux mein?
+// Middleware ek aisa function hai jo Redux store ke dispatch() method aur reducer ke beech aata hai. Ye action ko intercept kar sakta hai, usko modify kar sakta hai ya naye actions dispatch kar sakta hai.
