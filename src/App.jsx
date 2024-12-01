@@ -86,7 +86,7 @@ export default function App() {
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}
-      {/* <ReactRouter /> */}
+      <ReactRouter />
 
       {/* React-Router New Features File */}
       {/* <NewFeatures /> */}
@@ -99,7 +99,7 @@ export default function App() {
        {/* <Redux /> */}
 
        {/* Redux Thunk File use */}
-       <ReduxThunk />
+       {/* <ReduxThunk /> */}
 
 
 

@@ -27,7 +27,7 @@ const router = createBrowserRouter(
 
       <Route
         path="post"
-        element={
+        element={   
           <ProtectedRoutes>
             <Post />
           </ProtectedRoutes> 
