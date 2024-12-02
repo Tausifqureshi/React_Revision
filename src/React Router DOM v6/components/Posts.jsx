@@ -15,8 +15,8 @@ function Posts({id, name}) {
   {/* Id ko string me chang kar re hai q ke o integer me mil ri hai id. id se hi ham jis number ki post pe click only ohi single show hoga postdetails me*/}
  
    <h1>{id}</h1>
-
-  </div>;
+ 
+  </div>; 
   </>
 
 

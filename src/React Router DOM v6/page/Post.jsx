@@ -19,7 +19,7 @@ function Post() {
       console.log(error);
      setIsError(error.message) ; // Error message ko state mein set karna.
     }
-  }
+  } 
   useEffect(() => {
     fetchData();
   }, []);
