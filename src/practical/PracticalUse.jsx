@@ -17,7 +17,7 @@ function PracticalUse() {
     //   return person.id === id ? { ...person, age: newAge } : person;
     // });
     // setUsers(updatedUsers);
-
+  
     // Aisa bhi kar sakte hai map ka use age + 1.
     setUsers((previousState)=>{  //previousState ek callBcak function lera hai.
       return previousState.map((person)=>{
