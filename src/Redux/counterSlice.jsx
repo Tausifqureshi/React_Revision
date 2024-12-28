@@ -1,6 +1,6 @@
 // Slice ko aise samajh sakte hain ki ek application me kai features ho sakte hain. Har feature ke liye alag-alag actions aur reducers ho sakte hain, jo us feature ki state ko manage karte hain.
 
-// Redux Toolkit se `createSlice` ko import kar rahe hain
+// Redux Toolkit se `createSlice` ko import kar rahe hain 
 import { createSlice } from "@reduxjs/toolkit";
 
 // Counter ka initial state set kar rahe hain jisme `count` ki shuruaat 0 se ho rahi hai

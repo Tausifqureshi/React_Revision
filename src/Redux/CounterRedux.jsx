@@ -8,8 +8,8 @@ function CounterRedux() {
   // `useSelector` ko use karte hain taaki hum Redux store se required state ko safely read kar sakein.
   // Yahan `state.counter.count` ko access kar rahe hain, jisme `counter` slice ke andar `count` value stored hai.
   // const {count} = useSelector((state) => state.myCounterState); // yahan 'count' safe access ho raha hai
-
-  const {count} = useSelector((state) => {  //useSelector se koi bhi state ko slect kar sakte hai. count kodestructure  ke nikal re hai. aisa bhi kar sakte hai jaisa upper ai vaisa bbi kar sakte hai
+ 
+  const {count} = useSelector((state) => {  //useSelector se koi bhi state ko slect kar sakte hai. count ko destructure  ke nikal re hai. aisa bhi kar sakte hai jaisa upper ai vaisa bhi kar sakte hai
     console.log("state mile gi yaha se myCounterState state hai",state);
     return state.myCounterState
 
