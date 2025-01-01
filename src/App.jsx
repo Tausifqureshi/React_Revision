@@ -62,7 +62,7 @@ export default function App() {
 
       {/* Practical-File */}
       {/* <PracticalUse /> */}
-      <Dymi />
+      {/* <Dymi /> */}
 
       {/* <ControlledComponent /> */}
 
@@ -99,7 +99,7 @@ export default function App() {
        {/* <Redux /> */}
 
        {/* Redux Thunk File use */}
-       {/* <ReduxThunk /> */}
+       <ReduxThunk />
 
 
 

@@ -27,7 +27,7 @@ function NavBarRoot() {
             {isLogin &&  <li onClick={logOut}>LogOut</li>}
             {/* User Login tohi logout ka button show hoga warna login button show hoga */}
           </ul>
-          
+ 
         </nav>
       </header>
 

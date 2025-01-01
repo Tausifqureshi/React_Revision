@@ -10,7 +10,7 @@ import axios from "axios";
 //       // Agar error ho, toh error ko return karein
 //       throw Error(error.message);
 //     }
-//   });
+//   }); 
 
 export const fetchDatat = createAsyncThunk("todos/fetch", async () => {
   const response = await axios.get("http://localhost:8001/todo");
@@ -102,6 +102,8 @@ const thunkSlice = createSlice({
         state.error = action.error.message; // Error ko state mein store karna
       });
 
+
+
     // Delete Todos
     builder
       .addCase(deleteTodos.pending, (state) => {
@@ -157,3 +159,5 @@ const thunkSlice = createSlice({
 });
 
 export default thunkSlice.reducer;
+
+// json-server --watch db.json --port 800 //json server start karenge ke liye hai yr command
