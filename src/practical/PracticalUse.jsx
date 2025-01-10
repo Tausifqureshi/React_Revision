@@ -10,11 +10,11 @@ function PracticalUse() {
     { id: 2, name: "Jane Smith", age: 30 },
     { id: 3, name: "Eoin Morgan", age: 27 },
   ]);
-    
+     
   function updateAge(userId, newAge) {
-    console.log("clicked");
+    console.log("clicked", userId, newAge);
     const updatedUsers = users.map((person) => {
-      return person.id === id ? { ...person, age: newAge } : person;
+      return person.id === userId ? { ...person, age: newAge } : person;
     });
     setUsers(updatedUsers);
   

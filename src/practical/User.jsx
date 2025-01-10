@@ -1,6 +1,6 @@
 // import React from "react";
 // // Destructuring the userDetails object.
-// function User({ id, name, age, clickEvent }) {
+// function User({ id, name, age, click }) {
 //   return (
 //     <>
 //       <div
@@ -26,7 +26,7 @@
 //         </p>
 //         <button
 //           onClick={() => {
-//             clickEvent(id,  age + 1);
+//             click(id,  age + 1);
 //           }}
 //         >
 //           Increase Age
@@ -66,7 +66,7 @@ function User({ id, name, age, click, removeUser }) {
           <strong>Age:</strong> {age}
         </p> 
         {/* If condition use Practical file me tu is tara se call funcation */}
-        <button onClick={() => { click (id);}}> Increase Age </button>
+        <button onClick={() => { click (id, age + 1);}}> Increase Age </button>
 
 
         {/* <button onClick={() => { click (id, age + 1);}}> Increase Age </button> */}
