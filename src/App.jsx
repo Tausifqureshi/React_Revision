@@ -61,7 +61,7 @@ export default function App() {
       {/* <MultiInputForm /> */}
 
       {/* Practical-File */}
-      {/* <PracticalUse /> */}
+      <PracticalUse />
       {/* <Dymi /> */}
 
       {/* <ControlledComponent /> */}
@@ -99,7 +99,7 @@ export default function App() {
        {/* <Redux /> */}
 
        {/* Redux Thunk File use */}
-       <ReduxThunk />
+       {/* <ReduxThunk /> */}
 
 
 

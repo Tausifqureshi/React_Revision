@@ -13,21 +13,21 @@ function PracticalUse() {
     
   function updateAge(userId, newAge) {
     console.log("clicked");
-    // const updatedUsers = users.map((person) => {
-    //   return person.id === id ? { ...person, age: newAge } : person;
-    // });
-    // setUsers(updatedUsers);
+    const updatedUsers = users.map((person) => {
+      return person.id === id ? { ...person, age: newAge } : person;
+    });
+    setUsers(updatedUsers);
   
     // Aisa bhi kar sakte hai map ka use age + 1.
-    setUsers((previousState)=>{  //previousState ek callBcak function lera hai.
-      return previousState.map((person)=>{
-        if (person.id === userId) {
-          return {...person, age : person.age +1}
-        } else{
-          return person
-        }
-      })
-    }) 
+    // setUsers((previousState)=>{  //previousState ek callBcak function lera hai.
+    //   return previousState.map((person)=>{
+    //     if (person.id === userId) {
+    //       return {...person, age : person.age +1}
+    //     } else{
+    //       return person
+    //     }
+    //   })
+    // }) 
   } 
 
   function removeUser(userId) {
