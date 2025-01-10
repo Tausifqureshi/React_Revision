@@ -61,7 +61,7 @@ export default function App() {
       {/* <MultiInputForm /> */}
 
       {/* Practical-File */}
-      <PracticalUse />
+      {/* <PracticalUse /> */}
       {/* <Dymi /> */}
 
       {/* <ControlledComponent /> */}
@@ -92,7 +92,7 @@ export default function App() {
       {/* <NewFeatures /> */}
 
       {/* React Performance and Advance Hook and Memoize*/}
-      {/* <MemoizeAllConsept/> */}
+      <MemoizeAllConsept/>
 
        
        {/* Redux File use */}
