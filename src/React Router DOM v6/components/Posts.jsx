@@ -8,7 +8,7 @@ function Posts({id, name}) {
   <div style={{
     border: "1px solid #232323"
   }}>
-
+  
   {/* ye Post page hai is components me share ke share post show hoge */}
 
   <Link to={id.toString()}> <h1> {name} </h1> </Link>

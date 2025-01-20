@@ -21,7 +21,7 @@ function Post() {
     }
   } 
   useEffect(() => {
-    fetchData();
+    fetchData();  
   }, []);
   return (
       <div className="">

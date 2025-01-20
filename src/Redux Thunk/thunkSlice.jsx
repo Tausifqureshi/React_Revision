@@ -48,7 +48,7 @@ const thunkSlice = createSlice({
   initialState: { data: [], loading: false, error: null },
 
   reducers: {}, //Synchronous actions ke liye.
-
+  
   extraReducers: (builder) => {
     // Async thunk ke liye.
     // `builder` Redux Toolkit ka helper hai jo asynchronous actions ko handle karta hai.
