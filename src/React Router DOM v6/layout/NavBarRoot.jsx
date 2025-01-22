@@ -30,7 +30,7 @@ function NavBarRoot() {
  
         </nav>
       </header>
-
+  
       <main className={styles.mainContent}>
         <h1>Main Content</h1>
         <Outlet /> {/* Yeh component current route ke andar jo bhi child route hoga, uska component yahan render karega yani dikhayega. Iska use nested routes dikhane ke liye hota hai. Note karein ki yeh 'children' prop se alag hai. */}
