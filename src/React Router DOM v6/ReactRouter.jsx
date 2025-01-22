@@ -46,7 +46,14 @@ const router = createBrowserRouter(
       <Route path="*" element={<Error />} />
       {/* Agar koi path match nahi hota, to Error component dikhai dega. "*" wildcard path ko represent karta hai */}
     </Route>
-  )
+
+    
+  ),
+  {
+    future: {
+      v7_startTransition: true, // Future flag enable kiya gaya
+    },
+  }
 );
 
 function ReactRouter() {

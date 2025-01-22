@@ -54,3 +54,59 @@ function InputBox({
 }
 
 export default InputBox;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<NavBarRoot />}>
+      <Route path="home" element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
+      <Route
+        path="post"
+        element={   
+          <ProtectedRoutes>
+            <Post />
+          </ProtectedRoutes>  
+        }
+      /> 
+      <Route
+        path="post/:id"
+        element={
+          <ProtectedRoutes>
+            <PostDetails /> 
+          </ProtectedRoutes>
+        }
+      />
+      <Route path="login" element={<Login />} />
+      <Route path="*" element={<Error />} />
+    </Route>
+  ),
+  {
+    future: {
+      v7_startTransition: true, // Future flag enable kiya gaya
+    },
+  }
+);
+
+function App() {
+  return <RouterProvider router={router} />;
+}
+
+export default App;
