@@ -56,7 +56,7 @@ const thunkSlice = createSlice({
 
     console.log("builder ke ander builder method mile ge", builder);
     // Output mein builder ke methods milenge, jaise addCase, addMatcher, addDefaultCase.
-
+    
     // `pending` case, jab data load ho raha ho
     builder
       .addCase(fetchDatat.pending, (state) => {
