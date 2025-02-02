@@ -13,8 +13,8 @@ import axios from "axios";
 //   }); 
 
 export const fetchDatat = createAsyncThunk("todos/fetch", async () => {
-  const response = await axios.get("http://localhost:8001/todo");
-  // console.log("Respons Data Get",response.data);
+  const response = await axios.get("https://fakestoreapi.com/products");
+  console.log("Respons Data Get",response.data);
   return response.data; // Response ke data ko return karein
 });
 
@@ -56,7 +56,7 @@ const thunkSlice = createSlice({
 
     console.log("builder ke ander builder method mile ge", builder);
     // Output mein builder ke methods milenge, jaise addCase, addMatcher, addDefaultCase.
-    
+
     // `pending` case, jab data load ho raha ho
     builder
       .addCase(fetchDatat.pending, (state) => {
