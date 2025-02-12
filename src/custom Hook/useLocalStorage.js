@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+ 
 export default function useLocalStorage(key, initialValue) {
   const [names, setNames] = useState(""); //setName ke liye ye state hai.
   const [state, setState] = useState(() => { //user ki input lene ke liye ye state hai. 
