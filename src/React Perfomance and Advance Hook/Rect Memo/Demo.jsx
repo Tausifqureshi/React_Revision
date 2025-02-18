@@ -6,7 +6,7 @@ function Demo() {
   const [state1, setState1] = useState(false);
   const [state2, setState2] = useState(false);
 
-  function checkboxHandle(event) {
+  function checkboxHandle(event) { 
     const { name, checked } = event.target;
     // console.log("Name Render", event.target.name);
     // console.log("Checked Render", event.target.checked);.

@@ -15,10 +15,10 @@ function MemoizeAllConsept() {
      {/* <ReactMemo /> */}
 
 
-    {/* <UseMemoHook /> */}
+    <UseMemoHook />
 
 
-    <UseCallBackHook />
+    {/* <UseCallBackHook /> */}
   </div>;
 }
 
