@@ -92,14 +92,14 @@ export default function App() {
       {/* <NewFeatures /> */}
 
       {/* React Performance and Advance Hook and Memoize*/}
-      <MemoizeAllConsept/>
+      {/* <MemoizeAllConsept/> */}
 
        
        {/* Redux File use */}
        {/* <Redux /> */}
 
        {/* Redux Thunk File use */}
-       {/* <ReduxThunk /> */}
+       <ReduxThunk />
 
 
 

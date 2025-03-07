@@ -13,13 +13,14 @@ import axios from "axios";
 //   }); 
 
 export const fetchDatat = createAsyncThunk("todos/fetch", async () => {
-  const response = await axios.get("https://fakestoreapi.com/products");
+  // const response = await axios.get("https://fakestoreapi.com/products");
+  const response = await axios.get("http://localhost:800/todo");
   console.log("Respons Data Get",response.data);
   return response.data; // Response ke data ko return karein
 });
 
 export const addTodos = createAsyncThunk("todos/add", async (title) => {
-  const response = await axios.post("http://localhost:8001/todo", {
+  const response = await axios.post("http://localhost:800/todo", {
     // post request hai ye.
     title: title,
      completed : false,
@@ -29,14 +30,14 @@ export const addTodos = createAsyncThunk("todos/add", async (title) => {
 });
 
 export const deleteTodos = createAsyncThunk("todos/delete", async (id) => {
-  const response = await axios.delete(`http://localhost:8001/todo/${id}`);
+  const response = await axios.delete(`http://localhost:800/todo/${id}`);
   console.log("Delete Datat", response);
   return id; // Sirf ID return karein
 });
 
 
 export const toggleTodos = createAsyncThunk("todos/toggle", async ({ id, completed }) => {
-    const response = await axios.patch(`http://localhost:8001/todo/${id}`, {
+    const response = await axios.patch(`http://localhost:800/todo/${id}`, {
       completed: !completed, // Toggling the completed status
     });
     return response.data; // Return the updated todo

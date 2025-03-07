@@ -11,7 +11,7 @@ function FormTodos() {
     dispatch(addTodos(title))
     setTitle("");
   }
-
+  
   return (
     <form onSubmit={submitHandler}>
       <div style={{width: "20rem", margin: "1rem"}}>
