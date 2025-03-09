@@ -10,7 +10,7 @@ function ProtectedRoutes({children}) {
     if(isLogin){   
         return children;// Children Post components  hai is protectedRoutes components ka.user Login tohi Post components show hoga warna loginpage pe navigate kar dega else wala first login karna hoga.
     } else {
-        return <Navigate to='/login' replace state={{
+        return <Navigate to='/login' replace state={{ 
             PreviousPathname: location.pathname,
         }}/>;  
         // Jab kisi component ko return karte hue navigation karni hoti hai, to <Navigate> ka use hota hai. Lekin agar programmatically, kisi function ke andar se navigation karni ho, to useNavigate hook ka use karte hain. Dono ka kaam navigation karna hai, lekin <Navigate> component rendering ke time hota hai aur useNavigate functional logic ke time.
