@@ -16,7 +16,7 @@ function ProtectedRoutes({children}) {
         // Jab kisi component ko return karte hue navigation karni hoti hai, to <Navigate> ka use hota hai. Lekin agar programmatically, kisi function ke andar se navigation karni ho, to useNavigate hook ka use karte hain. Dono ka kaam navigation karna hai, lekin <Navigate> component rendering ke time hota hai aur useNavigate functional logic ke time.
 
       }
-
+ 
   
 }
 

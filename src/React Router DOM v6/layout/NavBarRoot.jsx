@@ -11,7 +11,7 @@ function NavBarRoot() {
     setIsLogin(false); // Agar user login hai, toh navbar mein logout button dikhai dega. Logout karne par post components ka data nahi dikhai dega; user ko pehle login karna hoga.
 
   }
- 
+              
   return (
     <div className={styles.container}> 
       <header className={styles.navbarContainer}>
