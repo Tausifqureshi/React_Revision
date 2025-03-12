@@ -290,7 +290,7 @@ const counterSlices = createSlice({
 // export const { increment, decrement } = counterSlice.actions;
 // export default counterSlice.reducer;
 
-
+ 
 
 // ChatGPT Se Liya Hua Syntex ---> Key Points:
 // 1. Slice identification: name slice ko identify karne ke liye use hota hai, jisse action types generate karte waqt uniquely identify kiya jata hai.
