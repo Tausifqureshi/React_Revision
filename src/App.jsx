@@ -99,7 +99,7 @@ export default function App() {
        {/* <Redux /> */}
 
        {/* Redux Thunk File use */}
-       <ReduxThunk />
+       {/* <ReduxThunk /> */}
 
 
 
