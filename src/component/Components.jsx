@@ -7,7 +7,7 @@
 
 //  Function Components.
 //  Class Components.
-
+ 
 
 // 1. Function components: Function components simple JavaScript functions hote hain jo JSX (JavaScript XML) return karte hain. Ye components stateless hote hain, matlab ye apne andar state ko manage nahi karte. Lekin, React 16.8 se hooks ka use karke function components me bhi state ko manage kar sakte hain.
 // import React from 'react';
