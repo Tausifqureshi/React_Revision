@@ -88,7 +88,7 @@ function MyComponent() {
     return () => {
       console.log('Component unmounted');
     };
-  }, []);
+  }, []);   
 
   return <div>Check the console for lifecycle effects</div>;
 }
