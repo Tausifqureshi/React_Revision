@@ -53,9 +53,9 @@ export default UserList;
 //     { id: 1, name: 'Apple' },
 //     { id: 2, name: 'Banana' },
 //     { id: 3, name: 'Cherry' },
-// ];
+// ];        
  
-// function UserList() {
+// function UserList() {   
 //   return (
 //     <>
 //       {/* Short syntax without return keyword */}
