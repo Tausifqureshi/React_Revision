@@ -101,10 +101,10 @@ export default function App() {
        {/* Redux Thunk File use */}
        {/* <ReduxThunk /> */}
         
-        
-      {/* <Z /> */}
-     {/* <p>lorem30</p> */}
 
+      {/* <Z /> */}
+   
+   
 
     </div>
   );
