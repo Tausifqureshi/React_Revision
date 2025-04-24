@@ -39,7 +39,7 @@ export default function App() {
       <h1> Hello {lastName("Quraishi")} </h1> */}
 
       {/* Evnet-componet-file */}
-      <EventChapter />
+      {/* <EventChapter /> */}
 
       {/* Porps-componet-file */}
       {/* <PropsChap /> */}
@@ -61,7 +61,7 @@ export default function App() {
       {/* <MultiInputForm /> */}
 
       {/* Practical-File */}
-      {/* <PracticalUse /> */}
+      <PracticalUse />
       {/* <Dymi /> */}
  
       {/* <ControlledComponent /> */}
