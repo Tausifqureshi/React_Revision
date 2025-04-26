@@ -1,7 +1,7 @@
 import React from "react";
 import User from "./User";
 
-function Users({ userDetaisl , onClickEvent, remove}) {
+function Users({ userDetaisl , onClickEvent, remove, onDecreaseEvent}) {
   return ( 
     <>
       {userDetaisl.map((userValue) => {
@@ -15,7 +15,7 @@ function Users({ userDetaisl , onClickEvent, remove}) {
         ); */
         }  
   
-        return <User key={userValue.id} {...userValue}  click = { onClickEvent }  removeUser={remove}/>;
+        return <User key={userValue.id} {...userValue}  click = { onClickEvent }  decrease={onDecreaseEvent} removeUser={remove}/>;
         {/* sperade oprator use kar ke pura ke pura object hi pass kar sakte User-File me parameter Destructuring kar ke id name age nikal lega. clickEvnet pass kar re hai ham props me updateAge function ka referance User.file me.
 
         

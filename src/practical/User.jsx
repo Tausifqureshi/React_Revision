@@ -41,7 +41,7 @@
 import React from "react";
 
 // Destructuring the userDetails object.
-function User({ id, name, age, click, removeUser }) {
+function User({ id, name, age, click, removeUser,decrease }) {
   return (
     <>
       <div
@@ -66,11 +66,12 @@ function User({ id, name, age, click, removeUser }) {
           <strong>Age:</strong> {age}
         </p> 
         {/* If condition use Practical file me tu is tara se call funcation */}
-        <button onClick={() => { click (id, age + 1);}}> Increase Age </button>
-
-
         {/* <button onClick={() => { click (id, age + 1);}}> Increase Age </button> */}
-        {/* onClick ye real event hai jo click hai o referance ara hai Users-Fils se jis se ham props se  Destructuring kar re hai ham click event ka naam kuch bhi de sakta hai  */}
+
+
+        <button onClick={() => { click (id);}}> Increase Age </button>
+        <button onClick={() => decrease(id)}>Decrease Age</button>
+       
 
         <button onClick={() => removeUser(id)}>Remove</button>
       </div>
