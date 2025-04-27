@@ -4,11 +4,12 @@ function ZZZ() {
   const lastName = (name) => {
     return name;
   };
-  // const fullName = `${firstName} ${lastName("Tausif")}`;
-  // console.log("Full Name:", fullName);
+  const fullName = `${firstName} ${lastName("Tausif")}`; 
+  console.log("Full Name:", fullName);
+
 
   return (
-    <>
+    <>  
       <h1
         onClick={() => {
           lastName("Tausif");
