@@ -36,7 +36,7 @@ function PracticalUse() {
     const updatedUsers = users.map((person) => {
       return person.id === userId ? { ...person, age: person.age - 1 } : person;
     });
-    setUsers(updatedUsers);  
+    setUsers(updatedUsers);   
 
     // setUsers((previousState)=>{  //previousState ek callBcak function lera hai.
     //   return previousState.map((person)=>{
