@@ -6,10 +6,10 @@ function ZZZ() {
   };
   const fullName = `${firstName} ${lastName("Tausif")}`; 
   console.log("Full Name:", fullName);
-   let lastName1 = "Tausif"; // Variable declaration
-  const lastName2 = "Tausif"; // Constant declaration
-  console.log("lastName1:", lastName1); // Output: Tausif
-  console.log("lastName2:", lastName2);
+   
+  
+
+
   
 
   return (
