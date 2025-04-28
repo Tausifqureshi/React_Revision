@@ -6,12 +6,8 @@ function ZZZ() {
   };
   const fullName = `${firstName} ${lastName("Tausif")}`; 
   console.log("Full Name:", fullName);
+  
    
-  
-
-
-  
-
   return (
     <>  
       <h1
