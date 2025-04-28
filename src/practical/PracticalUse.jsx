@@ -33,11 +33,23 @@ function PracticalUse() {
   // Decrease age function.
   function decreaseAge(userId) {
     console.log("clicked", userId);
-    const updatedUsers = users.map((person) => {
-      return person.id === userId ? { ...person, age: person.age - 1 } : person;
-    });
-    setUsers(updatedUsers);   
 
+    // Ternary operator use kar ke bhi kar sakte hai.
+    // const updatedUsers = users.map((person) => {
+    //   return person.id === userId ? { ...person, age: person.age - 1 } : person;
+    // });
+    // setUsers(updatedUsers); 
+    
+    const updatedUsers = users.map((person) =>
+      person.id === userId
+        ? { ...person, age: person.age > 1 ? person.age - 1 : 1 }
+        : person
+    );
+    setUsers(updatedUsers);
+    
+
+    
+    // Aisa bhi kar sakte hai map ka use age - 1. if condition use kar ke.
     // setUsers((previousState)=>{  //previousState ek callBcak function lera hai.
     //   return previousState.map((person)=>{
     //     if (person.id === userId) {
@@ -47,6 +59,20 @@ function PracticalUse() {
     //     }
     //   })
     // })
+
+
+    // setUsers((previousState) => {
+    //   return previousState.map((person) => {
+    //     if (person.id === userId) {
+    //       return {
+    //         ...person,
+    //         age: person.age > 1 ? person.age - 1 : 1  // Age kabhi 1 se kam nahi hogi
+    //       };
+    //     } else {
+    //       return person;
+    //     }
+    //   });
+    // });
 
 
   }
@@ -66,5 +92,5 @@ function PracticalUse() {
     </>
   );
 }
-
+ 
 export default PracticalUse;
