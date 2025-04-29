@@ -19,7 +19,7 @@ function ZZZ() {
       <h1>My name is {firstName}</h1>
       <h1>React {version}</h1>
     </>
-  );
+  ); 
 }
 
 export default ZZZ;

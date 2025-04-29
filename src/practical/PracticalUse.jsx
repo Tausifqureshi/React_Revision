@@ -28,7 +28,7 @@ function PracticalUse() {
         }
       })
     }) 
-  } 
+  }   
 
   // Decrease age function.
   function decreaseAge(userId) {
