@@ -61,7 +61,7 @@ export default function App() {
       {/* <MultiInputForm /> */}
 
       {/* Practical-File */}
-      <PracticalUse />
+      {/* <PracticalUse /> */}
       {/* <Dymi /> */}
  
       {/* <ControlledComponent /> */}
@@ -73,7 +73,7 @@ export default function App() {
       {/* <UseRefHook /> */}
 
       {/* UseEffect Hook-File */}
-      {/* <UseEffect /> */}
+      <UseEffect />
 
       {/* UseReducer Hook-File */}
       {/* <UseReducer /> */}
