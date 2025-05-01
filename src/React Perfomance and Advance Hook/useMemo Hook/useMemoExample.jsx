@@ -26,7 +26,7 @@ return  extraComponets(add);  // extraCompoents Function ek argument me add pass
 }, [add]) // Ye function sirf tabhi call hoga jab `addition` ki value change hogi; kisi aur state ke change par yeh trigger nahi hoga. useMemo specific values ko memoize karta hai, jo unnecessary recalculations ko rokte hue React ki performance ko enhance karta hai. useMemo React ko zyada calculate karne se rokta hai, taake performance better ho sake.
 
 
-  function showClick(){
+  function showClick(){    
     console.log("Show Click Function");
     setShaow(!shaow)
 
