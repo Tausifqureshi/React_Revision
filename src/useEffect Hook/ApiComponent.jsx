@@ -55,7 +55,7 @@ const ApiComponent = () => {
   return (
     <div>
       <h1>Data from API:</h1>
-      <div>
+      <div> 
       {/* Without return keyword use Short Syntext */}
         {/* {data.map((item) => <div key={item.id}>
             <h3>FirstNamae: {item.name}</h3>
