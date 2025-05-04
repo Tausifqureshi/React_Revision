@@ -5,7 +5,7 @@ function MouseMoveEvent() {
   function handleMouseEvent(e){
     console.log({x: e.clientX, y: e.clientY}); 
     setMousePosition({x: e.clientX, y: e.clientY}); //jo value print karan o is me jaye gi tab hi jake p element me show hogi
-  }     
+  }       
     useEffect(() => {
         console.log("Call useEffect Function");
         document.addEventListener("mousemove",handleMouseEvent);
