@@ -6,7 +6,7 @@ function ExampleUseReducer() {
   // console.log("UseReducer Value ",valueReturn);
 
   const initialState = { count: 0 }; // initialState ye ek object hai.
-
+ 
   function reducer(state, action) {//ye function 2parameter leta hai first state dusra action.action jo bhi hai ohi nich dispacth function is se call kar raha hai. dispatch: Ye ek function hai jo actions ko trigger karta hai.
 
     // If statement use kar ke.
