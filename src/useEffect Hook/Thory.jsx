@@ -1,7 +1,22 @@
 // =========================================== useEffect React Hook ============================================== //
 // ChatGPT Se Liya Hua Syntex ---> useEffect React Hook ko functional components ke andar side effects ko manage karne ke liye use kiya jata hai. Side effects aise actions hote hain jo React ke rendering ke process se bahar hote hain, jaise API calls karna, timers set karna, DOM ko directly manipulate karna, ya subscriptions handle karna.
 
+// ChatGPT Se Liya Hua Syntex ---> useEffectka use side effects ko perform karne ke liye kiya jata hai, side effects ka matlab hai wo hota hai  jo react se bahar hota hai, jaise API call karna, DOM ko manipulate karna, ya kisi event listener ko add ya remove karna. timers set karna, ya subscriptions handle karna.
 
+//// ChatGPT Se Liya Hua Syntex ---> 🔸 Side Effects kya hote hain?
+// Side effects woh kaam hote hain jo component ke render ke baad ya kisi state ke change ke baad hote hain — jaise:
+
+// API call karna
+
+// setTimeout, setInterval use karna
+
+// DOM ko manually change karna
+
+// Event listener lagana
+
+// Local storage access karna
+
+// Cleanup karna (like removing event listener)
 // ========================================= useEffect Hook Parameters =========================================== //
 // ChatGPT Se Liya Hua Syntex --->  Parameters:
 // Effect function (callback): Yeh function wo code execute karta hai jo side effects ke liye likha gaya ho. Side effects ka matlab wo actions jo directly render ke baad perform kiye jate hain, jaise API calls, DOM ke changes, timers set karna, etc.
@@ -70,3 +85,34 @@ const App = () => {
 
 // export default App;
 
+
+
+
+// ===================================== useEffect Hook LocalStorage ======================================= //
+
+// import { useState, useEffect } from 'react';
+
+// function Counter() {
+//   const [count, setCount] = useState(0);
+
+//   // ✅ Read from local storage when component mounts
+//   useEffect(() => {
+//     const savedCount = localStorage.getItem('counter');
+//     if (savedCount !== null) {
+//       setCount(parseInt(savedCount));
+//     }
+//   }, []); // run once on mount
+
+//   // ✅ Save to local storage whenever count changes
+//   useEffect(() => {
+//     localStorage.setItem('counter', count.toString());
+//   }, [count]); // run every time count changes
+
+//   return (
+//     <div>
+//       <h2>Count: {count}</h2>
+//       <button onClick={() => setCount((c) => c + 1)}>+1</button>
+//       <button onClick={() => setCount((c) => c - 1)}>-1</button>
+//     </div>
+//   );
+// }
