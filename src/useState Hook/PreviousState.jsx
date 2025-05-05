@@ -28,7 +28,7 @@ function PreviousState() {
 
   //   const increaseCount = () => {
   //     setCounter((previousState) => previousState + 1);
-  //   };
+  //   };  
 
   const decreaseCount = () => {
     setCounter((previousState) => previousState - 1);
