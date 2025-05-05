@@ -8,7 +8,7 @@ function ContextAPI() {
     console.log("Function Called");
   };
           
-  
+    
   return (
     <MyContext.Provider value={{      //Provider se hamne ParentComponents wrap kiya hai ab ham ParentComponents ke jitne bhi chaild hai us me context api compoent ki value direct pass kar skate hai agar app components wrap tu  pure ke pure project me value pass kar sakte hai. 
        key1: "value1",

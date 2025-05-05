@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { MyContext } from "./ContextAPI";
  
-function GrendChild() {
+function GrendChild() {  
 //  const retrunValues = useContext(MyContext);
 //  console.log(retrunValues);  //myfun mile ga jo ham ne ContextAPI compnents ke provider value dali hai ohi mile ga is se hame kahi bhi use kar sakte same is tara procees se har components me lene hoga myfun ya or bhi koi value.
 

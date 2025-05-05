@@ -3,7 +3,7 @@ import GrendChild from "./GrendChild";
 
 function ChaildCopmonets() {
   return (
-    <div
+    <div 
       style={{  
         padding: "2rem",
         backgroundColor: "#7EAA92",
