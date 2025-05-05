@@ -16,7 +16,7 @@ function ExampleUseReducer() {
 
     else if(action.type === "decrement"){
       // return ({...state, count: state.count - 1})
-      if (state.count > 0) {
+      if (state.count > 0) {     
         return { ...state, count: state.count - 1 };
       }
       return state; // agar count 0 hai, toh wahi state return hogi
