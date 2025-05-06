@@ -4,9 +4,10 @@ import GrendChild from "./GrendChild";
 function ChaildCopmonets() {
   return (
     <div 
-      style={{  
+      style={{         
         padding: "2rem",
-        backgroundColor: "#7EAA92",
+        backgroundColor: "#7EAA92", 
+        
       }}    
     >
       <h1>Chaild-Components</h1>

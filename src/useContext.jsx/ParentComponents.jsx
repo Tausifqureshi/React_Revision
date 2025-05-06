@@ -4,7 +4,7 @@ import ChaildCopmonets from "./ChaildCopmonets";
   
 
 function ParentComponents() {
-  
+             
   return (
     <div  
       style={{
