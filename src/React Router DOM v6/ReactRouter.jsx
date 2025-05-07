@@ -48,7 +48,7 @@ const router = createBrowserRouter(
     </Route>
 
     
-  ),
+  ),  
   {
     future: {
       v7_startTransition: true, // Future flag enable kiya gaya

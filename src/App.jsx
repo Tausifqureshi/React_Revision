@@ -81,11 +81,11 @@ export default function App() {
       {/* <UseContext /> */}
 
       {/* Custom-Hook File*/}
-      <CustomHook />
+      {/* <CustomHook /> */}
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}
-      {/* <ReactRouter /> */}
+      <ReactRouter />
 
       {/* React-Router New Features File */}
       {/* <NewFeatures /> */}
