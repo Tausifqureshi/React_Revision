@@ -8,7 +8,7 @@ function CustomHook() {
       
   if(isError){
     // return <h1>{isError}</h1>
-  } 
+  }  
 
   return (
     <>

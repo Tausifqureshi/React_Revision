@@ -5,7 +5,7 @@ function useFetch(url) {
   const [isError, setIsError] = useState(null);
    
   useEffect(() => { 
-    setPending(true);
+    setPending(true); 
     const controller = new AbortController(); // Yaha controller ko define karna zaruri hai
     const signal = controller.signal; // Ab signal ko fetch ke sath use karenge
     async function fetchData() {
