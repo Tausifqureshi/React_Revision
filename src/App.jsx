@@ -17,7 +17,7 @@ import MultiInputForm from "./form/MultiInputForm";
 import UseRefHook from "./useRef Hooks/UseRefHook";
 import UseEffect from "./useEffect Hook/UseEffect";
 import UseReducer from "./useReducer-Hook/UseReducer";
-import UseContext from "./useContext.jsx/useContext";      
+import UseContext from "./useContext.jsx/useContext";
 import CustomHook from "./custom Hook/CustomHook";
 import BasicForm from "./custom Hook/BasicForm";
 import ReactRouter from "./React Router DOM v6/ReactRouter";
@@ -28,7 +28,6 @@ import Memoize_React from "./React Perfomance and Advance Hook/MemoizeAllConsept
 import MemoizeAllConsept from "./React Perfomance and Advance Hook/MemoizeAllConsept";
 import Redux from "./Redux/Redux";
 import ReduxThunk from "./Redux Thunk/ReduxThunk";
-
 
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
@@ -63,7 +62,7 @@ export default function App() {
       {/* Practical-File */}
       {/* <PracticalUse /> */}
       {/* <Dymi /> */}
- 
+
       {/* <ControlledComponent /> */}
 
       {/* Style Components */}
@@ -76,13 +75,13 @@ export default function App() {
       {/* <UseEffect /> */}
 
       {/* UseReducer Hook-File */}
-      <UseReducer />
+      {/* <UseReducer /> */}
 
       {/* Context-API and useContext Hook-File */}
       {/* <UseContext /> */}
 
       {/* Custom-Hook File*/}
-      {/* <CustomHook /> */}
+      <CustomHook />
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}
@@ -94,19 +93,13 @@ export default function App() {
       {/* React Performance and Advance Hook and Memoize*/}
       {/* <MemoizeAllConsept/> */}
 
-       
-       {/* Redux File use */}
-       {/* <Redux /> */}
+      {/* Redux File use */}
+      {/* <Redux /> */}
 
-       {/* Redux Thunk File use */}
-       {/* <ReduxThunk /> */}
-        
+      {/* Redux Thunk File use */}
+      {/* <ReduxThunk /> */}
 
       {/* <Z /> */}
-      
-   
-   
-
     </div>
   );
 }
