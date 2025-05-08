@@ -7,7 +7,7 @@ function ContextAuth({ children}) {
     <AuthContetx.Provider
       value={{
         isLogin: isLogin,
-        setIsLogin: setIsLogin,
+        setIsLogin: setIsLogin,  
       }}
     > 
         {children}
