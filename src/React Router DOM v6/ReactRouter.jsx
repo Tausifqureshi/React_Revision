@@ -9,7 +9,7 @@ import {
 import { Home, About, Contact, Post, Error } from "./page";
 import NavBarRoot from "./layout/NavBarRoot";
 import PostDetails from "./components/PostDetails";
-import ProtectedRoutes from "./components/ProtectedRoutes";
+import ProtectedRoutes from "./components/ProtectedRoutes";  
 import Login from "./page/Login";
 import ContextAuth from "./context API/ContextAuth";
 // Humne "./page/index.js" file me saare components ko export kiya hai. Yahaan, hum destructuring ka use karke unhe import kar rahe hain, jise hum routes me use karenge.
