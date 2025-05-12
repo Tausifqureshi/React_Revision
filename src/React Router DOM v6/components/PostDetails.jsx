@@ -36,8 +36,9 @@ function PostDetails() {
      <h3>{data.username}</h3>
      <p>{data.address.city}</p>
      <p>{data.address.catchPhrase}</p>
+     
 
-     </div>
+     </div>   
      
      }
 
