@@ -7,7 +7,7 @@ function Card({ state1 }) {
   
   return (
     <div
-      style={{
+      style={{  
         background: state1 ? "green" : "red",
         width: "300px",
         height: "150px",
