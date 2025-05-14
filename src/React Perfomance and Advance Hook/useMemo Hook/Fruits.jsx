@@ -17,7 +17,7 @@ function Fruits() {
    }, [])
 
 
-  // const fruit = [
+  // const fruit = [ 
   //   { firstName: "apple", emoji: "🍎" },
   //   { firstName: "banana", emoji: "🍌" },
   //   { firstName: "mango", emoji: "🥭" },
