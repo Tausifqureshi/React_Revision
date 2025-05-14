@@ -10,7 +10,7 @@ function DispalyeFruits({fruit}) {
         <span>{fur.emoji}</span>  <span> {fur.firstName} </span>
 
         </div>
-    })}
+    })}  
 
   </div>;
 }

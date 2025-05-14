@@ -14,7 +14,7 @@ function Fruits() {
         { firstName: "mango", emoji: "🥭" },
       ];
    }, [])
-
+  
 
   return (
     <div>

@@ -85,14 +85,14 @@ export default function App() {
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}
-      <ReactRouter />
+      {/* <ReactRouter /> */}
       
 
       {/* React-Router New Features File */}
       {/* <NewFeatures /> */}
 
       {/* React Performance and Advance Hook and Memoize*/}
-      {/* <MemoizeAllConsept/> */}
+      <MemoizeAllConsept/>
 
       {/* Redux File use */}
       {/* <Redux /> */}
