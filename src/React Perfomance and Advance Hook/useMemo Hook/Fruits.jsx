@@ -8,13 +8,20 @@ function Fruits() {
   const [userName, setUserName] = useState("");
    
   const fruit = useMemo(()=>{ // "fruits" bar-bar re-render ho raha hai kyunki ye ek reference type hai, jo parent state change par naya memory reference banata hai; ise rokne ke liye `useMemo` ka use karein.
+    // useMemo ka use karne se ye reference type nahi banega, aur ye bar-bar re-render nahi hoga display fruits component.
    return [
         { firstName: "apple", emoji: "🍎" },
         { firstName: "banan", emoji: "🍌" },
         { firstName: "mango", emoji: "🥭" },
       ];
    }, [])
-  
+
+
+  // const fruit = [
+  //   { firstName: "apple", emoji: "🍎" },
+  //   { firstName: "banana", emoji: "🍌" },
+  //   { firstName: "mango", emoji: "🥭" },
+  // ];
 
   return (
     <div>
