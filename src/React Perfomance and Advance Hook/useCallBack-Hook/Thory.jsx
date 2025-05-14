@@ -29,16 +29,18 @@ function TodoApp() {
     // `increment` function: Ye simple function hai jo count ko increase karega
     const increment = () => setCount(count + 1);
 
-    // `addTodo` ko useCallback se wrap kiya gaya hai
+    // ✅ useCallback ek FUNCTION return karta hai
     const addTodo = useCallback(() => {
+        // 👇 Yehi FUNCTION hai jo useCallback return karta hai
         setTodos((prevTodos) => [...prevTodos, "New Todo"]);
-    }, [todos]);
+    }, [todos]); // 🔁 Jab 'todos' badlega tabhi naya function banega
 
     return (
         <div>
             <h1>Count: {count}</h1>
             <button onClick={increment}>Increment</button>
             
+            {/* 👇 Memoized function pass ho raha hai child component ko */}
             <Todos todos={todos} addTodo={addTodo} />
         </div>
     );
@@ -53,12 +55,15 @@ function Todos({ todos, addTodo }) {
             {todos.map((todo, index) => (
                 <p key={index}>{todo}</p>
             ))}
+
+            {/* 👇 Memoized FUNCTION yahan use ho raha hai */}
             <button onClick={addTodo}>Add Todo</button>
         </div>
     );
 }
 
 export default TodoApp;
+
 
 
 

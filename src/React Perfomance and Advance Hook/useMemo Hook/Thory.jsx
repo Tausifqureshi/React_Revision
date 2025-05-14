@@ -55,25 +55,30 @@
 // 2. useMemo tab use hota hai jab aap kisi expensive calculation ko memoize karna chahte hain taaki baar-baar calculate na ho.
 
 
-
 import React, { useState, useMemo } from 'react';
+
 function ExpensiveCalculationComponent() {
   const [count, setCount] = useState(0);
   const [input, setInput] = useState('');
 
-  // Ye function slow hai aur baar-baar calculate nahi karna chahte
+  // 🚨 Ye heavy calculation hai, baar-baar nahi karna chahte
   const expensiveCalculation = (num) => {
-    console.log("Calculating...");
-    for (let i = 0; i < 1000000000; i++) {} // Dummy loop for slow calculation
-    return num * 2;
+    console.log("⏳ Calculating...");
+    for (let i = 0; i < 1000000000; i++) {} // Dummy loop to simulate slowness
+    return num * 2; // 👈 Ye ACTUAL VALUE return ho rahi hai function se
   };
 
-  // `useMemo` ka istemal karke hum calculation ko memoize kar rahe hain
-  const memoizedValue = useMemo(() => expensiveCalculation(count), [count]);
+  // ✅ useMemo ek VALUE return karta hai — yahan pe expensiveCalculation ka result
+  const memoizedValue = useMemo(() => {
+    // 👇 Ye VALUE return ho rahi hai useMemo se (sirf jab count change ho)
+    return expensiveCalculation(count);
+  }, [count]); // 🔁 Re-run only if count changes
 
   return (
     <div>
       <h1>Count: {count}</h1>
+
+      {/* 👇 Yahan memoized VALUE render ho rahi hai */}
       <p>Expensive Calculation Result: {memoizedValue}</p>
 
       <button onClick={() => setCount(count + 1)}>Increment Count</button>
@@ -89,7 +94,4 @@ function ExpensiveCalculationComponent() {
 }
 
 export default ExpensiveCalculationComponent;
-
-
-
 
