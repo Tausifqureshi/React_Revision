@@ -47,44 +47,30 @@
 
 // 2. Limitations: Agar props ke andar deep nested objects hain, ya arrays hain jo har render me nayi reference lete hain, to ye re-render ko avoid nahi kar sakta. Isme shallow comparison hoti hai.
 
-
-
-
-
-
+ 
 import React, { useState } from 'react';
 
-const Counter = React.memo(({ count }) => {
-    console.log('Counter re-render');
-    return <div>Count: {count}</div>;
+// ✅ React.memo ek Higher Order Componeznt hai
+// 👇 Ye Child component ko wrap karta hai aur tabhi re-render hone deta hai jab props change ho
+const Child = React.memo(function Child({ name }) {
+  console.log("👶 Child component rendered"); // ✅ Sirf tab chalega jab props me change ho
+  return <p>Hello, {name}</p>;
+  // 👆 Ye rendered JSX ko React.memo return karta hai — ye memoized version hota hai
 });
 
-function App() {
-    const [count, setCount] = useState(0);
-    const [text, setText] = useState("");
+function Parent() {
+  const [count, setCount] = useState(0);
 
-    return (
-        <div>
-            <Counter count={count} />
-            <button onClick={() => setCount(count + 1)}>Increment</button>
-            <input 
-                type="text" 
-                value={text} 
-                onChange={(e) => setText(e.target.value)}
-                placeholder="Type something" 
-            />
-        </div>
-    );
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+
+      {/* ✅ Child component ko same prop mil raha hai (name="Amit") */}
+      {/* ❌ Agar React.memo nahi hota to Child har baar re-render hota */}
+      <Child name="Amit" />
+    </div>
+  );
 }
 
-export default App;
-
-
-
-// Is example me:
-
-// 1. Counter component ko React.memo se wrap kiya gaya hai.
-
-// 2. Jab aap button click karte hain aur count update hota hai, tab Counter re-render hoga kyunki count me change aaya hai.
-
-// 3. Lekin jab aap input field me kuch type karte hain, toh Counter re-render nahi hoga kyunki count prop me koi change nahi aaya hai.
+export default Parent;
