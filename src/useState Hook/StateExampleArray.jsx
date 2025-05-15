@@ -5,7 +5,7 @@
 // function StateExampleArray() {
 //   const [fruits, setFruit] = useState(["Apple", "Mango", "Banana"]);
 
-//   function fruitsAdding() {  
+//   function fruitsAdding() {   
 //     console.log("Add new Fruits"); 
 //     // setFruit([...fruits, "Add new fruits"]); //...old value bhi rehe gi is spreade oparetor se or new value ko add kar re hai "new value".
 

@@ -29,7 +29,7 @@ function UseStateChap() {
 
 // const valueReturn = useState("Tausif");
 // console.log(valueReturn); //ek array return karta hai jism me 1index pe current value and 2index pe ek function hota hai jis ka use kar ke ham state ki value ko update kar sakte hai.
-
+ 
 const [firstName, setFirstName ] = useState("Tausif");
  function handleClick(){
     if (firstName === "Tausif") { // is se toggle kara re hai name chnage.
@@ -63,3 +63,110 @@ export default UseStateChap;
 // 1. useState hook ko component ke andar top-level pe hi call karna chahiye. Aap ise loops, conditions, ya nested functions ke andar call nahi kar sakte.
 
 // 2. Aap ek component me multiple useState hooks ka use kar sakte ho alag-alag state variables ke liye.
+
+// 
+
+
+// ========================================= obejct ke sath useState ============================================ //
+import React, { useState } from "react";
+
+function ExampleUseStateObject() {
+  // object-based state
+  const [state, setState] = useState({ count: 0 });//  obejct ke sath useState
+
+  // Increase Function
+  const increaseHandle = () => {
+    // setState(prevState => ({
+    //   ...prevState,
+    //   count: prevState.count + 1
+    // }));
+
+  setState({...state, count: state.count + 1}); // object ke sath useState me update karne ka dusra tarika.
+  };
+
+  // Decrease Function
+  const decreaseHandle = () => {
+    setState(prevState => ({
+      ...prevState,
+      count: prevState.count > 0 ? prevState.count - 1 : 0
+    }));
+  };
+
+  // Reset Function
+  const resetHandle = () => {
+    setState(prevState => ({
+      ...prevState,
+      count: 0
+    }));
+  };
+
+  return (
+    <div>
+      <h1>Application</h1>
+      <h1>Count {state.count}</h1>
+      <div>
+        <button style={{ margin: "0 10px" }} onClick={increaseHandle}>
+          Increase
+        </button>
+
+        <button style={{ margin: "0 10px" }} onClick={decreaseHandle}>
+          Decrease
+        </button>
+
+        <button style={{ margin: "0 10px" }} onClick={resetHandle}>
+          Reset
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// export default ExampleUseStateObject;
+
+
+
+// ========================================= Array ke sath useState ============================================ //
+
+import React, { useState } from "react";
+
+function ExampleUseStateArray() {
+  // Array-based state
+  const [state, setState] = useState([0]); // Array me count rakha gaya hai (index 0 par)
+
+  // Increase Function
+  const increaseHandle = () => {
+    setState([state[0] + 1]); // Pehla element (count) ko +1 karna
+  };
+
+  // Decrease Function
+  const decreaseHandle = () => {
+    setState([state[0] > 0 ? state[0] - 1 : 0]); // Count ko 0 se neeche nahi jaane dena
+  };
+
+  // Reset Function
+  const resetHandle = () => {
+    setState([0]); // Count ko 0 pe reset karna
+  };
+
+  return (
+    <div>
+      <h1>Application</h1>
+      <h1>Count {state[0]}</h1>
+      <div>
+        <button style={{ margin: "0 10px" }} onClick={increaseHandle}>
+          Increase
+        </button>
+
+        <button style={{ margin: "0 10px" }} onClick={decreaseHandle}>
+          Decrease
+        </button>
+
+        <button style={{ margin: "0 10px" }} onClick={resetHandle}>
+          Reset
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// export default ExampleUseStateArray;

@@ -29,7 +29,7 @@ function PracticalUse() {
       })
     }) 
   }   
-
+ 
   // Decrease age function.
   function decreaseAge(userId) {
     console.log("clicked", userId);

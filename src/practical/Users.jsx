@@ -13,7 +13,7 @@ function Users({ userDetaisl , onClickEvent, remove, onDecreaseEvent}) {
             <p> userAge: {userValue.age}</p> 
           </div>  
         ); */
-        }  
+        }   
   
         return <User key={userValue.id} {...userValue}  click = { onClickEvent }  decrease={onDecreaseEvent} removeUser={remove}/>;
         {/* sperade oprator use kar ke pura ke pura object hi pass kar sakte User-File me parameter Destructuring kar ke id name age nikal lega. clickEvnet pass kar re hai ham props me updateAge function ka referance User.file me.
