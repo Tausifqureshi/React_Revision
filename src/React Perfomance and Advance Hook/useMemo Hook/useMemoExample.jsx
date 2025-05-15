@@ -35,7 +35,7 @@ return  extraComponets(add);  // extraCompoents Function ek argument me add pass
   return <div>
   <h1> ExtranComponents {number} </h1> 
   {/* Functon Print */}
-
+ 
   <h1> Addition Number: {add} </h1>
    <button type="button" onClick={btnHandle} style={{display: "block", margin: "auto"}}> Addition </button><br /><br />
    <button type="button" onClick={btnMinus} style={{display: "block", margin: "auto"}}> Minus </button> <br /> <br />

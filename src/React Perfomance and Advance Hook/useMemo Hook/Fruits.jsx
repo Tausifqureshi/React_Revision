@@ -14,7 +14,7 @@ function Fruits() {
         { firstName: "banan", emoji: "🍌" },
         { firstName: "mango", emoji: "🥭" },
       ];
-   }, [])
+   }, []) 
 
 
   // const fruit = [ 

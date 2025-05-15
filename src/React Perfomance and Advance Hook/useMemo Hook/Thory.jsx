@@ -56,7 +56,7 @@
 
 
 import React, { useState, useMemo } from 'react';
-
+   
 function ExpensiveCalculationComponent() {
   const [count, setCount] = useState(0);
   const [input, setInput] = useState('');

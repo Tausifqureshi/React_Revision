@@ -14,33 +14,55 @@ function UseMemoExample1() {
    return addition *10 //Memoize vaule retrun hori hai. useMemo Memoize value return karta hai.
 
   }, [addition]); // Ye function tabhi call hoga jab `addition` ki value change hoti hai, aur kisi aur state change pe yeh trigger nahi hoga.
+
+
+  // function multiply() {
+  //   // Ye function bas ek example hai, koi use case nahi hai, React mein state change par har function re-render hota hai. is se rukne ke liye hi hai useMemo ka use karta hai taki parfomance pe issu na ho.
+
+  //   // console.log(" Multiply Function Called ");// Minus function click par bhi yaha baar-baar call ho raha hai, jo React ki performance pe impact daal sakta hai. Is issue ko avoid karne ke liye, hum useMemo ka use kar sakte hain taaki ye function tabhi re-render ho jab dependencies change ho.
+  
+  //   //  return addition *10 //Memoize vaule retrun hori hai. useMemo Memoize value return karta hai.
+  //   // Ye function tabhi call hoga jab `addition` ki value change hoti hai, aur kisi aur state change pe yeh trigger nahi hoga.
+
+  //   console.log(" Multiply Function Called ");
+  //   return addition * 10;
+  // }
+
+
   
   function counterIncrease() {
+    console.log("Addition Function Called");
     setAddition ((prevState) => prevState + 1);
   }
 
-  function counterDecrease () {    
+  function counterDecrease () {   
+    console.log("Minus:1 Function Called"); 
     if(addition > 0){
       setAddition((prevState) => prevState - 1)
     }
   }
 
   function minusHandle(){
+    console.log("Minus Function Called");
     if (minus > 1) {
     setMinus(minus - 1);
       
     }
+   
   }
   
  
   return (
     <div>
      <h1> Multiply Function Called : {multipluction} </h1>
+      {/* <h1> Multiply Function Called : {multiply()} </h1> */}
       <br /> <br />
       <p> Additions Number : { addition } </p>
       <button  onClick={counterIncrease}  style={{ background: "red", display: "block", margin: "auto", }}>
        Addition
       </button> <br /> <br />
+
+     
 
       <button  onClick={counterDecrease}  style={{ background: "red", display: "block", margin: "auto", }}>
       Minus-2
