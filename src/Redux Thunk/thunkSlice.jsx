@@ -70,7 +70,9 @@ const thunkSlice = createSlice({
         // jo uperr axios me datat return kar re hai o is fulfiled wale me mile ga action.payload me
         // console.log("actions mil ra hai yaha se fulfiled ka",action.payload);
         state.loading = false; // Loading ko false set karna.
-        state.data = action.payload; // Data ko state mein store karna.
+
+        state.data = action.payload;  // ✅ API se aaya hua data 'action.payload' me hota hai, usko 'state.data' me save kar rahe hain
+        //action.payload se data milra hai jo uperr axios se fetch kiya hai. us data ko ham data state me store karenge.
       })
       // `rejected` case, jab data fetch mein error aaye
       .addCase(fetchDatat.rejected, (state, action) => {
@@ -128,7 +130,7 @@ const thunkSlice = createSlice({
         state.loading = false; // Loading ko false set karna
         state.error = action.error.message; // Error ko state mein store karna
       });
-
+    
       //Tggole Todos
       builder
       .addCase(toggleTodos.pending, (state) => {

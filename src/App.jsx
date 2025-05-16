@@ -47,7 +47,7 @@ export default function App() {
       {/* <UseStateChap /> */}
       {/* <PreviousState /> */}
       {/* <StateExampleArray /> */}
-      {/* <StateExampleObject /> */}
+      <StateExampleObject />
       {/* <MultiStateComponent /> */}
       {/*useState-component-file end  */}
 
@@ -57,7 +57,7 @@ export default function App() {
       {/* Form-File */}
       {/* <Form /> */}
       {/* <RadioButton /> */}
-      <MultiInputForm />
+      {/* <MultiInputForm /> */}
 
       {/* Practical-File */}
       {/* <PracticalUse /> */}
