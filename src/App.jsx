@@ -57,7 +57,7 @@ export default function App() {
       {/* Form-File */}
       {/* <Form /> */}
       {/* <RadioButton /> */}
-      {/* <MultiInputForm /> */}
+      <MultiInputForm />
 
       {/* Practical-File */}
       {/* <PracticalUse /> */}
@@ -92,7 +92,7 @@ export default function App() {
       {/* <NewFeatures /> */}
 
       {/* React Performance and Advance Hook and Memoize*/}
-      <MemoizeAllConsept/>
+      {/* <MemoizeAllConsept/> */}
 
       {/* Redux File use */}
       {/* <Redux /> */}

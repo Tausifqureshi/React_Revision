@@ -36,9 +36,11 @@ function MultiInputForm() {
       //is tara se bhi kar sakte state change multipul input field ki value.
       return { ...PreviousState, [event.target.name]: event.target.value };
     });
-    console.log(event.target);
-    console.log(event.target.name);
-    console.log(event.target.value);
+    console.log(event.target,"event.target");
+    console.log(event.target.name,"event.target.name");
+    console.log(event.target.value,"event.target.value");
+    console.log(formData, "formData");
+    
   };
 
   const handleSubmit = (event) => {

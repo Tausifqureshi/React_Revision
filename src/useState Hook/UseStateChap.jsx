@@ -68,58 +68,58 @@ export default UseStateChap;
 
 
 // ========================================= obejct ke sath useState ============================================ //
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-function ExampleUseStateObject() {
-  // object-based state
-  const [state, setState] = useState({ count: 0 });//  obejct ke sath useState
+// function ExampleUseStateObject() {
+//   // object-based state
+//   const [state, setState] = useState({ count: 0 });//  obejct ke sath useState
 
-  // Increase Function
-  const increaseHandle = () => {
-    // setState(prevState => ({
-    //   ...prevState,
-    //   count: prevState.count + 1
-    // }));
+//   // Increase Function
+//   const increaseHandle = () => {
+//     // setState(prevState => ({
+//     //   ...prevState,
+//     //   count: prevState.count + 1
+//     // }));
 
-  setState({...state, count: state.count + 1}); // object ke sath useState me update karne ka dusra tarika.
-  };
+//   setState({...state, count: state.count + 1}); // object ke sath useState me update karne ka dusra tarika.
+//   };
 
-  // Decrease Function
-  const decreaseHandle = () => {
-    setState(prevState => ({
-      ...prevState,
-      count: prevState.count > 0 ? prevState.count - 1 : 0
-    }));
-  };
+//   // Decrease Function
+//   const decreaseHandle = () => {
+//     setState(prevState => ({
+//       ...prevState,
+//       count: prevState.count > 0 ? prevState.count - 1 : 0
+//     }));
+//   };
 
-  // Reset Function
-  const resetHandle = () => {
-    setState(prevState => ({
-      ...prevState,
-      count: 0
-    }));
-  };
+//   // Reset Function
+//   const resetHandle = () => {
+//     setState(prevState => ({
+//       ...prevState,
+//       count: 0
+//     }));
+//   };
 
-  return (
-    <div>
-      <h1>Application</h1>
-      <h1>Count {state.count}</h1>
-      <div>
-        <button style={{ margin: "0 10px" }} onClick={increaseHandle}>
-          Increase
-        </button>
+//   return (
+//     <div>
+//       <h1>Application</h1>
+//       <h1>Count {state.count}</h1>
+//       <div>
+//         <button style={{ margin: "0 10px" }} onClick={increaseHandle}>
+//           Increase
+//         </button>
 
-        <button style={{ margin: "0 10px" }} onClick={decreaseHandle}>
-          Decrease
-        </button>
+//         <button style={{ margin: "0 10px" }} onClick={decreaseHandle}>
+//           Decrease
+//         </button>
 
-        <button style={{ margin: "0 10px" }} onClick={resetHandle}>
-          Reset
-        </button>
-      </div>
-    </div>
-  );
-}
+//         <button style={{ margin: "0 10px" }} onClick={resetHandle}>
+//           Reset
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
 
 // export default ExampleUseStateObject;
 
@@ -127,46 +127,46 @@ function ExampleUseStateObject() {
 
 // ========================================= Array ke sath useState ============================================ //
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-function ExampleUseStateArray() {
-  // Array-based state
-  const [state, setState] = useState([0]); // Array me count rakha gaya hai (index 0 par)
+// function ExampleUseStateArray() {
+//   // Array-based state
+//   const [state, setState] = useState([0]); // Array me count rakha gaya hai (index 0 par)
 
-  // Increase Function
-  const increaseHandle = () => {
-    setState([state[0] + 1]); // Pehla element (count) ko +1 karna
-  };
+//   // Increase Function
+//   const increaseHandle = () => {
+//     setState([state[0] + 1]); // Pehla element (count) ko +1 karna
+//   };
 
-  // Decrease Function
-  const decreaseHandle = () => {
-    setState([state[0] > 0 ? state[0] - 1 : 0]); // Count ko 0 se neeche nahi jaane dena
-  };
+//   // Decrease Function
+//   const decreaseHandle = () => {
+//     setState([state[0] > 0 ? state[0] - 1 : 0]); // Count ko 0 se neeche nahi jaane dena
+//   };
 
-  // Reset Function
-  const resetHandle = () => {
-    setState([0]); // Count ko 0 pe reset karna
-  };
+//   // Reset Function
+//   const resetHandle = () => {
+//     setState([0]); // Count ko 0 pe reset karna
+//   };
 
-  return (
-    <div>
-      <h1>Application</h1>
-      <h1>Count {state[0]}</h1>
-      <div>
-        <button style={{ margin: "0 10px" }} onClick={increaseHandle}>
-          Increase
-        </button>
+//   return (
+//     <div>
+//       <h1>Application</h1>
+//       <h1>Count {state[0]}</h1>
+//       <div>
+//         <button style={{ margin: "0 10px" }} onClick={increaseHandle}>
+//           Increase
+//         </button>
 
-        <button style={{ margin: "0 10px" }} onClick={decreaseHandle}>
-          Decrease
-        </button>
+//         <button style={{ margin: "0 10px" }} onClick={decreaseHandle}>
+//           Decrease
+//         </button>
 
-        <button style={{ margin: "0 10px" }} onClick={resetHandle}>
-          Reset
-        </button>
-      </div>
-    </div>
-  );
-}
+//         <button style={{ margin: "0 10px" }} onClick={resetHandle}>
+//           Reset
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
 
 // export default ExampleUseStateArray;
