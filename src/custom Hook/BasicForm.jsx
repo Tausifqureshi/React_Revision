@@ -1,6 +1,6 @@
 import useLocalStorage from "./useLocalStorage";
 import styles from "./BasicForm.module.css";
-
+  
 function BasicForm() {
   // first time user aye ga empty '' mile ga local storage. lekin kuch add kar re ge tu add hoga lekin is me add kar re ge jayge ga usename wale key me q ke new user ake apni value add kar sake.
   const [state, setState] = useLocalStorage("Person", ""); //USElocalstorage function me hamne jo parameter pass kiye hai na key and initail value us ko hi ham yaha pe argument me dere hai key Person hai, initalValue "",. jo ham state and setState uselocslstorage se dectcuturing kar re hai matlab useState-hook us ke ander hai is liye ham us ko  dectcuturing kar ke nikal re hai.

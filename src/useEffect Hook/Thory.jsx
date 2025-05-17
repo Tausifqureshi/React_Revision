@@ -116,3 +116,48 @@ const App = () => {
 //     </div>
 //   );
 // }
+
+
+// ===================================== useEffect Hook settime out  ======================================= //
+import React, { useState, useEffect } from "react";
+
+function TimeoutExample() {
+  const [message, setMessage] = useState("Waiting...");
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setMessage("3 seconds passed!");
+    }, 3000);
+
+    // Cleanup agar component jaldi unmount ho jaye to timeout clear kar de
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  return <div>{message}</div>;
+}
+
+// export default TimeoutExample;
+
+
+
+
+
+import React, { useState, useEffect } from "react";
+
+function IntervalExample() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCount((prevCount) => prevCount + 1);
+    }, 1000);
+
+    // Cleanup interval jab component unmount ho ya effect re-run ho
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return <div>Count: {count}</div>;
+}
+
+// export default IntervalExample;
+

@@ -21,11 +21,12 @@ function UseEffect() {
    {/* {showcomponents && <CleanUP />} */}
    {/* ShowComponents true hoga tohi cleanup function show hoga warna nhi */}
 
-   {/* {showcomponents &&  <MouseMoveEvent/>} */}
+   {/* <MouseMoveEvent/> */}
+   {showcomponents &&  <MouseMoveEvent/>}
    {/* Same kam ek hi state use kar ke MouseMoveEvent ke sath use */}
 
 
-   {showcomponents &&   <ApiComponent />}
+   {/* {showcomponents &&   <ApiComponent />} */}
    {/* Same kam ek hi state use kar ApiComponentke ke sath use */}
   
     </div>

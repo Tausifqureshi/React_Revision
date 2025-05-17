@@ -47,7 +47,7 @@ export default function App() {
       {/* <UseStateChap /> */}
       {/* <PreviousState /> */}
       {/* <StateExampleArray /> */}
-      <StateExampleObject />
+      {/* <StateExampleObject /> */}
       {/* <MultiStateComponent /> */}
       {/*useState-component-file end  */}
 
@@ -72,7 +72,7 @@ export default function App() {
       {/* <UseRefHook /> */}
 
       {/* UseEffect Hook-File */}
-      {/* <UseEffect /> */}
+      <UseEffect />
 
       {/* UseReducer Hook-File */}
       {/* <UseReducer /> */}
