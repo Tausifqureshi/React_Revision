@@ -161,3 +161,24 @@ function IntervalExample() {
 
 // export default IntervalExample;
 
+
+// ===================================== useEffect Hook dom manipulation ======================================= //
+// . Input pe automatically focus set karna (on mount) . dom element pe direct focus lagana
+import React, { useEffect, useRef } from "react";
+
+function AutoFocusInput() {
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    // DOM element pe direct focus lagana
+    inputRef.current.focus();
+  }, []);
+
+  return (
+    <div>
+      <input ref={inputRef} placeholder="Type here..." />
+    </div>
+  );
+}
+
+// export default AutoFocusInput;
