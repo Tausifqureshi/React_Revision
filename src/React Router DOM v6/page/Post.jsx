@@ -23,7 +23,7 @@ function Post() {
   useEffect(() => {
     fetchData();  
   }, []);    
-  return (
+  return (   
       <div className="">
       {isError ? <p style={{ color: "red", textAlign: "center" }}>{isError}</p>: // Agar error hai to error message  dikhana warna username show hoga
         <div>
