@@ -90,32 +90,71 @@ const App = () => {
 
 // ===================================== useEffect Hook LocalStorage ======================================= //
 
-// import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-// function Counter() {
-//   const [count, setCount] = useState(0);
+const UserForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: ''
+  });
 
-//   // ✅ Read from local storage when component mounts
-//   useEffect(() => {
-//     const savedCount = localStorage.getItem('counter');
-//     if (savedCount !== null) {
-//       setCount(parseInt(savedCount));
-//     }
-//   }, []); // run once on mount
+  // 🔹 Load data from localStorage when component mounts
+  useEffect(() => {
+    try {
+      const savedData = JSON.parse(localStorage.getItem('userForm')) || {};
+      setFormData(savedData);
+    } catch (error) {
+      console.error('Invalid JSON in localStorage:', error);
+    }
+  }, []);
 
-//   // ✅ Save to local storage whenever count changes
-//   useEffect(() => {
-//     localStorage.setItem('counter', count.toString());
-//   }, [count]); // run every time count changes
+  // 🔹 Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
-//   return (
-//     <div>
-//       <h2>Count: {count}</h2>
-//       <button onClick={() => setCount((c) => c + 1)}>+1</button>
-//       <button onClick={() => setCount((c) => c - 1)}>-1</button>
-//     </div>
-//   );
-// }
+  // 🔹 Handle form submit
+  const handleSubmit = (e) => {
+    e.preventDefault(); // prevent page reload
+    localStorage.setItem('userForm', JSON.stringify(formData));
+    alert('Form data saved to localStorage!');
+  };
+
+  return (
+    <div style={{ padding: '20px' }}>
+      <h2>User Form</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <br />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <br />
+        <button type="submit">Save</button>
+      </form>
+
+      <p><strong>Saved Name:</strong> {formData.name}</p>
+      <p><strong>Saved Email:</strong> {formData.email}</p>
+    </div>
+  );
+};
+
+// export default UserForm;
+
 
 
 // ===================================== useEffect Hook settime out  ======================================= //
