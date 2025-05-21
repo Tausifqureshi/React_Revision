@@ -1,5 +1,11 @@
 // Slice ko aise samajh sakte hain ki ek application me kai features ho sakte hain. Har feature ke liye alag-alag actions aur reducers ho sakte hain, jo us feature ki state ko manage karte hain.
 
+// ChatGPT Se Liya Hua Syntex ---> createSlice ka matlab hota hai: ek slice of state banana (jaise cartSlice, userSlice, etc).
+// state ka initial structure hota hai (initialState)
+// reducers define karte hain ki state kaise change hogi
+// Ye reducers ke liye actions automatically bana deta hai
+
+
 // Redux Toolkit se `createSlice` ko import kar rahe hain 
 import { createSlice } from "@reduxjs/toolkit";
  
