@@ -2,7 +2,7 @@
 
 // Redux Toolkit se `createSlice` ko import kar rahe hain 
 import { createSlice } from "@reduxjs/toolkit";
-
+ 
 // Counter ka initial state set kar rahe hain jisme `count` ki shuruaat 0 se ho rahi hai
 const initialState = { count: 0 }; 
 

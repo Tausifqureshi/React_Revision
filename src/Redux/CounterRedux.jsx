@@ -2,7 +2,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement, reset } from "./counterSlice"; // `counterSlice` se actions import kar rahe hain
-
+ 
 function CounterRedux() {
   // `useSelector` hook ka use karte hue Redux store se `count` value ko access kar rahe hain
   // `useSelector` ko use karte hain taaki hum Redux store se required state ko safely read kar sakein.
