@@ -10,7 +10,7 @@ function TodoSingle({ id, title, completed }) {
 
     function handleToggle(){
         dispatch(toggleTodos({id:id,completed:completed}));
-    }
+    } 
 
   return (
     <>

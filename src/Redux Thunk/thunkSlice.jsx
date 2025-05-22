@@ -10,7 +10,7 @@ import axios from "axios";
 //       // Agar error ho, toh error ko return karein
 //       throw Error(error.message);
 //     }
-//   }); 
+//   });  
 
 export const fetchDatat = createAsyncThunk("todos/fetch", async () => {
   // const response = await axios.get("https://fakestoreapi.com/products");
@@ -163,4 +163,8 @@ const thunkSlice = createSlice({
 
 export default thunkSlice.reducer;
 
-// json-server --watch db.json --port 800 //json server start karenge ke liye hai yr command
+// json-server --watch db.json --port 800 //json server start karenge ke liye hai ye command
+
+// npm run dev:server // json server start karenge ke liye hai ye command yaha sort me likha hai.
+
+// npm install json-server --save-dev // json server install karne ke liye hai ye command

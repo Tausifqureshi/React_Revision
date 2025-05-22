@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchDatat } from "./thunkSlice";
 import TodoSingle from "./TodoSingle";
-
+ 
 function ListTodos() {
   const dispatch = useDispatch();
 
@@ -11,7 +11,7 @@ function ListTodos() {
 //   console.log("initial state mil ri hai", todos); 
     
   useSelector((state)=>{                    
-    //   console.log("state mil ri hai", state); // jo hamne todos db.json ka datat push kiya hai na slice me ohi data mile ga yaha upper todos me us me de [data, error, loading] us ko destucturing kar ke nikal sakte hai.
+    //   console.log("state mil ri hai", state); // jo hamne todos db.json ka data push kiya hai na slice me ohi data mile ga yaha upper todos me us me se [data, error, loading] us ko destucturing kar ke nikal sakte hai.
     })
     
   useEffect(() => {

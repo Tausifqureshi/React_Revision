@@ -8,6 +8,6 @@ function ReduxThunkExample() {
       <ListTodos />
     </div>
   );
-}
+} 
 
 export default ReduxThunkExample;
