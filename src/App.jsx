@@ -95,7 +95,7 @@ export default function App() {
       {/* <MemoizeAllConsept/> */}
 
       {/* Redux File use */}
-      {/* <Redux /> */}
+      <Redux />/
 
       {/* Redux Thunk File use */}
       {/* <ReduxThunk /> */}
