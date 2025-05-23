@@ -45,7 +45,7 @@ export const counterSlice = createSlice({
       // state ko decrement kar raha hai
 
       // Agar `count` 0 se bada hai to 1 minus karta hai, warna state change nahi hoti
-      if (state.count > 0) {
+      if (state.count > 0) {      
         // state.count -= 1; // aisa bhi kar sakte hai
 
         return { ...state, count: state.count - 1 }; // `count` ko decrease kar rahe hain
