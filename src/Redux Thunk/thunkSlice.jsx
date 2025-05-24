@@ -42,7 +42,7 @@ export const toggleTodos = createAsyncThunk("todos/toggle", async ({ id, complet
     });
     return response.data; // Return the updated todo
   });
-
+  
   
 const thunkSlice = createSlice({
   name: "todos",
