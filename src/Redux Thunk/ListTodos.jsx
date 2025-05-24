@@ -7,11 +7,11 @@ function ListTodos() {
   const dispatch = useDispatch();
 
   const { data:todos, loading, error } = useSelector((state) => state.myExampleTodos);
-//   const todos = useSelector((state) => state.myExampleTodos.data); // Todos ko store se select karenge
-//   console.log("initial state mil ri hai", todos); 
+  const todo = useSelector((state) => state.myExampleTodos.data); // Todos ko store se select karenge
+  console.log("initial state mil ri hai", todo); 
     
   useSelector((state)=>{                    
-    //   console.log("state mil ri hai", state); // jo hamne todos db.json ka data push kiya hai na slice me ohi data mile ga yaha upper todos me us me se [data, error, loading] us ko destucturing kar ke nikal sakte hai.
+      console.log("state mil ri hai", state); // jo hamne todos db.json ka data push kiya hai na slice me ohi data mile ga yaha upper todos me us me se [data, error, loading] us ko destucturing kar ke nikal sakte hai.
     })
     
   useEffect(() => {
