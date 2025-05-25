@@ -68,7 +68,7 @@ const thunkSlice = createSlice({
       // `fulfilled` case, jab data successfully fetch ho gaya ho
       .addCase(fetchDatat.fulfilled, (state, action) => {
         // jo uperr axios me datat return kar re hai o is fulfiled wale me mile ga action.payload me
-        // console.log("actions mil ra hai yaha se fulfiled ka",action.payload);
+        console.log("actions mil ra hai yaha se fulfiled ka",action.payload);
         state.loading = false; // Loading ko false set karna.
 
         state.data = action.payload;  // ✅ API se aaya hua data 'action.payload' me hota hai, usko 'state.data' me save kar rahe hain
@@ -159,7 +159,7 @@ const thunkSlice = createSlice({
         state.error = action.error.message; // Error ko state mein store karna
       });
   },
-});
+}); 
 
 export default thunkSlice.reducer;
 
