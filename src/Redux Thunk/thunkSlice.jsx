@@ -18,7 +18,7 @@ export const fetchDatat = createAsyncThunk("todos/fetch", async () => {
   console.log("Respons Data Get", response.data);
   return response.data; // Response ke data ko return karein
 });
-
+    
 export const addTodos = createAsyncThunk("todos/add", async (title) => {
   const response = await axios.post("http://localhost:800/todo", {
     // post request hai ye.
