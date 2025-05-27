@@ -28,7 +28,7 @@ import Memoize_React from "./React Perfomance and Advance Hook/MemoizeAllConsept
 import MemoizeAllConsept from "./React Perfomance and Advance Hook/MemoizeAllConsept";
 import Redux from "./Redux/Redux";
 import ReduxThunk from "./Redux Thunk/ReduxThunk";
-
+import ReactQuery from "./React Query/ReactQuery";
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
   let firstName = "Tausif";
@@ -36,7 +36,7 @@ export default function App() {
     <div className="app">
       {/* <h1 className="container dymy"> Hello {firstName} </h1>
       <h1> Hello {lastName("Quraishi")} </h1> */}
-
+       
       {/* Evnet-componet-file */}
       {/* <EventChapter /> */}
 
@@ -98,7 +98,10 @@ export default function App() {
       {/* <Redux />/ */}
 
       {/* Redux Thunk File use */}
-      <ReduxThunk />
+      {/* <ReduxThunk /> */}
+
+      {/* React Query File use */}
+      <ReactQuery />
 
       {/* <Z /> */}
     </div>
