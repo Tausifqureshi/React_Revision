@@ -11,7 +11,7 @@ function ReactQuery() {
        React Query is a powerful library for managing server state in React applications.It simplifies data fetching, caching, and synchronization with the server.
      </p>
 
-
+     
       <QueryClientProvider client={queryClient}>
         <QueryExample />
       </QueryClientProvider>       
