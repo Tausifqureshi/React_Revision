@@ -19,10 +19,13 @@ const ApiComponent = () => {
         
         if (!response.ok) {
           throw new Error(`${response.status} Network response was not ok.`);
+          
         }
         const result = await response.json();
         console.log(result);
         setData(result);
+
+        
       } catch (error) {
         setError(error.message);
       } finally {

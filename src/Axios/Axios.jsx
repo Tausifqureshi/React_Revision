@@ -24,9 +24,10 @@
 //       //   throw new Error(`Error fetching data: ${response.status} statusText ${response.statusText}`)
         
 //       // }
-//       setData(response.data)
-//       setIsLoading(false)
-//       setError(null)
+//      setData(response.data);     // naya data mil gaya
+// setIsLoading(false);        // loading khatam
+// setError(null);             // purana error hata do
+
 //     } catch (error) {
 //       setError(error.message)
 //        console.log(error.response.statusText); // e.g., "Not Found"
