@@ -16,6 +16,7 @@ const ApiComponent = () => {
       try {
         const response = await fetch("https://jsonplaceholder.typicode.com/users", { signal: signal });
         console.log(response);
+        
         if (!response.ok) {
           throw new Error(`${response.status} Network response was not ok.`);
         }

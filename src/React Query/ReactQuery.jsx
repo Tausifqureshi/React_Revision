@@ -4,6 +4,9 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 const queryClient = new QueryClient()
 
 function ReactQuery() {
+  
+
+
   return (
    <>
      <h1 style={{ textAlign: "center" }}>React Query Example</h1>
