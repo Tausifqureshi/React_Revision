@@ -5,7 +5,7 @@
 //   const [isLoading, setIsLoading] = React.useState(true)
 //   const [error, setError] = React.useState(null)
 //   const URI = "https://jsonplaceholder.typicode.com/posts"
-//   useEffect(() => { 
+//   useEffect(() => {
 //     fetch(URI).then((response) => {
 //       if (!response.ok) {
 //         throw new Error(`HTTP error! status: ${response.status}`);
@@ -18,13 +18,13 @@
 //       setError(error.message)
 //       setIsLoading(false)
 //     })
-// // 
+// //
 //     }, [])
 //   return (
 //     <div>
 //       {isLoading && <p>Loading...</p>}
 //       {error && <p>Error: {error}</p>}
-     
+
 //       {/* {data&& data.length > 0 ? (
 //         <ul>
 //           {data.map(item => (
@@ -35,7 +35,6 @@
 //         <p>No data available</p>
 //       )} */}
 
-
 //       {data && data.length === 0 ? (
 //         <p>No data available</p>
 //       ) : (
@@ -44,7 +43,7 @@
 //             <li key={item.id}>{item.title}</li>
 //           ))}
 //         </ul>
-//       )} 
+//       )}
 //     </div>
 //   )
 // }
@@ -56,21 +55,3 @@
 
 
 
-
-
-
-
-
-
-import React from 'react'
-
-function QueryExample() {
-  let age = 20;
-  return (
-    <div>
-      <button>{age > 18 ? "Adult" : "Minor"}</button>
-    </div>
-  )
-}
-
-export default QueryExample

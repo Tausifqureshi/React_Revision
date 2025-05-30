@@ -17,6 +17,18 @@
 // Local storage access karna
 
 // Cleanup karna (like removing event listener)
+
+
+// //  usEffect chalne ke rules:
+// | Part                           | Description                                |
+// | ------------------------------ | ------------------------------------------ |
+// | `useEffect(() => {}, [])`      | Sirf ek baar chalega (component mount par) |
+// | `useEffect(() => {}, [state])` | Jab `state` change hoga, tab chalega       |
+// | `useEffect(() => {})`          | Har render ke baad chalega (rare case)     |
+// | `useEffect(() => { return () => {}; }, [state])` | Cleanup function chalega (state change par) |
+// | `useEffect(() => { return () => {}; }, [1props, props])` | props chnage hone per yaah function call hoga |
+
+
 // ========================================= useEffect Hook Parameters =========================================== //
 // ChatGPT Se Liya Hua Syntex --->  Parameters:
 // Effect function (callback): Yeh function wo code execute karta hai jo side effects ke liye likha gaya ho. Side effects ka matlab wo actions jo directly render ke baad perform kiye jate hain, jaise API calls, DOM ke changes, timers set karna, etc.

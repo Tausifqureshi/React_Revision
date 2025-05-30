@@ -78,3 +78,67 @@ function RadioButtonExample() {
 }
 
 export default RadioButtonExample;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// multiple radio button example
+// import React, { useState } from "react";
+
+// function RadioExample() {
+//   const [selectedOption, setSelectedOption] = useState(""); // initially koi select nahi
+
+//   const handleChange = (e) => {
+//     setSelectedOption(e.target.value);
+//   };
+
+//   return (
+//     <div>
+//       <label>
+//         <input
+//           type="radio"
+//           name="fruit"
+//           value="apple"
+//           checked={selectedOption === "apple"}
+//           onChange={handleChange}
+//         />
+//         Apple
+//       </label>
+
+//       <label>
+//         <input
+//           type="radio"
+//           name="fruit"
+//           value="banana"
+//           checked={selectedOption === "banana"}
+//           onChange={handleChange}
+//         />
+//         Banana
+//       </label>
+
+//       <label>
+//         <input
+//           type="radio"
+//           name="fruit"
+//           value="mango"
+//           checked={selectedOption === "mango"}
+//           onChange={handleChange}
+//         />
+//         Mango
+//       </label>
+
+//       <p>Selected fruit: {selectedOption}</p>
+//     </div>
+//   );
+// }
+
+// export default RadioExample;

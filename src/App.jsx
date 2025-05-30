@@ -14,6 +14,7 @@ import Form from "./form/Form";
 import StyleComponents from "./style-Rules/StyleComponents";
 import RadioButton from "./form/RadioButton";
 import MultiInputForm from "./form/MultiInputForm";
+import CheckboxComponent from "./form/Checkbos";
 import UseRefHook from "./useRef Hooks/UseRefHook";
 import UseEffect from "./useEffect Hook/UseEffect";
 import UseReducer from "./useReducer-Hook/UseReducer";
@@ -49,6 +50,7 @@ export default function App() {
       {/* <StateExampleArray /> */}
       {/* <StateExampleObject /> */}
       {/* <MultiStateComponent /> */}
+      <CheckboxComponent />
       {/*useState-component-file end  */}
 
       {/* Render-list componet file */}
@@ -101,7 +103,7 @@ export default function App() {
       {/* <ReduxThunk /> */}
 
       {/* React Query File use */}
-      <ReactQuery />
+      {/* <ReactQuery /> */}
 
       {/* <Z /> */}
     </div>
