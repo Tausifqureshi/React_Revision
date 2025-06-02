@@ -50,7 +50,7 @@ export default function App() {
       {/* <StateExampleArray /> */}
       {/* <StateExampleObject /> */}
       {/* <MultiStateComponent /> */}
-      <CheckboxComponent />
+      {/* <CheckboxComponent /> */}
       {/*useState-component-file end  */}
 
       {/* Render-list componet file */}
@@ -103,7 +103,7 @@ export default function App() {
       {/* <ReduxThunk /> */}
 
       {/* React Query File use */}
-      {/* <ReactQuery /> */}
+      <ReactQuery />
 
       {/* <Z /> */}
     </div>
