@@ -180,6 +180,7 @@ export default CheckboxComponent;
 // ChatGPT se liya hua syntex ---> Array-Based Checkbox Handling dynamic example
 // kaam 100% same hi ho raha hai — sirf data ka structure alag hai, aur handle karne ka tareeka thoda different hai. Array and object dono me checkbox handle karne ka logic similar hai, bas data structure alag hai. Array me items ko push ya filter karte ho, aur object me key-value pairs update karte ho.
 // ArrayBasedCheckbox.js
+
 import React, { useState } from "react";
 
 function ArrayBasedCheckbox() {
