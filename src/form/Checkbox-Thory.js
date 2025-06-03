@@ -70,7 +70,7 @@ const handleChange = (e) => {
 //   onChange={handleChange}
 // />
 
-// <input
+// <inputm    
 //   type="checkbox"
 //   value="football"
 //   checked={selected.includes("football")}
