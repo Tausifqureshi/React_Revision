@@ -55,17 +55,14 @@
 
 
 
-import React from "react";
+
+import React from 'react'
+
 function QueryExample() {
-
-    return (
-        <div>
-            <h1>Query Example</h1>
-            
-        </div>
-    );
-
+  return (
+    <div>QueryExample</div>
+  )
 }
-export default QueryExample;
 
+export default QueryExample
 

@@ -14,7 +14,7 @@ import Form from "./form/Form";
 import StyleComponents from "./style-Rules/StyleComponents";
 import RadioButton from "./form/RadioButton";
 import MultiInputForm from "./form/MultiInputForm";
-import CheckboxComponent from "./form/Checkbos";
+import Checkbox from "./form/Checkbos";
 import UseRefHook from "./useRef Hooks/UseRefHook";
 import UseEffect from "./useEffect Hook/UseEffect";
 import UseReducer from "./useReducer-Hook/UseReducer";
@@ -30,6 +30,7 @@ import MemoizeAllConsept from "./React Perfomance and Advance Hook/MemoizeAllCon
 import Redux from "./Redux/Redux";
 import ReduxThunk from "./Redux Thunk/ReduxThunk";
 import ReactQuery from "./React Query/ReactQuery";
+import Checkbos from "./form/Checkbos";
 export default function App() {
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
   let firstName = "Tausif";
@@ -50,7 +51,7 @@ export default function App() {
       {/* <StateExampleArray /> */}
       {/* <StateExampleObject /> */}
       {/* <MultiStateComponent /> */}
-      {/* <CheckboxComponent /> */}
+      <Checkbos />
       {/*useState-component-file end  */}
 
       {/* Render-list componet file */}
@@ -103,7 +104,7 @@ export default function App() {
       {/* <ReduxThunk /> */}
 
       {/* React Query File use */}
-      <ReactQuery />
+      {/* <ReactQuery /> */}
 
       {/* <Z /> */}
     </div>
