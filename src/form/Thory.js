@@ -10,11 +10,3 @@
 
 
 
-// ============================================== Radio Button  ================================================= //
-// ChatGPT SE liya hus sentex ---> 3. Radio Button (<input type="radio" />)
-
-// Radio button me bhi checked attribute se control hota hai.
-// Lekin, radio buttons group me hote hain, toh unka value attribute bhi important hota hai.
-// React me jab bhi user radio button select karta hai, onChange event se nayi checked state milti hai event.target.checked.
-// Isliye, React me radio buttons me state ko checked prop se bind karte hain.
-

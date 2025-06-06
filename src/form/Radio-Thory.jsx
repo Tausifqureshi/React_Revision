@@ -7,7 +7,7 @@
 // 4. Isliye, React me radio buttons me state ko checked prop se bind karte hain.
 
 
-// ChatGPT SE liya hus sentex ---> Checkbox (<input type="checkbox" />) checkbox and radio  button ke checked attribute ne state varible  ko q datlte hai.
+// ChatGPT SE liya hus sentex ---> Checkbox (<input type="checkbox" />) checkbox and radio  button ke checked attribute me state varible  ko q datlte hai.
 
 // 1. Checked state jo dikhta hai woh checked attribute se control hota hai.
 // 2. User ke check/uncheck hone par event.target.checked milta hai, jo boolean hota hai (true or false).
