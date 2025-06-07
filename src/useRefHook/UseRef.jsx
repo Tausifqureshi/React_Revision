@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 
-
-
-function ToggleInputVisibility() {
+function UseRef() {
   const inputRef = useRef(null);
 
   const toggleVisibility = () => {
@@ -20,5 +18,5 @@ function ToggleInputVisibility() {
 
 
 
-// export default UseRef;
+export default UseRef;
 

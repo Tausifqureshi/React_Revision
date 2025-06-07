@@ -51,15 +51,16 @@ export default function App() {
       {/* <StateExampleArray /> */}
       {/* <StateExampleObject /> */}
       {/* <MultiStateComponent /> */}
-      <Checkbos />
+     
       {/*useState-component-file end  */}
 
       {/* Render-list componet file */}
       {/* <UserList /> */}
 
       {/* Form-File */}
-      {/* <Form /> */}
+      <Form />
       {/* <RadioButton /> */}
+       {/* <Checkbos /> */}
       {/* <MultiInputForm /> */}
 
       {/* Practical-File */}
