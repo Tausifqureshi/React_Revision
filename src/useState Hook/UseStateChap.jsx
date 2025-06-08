@@ -29,7 +29,7 @@ function UseStateChap() {
 
 // const valueReturn = useState("Tausif");
 // console.log(valueReturn); //ek array return karta hai jism me 1index pe current value and 2index pe ek function hota hai jis ka use kar ke ham state ki value ko update kar sakte hai.
- 
+  
 const [firstName, setFirstName ] = useState("Tausif");
  function handleClick(){
     if (firstName === "Tausif") { // is se toggle kara re hai name chnage.
@@ -37,11 +37,19 @@ const [firstName, setFirstName ] = useState("Tausif");
     }else{
         setFirstName("Tausif")
     }
+
+    // setFirstName(firstName === "Tausif" ? "Quarishi" : "Tausif")// Ternary operator 
+
+
+    // setFirstName(!firstName)  //toggle karne ke liye.
+     
+
     
     }
   return (
     <>
-      <h2>Current change your name: {firstName}</h2>
+      {/* <h2>Current change your name: {firstName ? "Tausif" : "Quarishi"}</h2> */}
+      <h2>Current change your name: {firstName }</h2> 
       <button onClick={handleClick}>Change</button>
     </>
   );

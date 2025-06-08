@@ -14,7 +14,8 @@ import StyleComponents from "./style-Rules/StyleComponents";
 import Form from "./form/Form";
 import RadioButton from "./form/RadioButton";
 import MultiInputForm from "./form/MultiInputForm";
-
+import Checkbos from "./form/Checkbos";
+import UseRef from "./useRef Hooks/UseRef";
 import UseEffect from "./useEffect Hook/UseEffect";
 import UseReducer from "./useReducer-Hook/UseReducer";
 import UseContext from "./useContext.jsx/useContext";
@@ -64,7 +65,7 @@ export default function App() {
       {/* Form-File */}
       {/* <Form /> */}
       {/* <RadioButton /> */}
-      {/* <Checkbos /> */}
+      <Checkbos />
       {/* <MultiInputForm /> */}
 
       {/* Practical-File */}

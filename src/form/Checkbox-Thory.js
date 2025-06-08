@@ -7,34 +7,17 @@
 
 // 1. Aapki hobbies kya hain? ✅ Cricket ✅ Football ✅ Music
 // 2. User 1 se zyada select kar sakta hai
-// const [hobbies, setHobbies] = useState([]);
+const [hobbies, setHobbies] = useState([]);
 
-// const handleCheckboxChange = (e) => {
-//   const { value, checked } = e.target;
-//   setHobbies((prev) =>
-//     checked ? [...prev, value] : prev.filter((item) => item !== value)
-//   );
-// };
+const handleCheckboxChange = (e) => {
+  const { value, checked } = e.target;
+  setHobbies((prev) =>
+    checked ? [...prev, value] : prev.filter((item) => item !== value)
+  );
+};
 
 // ✔️ Har checkbox ka checked={hobbies.includes("value")} hota hai
 // ✔️ On change pe value array me add/remove hoti hai
-
-
-// ======================================== CheckBox checked attribute =========================================== //
-// ChatGPT SE liya hus sentex ---> 1. Checkbox (<input type="checkbox" />)
-// Checkbox me checked attribute se control hota hai.
-
-// React me jab bhi user checkbox ko check/uncheck karta hai, onChange event se nayi checked state milti hai event.target.checked.
-// Isliye, React me checkbox me state ko checked prop se bind karte hain.
-
-
-// ChatGPT SE liya hus sentex ---> Checkbox (<input type="checkbox" />) checkbox and radio  button ko checked attribute ne state varible  ko q datlte hai.
-
-// 1. Checked state jo dikhta hai woh checked attribute se control hota hai.
-// 2. User ke check/uncheck hone par event.target.checked milta hai, jo boolean hota hai (true or false).
-// 3. Isliye React me checkbox/radio ko state se checked prop se bind karte hain.
-
-
 
 
 // ========================================= CheckBox value attribute ============================================ //
@@ -42,40 +25,39 @@
 
 // 1. Jab sirf ek checkbox ho (e.g. "I agree to terms")
 // To value dena zaroori nahi hota.
-// const [agreed, setAgreed] = useState(false);
+const [agreed, setAgreed] = useState(false);
 
-// <input
-//   type="checkbox"
-//   checked={agreed}
-//   onChange={(e) => setAgreed(e.target.checked)}
-// />
+<input
+  type="checkbox"
+  checked={agreed}
+  onChange={(e) => setAgreed(e.target.checked)}
+/>
 // Yahan value ki koi zarurat nahi hai, kyunki bas hume pata karna hai user ne tick kiya ya nahi (true/false).
 
 //  2. Jab multiple checkboxes ho (e.g. select hobbies)
 // To value dena zaroori hota hai — warna pata nahi chalega kaunsa option tick hua.
 
-// const [selected, setSelected] = useState([]);
+const [selected, setSelected] = useState([]);
+const handleChange = (e) => {
+  const { value, checked } = e.target;
+  setSelected((prev) =>
+    checked ? [...prev, value] : prev.filter((item) => item !== value)
+  );
+};
 
-// const handleChange = (e) => {
-//   const { value, checked } = e.target;
-//   setSelected((prev) =>
-//     checked ? [...prev, value] : prev.filter((item) => item !== value)
-//   );
-// };
+{/* <input
+  type="checkbox"
+  value="cricket"
+  checked={selected.includes("cricket")}
+  onChange={handleChange}
+/> */}
 
-// <input
-//   type="checkbox"
-//   value="cricket"
-//   checked={selected.includes("cricket")}
-//   onChange={handleChange}
-// />
-
-// <inputm    
-//   type="checkbox"
-//   value="football"
-//   checked={selected.includes("football")}
-//   onChange={handleChange}
-// />
+<inputm    
+  type="checkbox"
+  value="football"
+  checked={selected.includes("football")}
+  onChange={handleChange}
+/>
 
 // Agar tu value nahi dega to React e.target.value me "on" return karega (jo default hota hai), aur wo useful nahi hai.
 
@@ -87,64 +69,6 @@
 //====Checkbox and radio button me value me ham state varible name q nhi dete checked me dete hai state varible====//
 
 // chatGPT se liya hua syntex --->  Tera Sawal ----> Radio/Checkbox me value me hum state ka naam kyun nahi dete.Jabki text input me value={state} likhte hain. input ka code thory.js me diya hua hai.
-
-// 1. 👉 Text input ka kaam hota hai — value ko "show" karna.
-// 2. 👉 Radio / checkbox ka kaam hota hai — value ko "dena" jab select ho.
-
-
-//  1.Radio / Checkbox: value="..." (fixed string hoti hai). Yahan value ka matlab hota hai:
-
-// const [gender, setGender] = useState("male");
-// <input
-//   type="radio"
-//   name="gender"
-//   value="male"
-//   checked={gender === "male"}   // ✅ Agar selected hai to hi checked
-//   onChange={(e) => setGender(e.target.value)}
-// />
-
-// 1. Yahan agar tu checked={gender} likhega to:
-// 2. State me gender = "male" hoga
-// 3. Aur checked={gender} ka matlab hoga: "male" (string) → ye JS me truthy hai
-// 4. To sabhi radio button checked ho jayenge, kyunki sab me checked={truthy} lag raha hoga 😵
-// 5. ✅ Isliye hum radio me checked={gender === "male"} likhte hain —
-// 6. Jo option select hua hai sirf wahi true hoga, baaki sab false.
-
-
-
-// ChatGPT SE liya hus sentex ---> ⚠️ Ab agar tu ye kare:
-// ❌ Ab agar tu galti se ye kare:
-{/* <input
-  type="radio"
-  value={gender}  // ❌ state use kar diya value me
-  ...
-/> */}
-// 1. 🟥 Har radio ka value same ho jayega (jaise "male" hi sab me aa raha hoga)
-// 2. 🟥 Fir kabhi bhi different option select hi nahi hoga
-// 3. 🟥 React ko samajh nahi aayega ki kaunsa radio active hona chahiye
-
-
-
-//  ✅ Checkbox me bhi same logic:
-// const [selected, setSelected] = useState(["cricket"]);
-{/* <input
-  type="checkbox"
-  value="cricket"
-  checked={selected.includes("cricket")}  // ✅ Agar selected list me hai to tick dikhao
-  onChange={handleChange}
-/>
-1. Agar tu yahan checked={selected} kare:
-2. selected ek array hai → jaise ["cricket"]
-3. Array JS me hamesha truthy hota hai
-4. To sabhi checkbox tick ho jaayenge 😵‍💫
-✅ 5. Isliye checkbox me checked={selected.includes("cricket")} likhte hain —
-Taaki har checkbox individually check ho sake: selected hai ya na */}
-
-
-// ✅ Final Gyaan Line:
-// ✅ Text input me value hota hai: current state jo input me dikh rahi hai.
-// ✅  Radio / Checkbox me checked={comparison} hota hai — wo tick karne ke liye hai.
-// ❌ State ka naam value me dena galat hai radio/checkbox me
 
 
 

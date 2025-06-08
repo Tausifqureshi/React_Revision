@@ -33,9 +33,17 @@ function UseRefHook() {
     function handleClick (){
       console.log(h1Ref); // h1 me ref pass clg me pura h1 element aye ga print hoke.
       const h1Elememt = h1Ref.current; // h1 access useRef wala.
-      h1Elememt.textContent = 'Tausif Quraishi'; //Content Value Change.
-      h1Elememt.style.background = 'green'
-      h1Elememt.style.color = 'white'
+      if(h1Elememt.textContent === 'Tausif Quraishi'){
+        h1Elememt.textContent = 'Hello There'
+        h1Elememt.style.background = 'white'
+        h1Elememt.style.color = 'black'
+      }else{
+        h1Elememt.textContent = 'Tausif Quraishi'; //Content Value Change.
+        h1Elememt.style.background = 'green'
+        h1Elememt.style.color = 'white'
+        console.log(h1Elememt.textContent);
+      }
+
 
     }
   return (
