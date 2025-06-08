@@ -10,12 +10,11 @@ import MultiStateComponent from "./useState Hook/MultiStateComponent";
 import PracticalUse from "./practical/PracticalUse";
 import ControlledComponent from "./controll vs uncontroll/ControlledComponent";
 import Dymi from "./practical/Dymi";
-import Form from "./form/Form";
 import StyleComponents from "./style-Rules/StyleComponents";
+import Form from "./form/Form";
 import RadioButton from "./form/RadioButton";
 import MultiInputForm from "./form/MultiInputForm";
-import Checkbox from "./form/Checkbos";
-import UseRefHook from "./useRef Hooks/UseRefHook";
+
 import UseEffect from "./useEffect Hook/UseEffect";
 import UseReducer from "./useReducer-Hook/UseReducer";
 import UseContext from "./useContext.jsx/useContext";
@@ -29,16 +28,16 @@ import Memoize_React from "./React Perfomance and Advance Hook/MemoizeAllConsept
 import MemoizeAllConsept from "./React Perfomance and Advance Hook/MemoizeAllConsept";
 import Redux from "./Redux/Redux";
 import ReduxThunk from "./Redux Thunk/ReduxThunk";
-import ReactQuery from "./React Query/ReactQuery";
-import Checkbos from "./form/Checkbos";
+
 export default function App() {
-  const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
-  let firstName = "Tausif";
+  // const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
+  // let firstName = "Tausif";
   return (
-    <div className="app">
+    <div>
+      <h1> React Tutorial</h1>
       {/* <h1 className="container dymy"> Hello {firstName} </h1>
       <h1> Hello {lastName("Quraishi")} </h1> */}
-       
+
       {/* Evnet-componet-file */}
       {/* <EventChapter /> */}
 
@@ -51,16 +50,16 @@ export default function App() {
       {/* <StateExampleArray /> */}
       {/* <StateExampleObject /> */}
       {/* <MultiStateComponent /> */}
-     
+
       {/*useState-component-file end  */}
 
       {/* Render-list componet file */}
       {/* <UserList /> */}
 
       {/* Form-File */}
-      <Form />
-      {/* <RadioButton /> */}
-       {/* <Checkbos /> */}
+      {/* <Form /> */}
+      <RadioButton />
+      {/* <Checkbos /> */}
       {/* <MultiInputForm /> */}
 
       {/* Practical-File */}
@@ -73,7 +72,7 @@ export default function App() {
       {/* <StyleComponents /> */}
 
       {/* UseRef Hook */}
-      {/* <UseRefHook /> */}
+      {/* <UseRef /> */}
 
       {/* UseEffect Hook-File */}
       {/* <UseEffect /> */}
@@ -90,7 +89,6 @@ export default function App() {
 
       {/* React-Router-File */}
       {/* <ReactRouter /> */}
-      
 
       {/* React-Router New Features File */}
       {/* <NewFeatures /> */}
@@ -107,7 +105,11 @@ export default function App() {
       {/* React Query File use */}
       {/* <ReactQuery /> */}
 
-      {/* <Z /> */}
+      {/* <Z /> */}\
+
+        
+                
+      
     </div>
   );
 }

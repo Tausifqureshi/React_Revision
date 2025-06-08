@@ -42,8 +42,7 @@
 
 
 import React, { useState } from 'react';
-
-function RadioButtonExample() {
+function RadioButton() {
   const [selectedOption, setSelectedOption] = useState('Option 1');
   const [optionSelect, setOptionSelect] = useState("");
 
@@ -77,7 +76,8 @@ function RadioButtonExample() {
   );
 }
 
-export default RadioButtonExample;
+export default RadioButton;
+
 
 
 

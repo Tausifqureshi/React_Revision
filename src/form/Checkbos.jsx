@@ -1,29 +1,29 @@
 
-// import React, { useState } from "react";
-//  function Checkbos() {
-//   const [isChecked, setIsChecked] = useState(false);
+import React, { useState } from "react";
+ function Checkbos() {
+  const [isChecked, setIsChecked] = useState(false);
 
-//   function handleCheckboxChange(e) {
-//     //  setIsChecked(e.target.checked);
-//     setIsChecked((prev) => !prev); // Toggle the state
-//    }
+  function handleCheckboxChange(e) {
+    //  setIsChecked(e.target.checked);
+    setIsChecked((prev) => !prev); // Toggle the state
+   }
 
-//   return (
-//     <div>
-//       <label>
-//         <input
-//           type="checkbox"
-//           checked={isChecked}
-//           onChange={handleCheckboxChange}
-//         />
-//         Check me!
-//       </label>
-//       {isChecked ? <p>Toggle is ON</p> : <p>Toggle is OFF</p>}
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
+        Check me!
+      </label>
+      {isChecked ? <p>Toggle is ON</p> : <p>Toggle is OFF</p>}
+    </div>
+  );
+}
 
-// export default Checkbos;
+export default Checkbos;
  
 
 
@@ -35,16 +35,14 @@
 //   const [inputValue, setInputValue] =useState("");
 //   const [showInput, setShowInput] = useState(true); // input dikh raha hai ya nahi
 
-//   const inputToggle = () => {
+//   const inputToggle = (e) => {
 //     //  Toggle to input 
 
-//     // setInputValue((prevValue) => !prevValue);
-//     // if (inputValue) {
-//     //   setInputValue("");
-//     // } else {
-//     //   setInputValue("Default Value");
-//     // }
-//     setShowInput(!showInput);
+//     // setShowInput(!showInput);
+
+//     setShowInput(e.target.checked);
+
+    
 //   };
 
 //   return (
@@ -59,9 +57,13 @@
 //         />
 //       )}
 
-//       <button type="button" onClick={inputToggle}>
+//       {/* <button type="button" onClick={inputToggle}>
 //         Toggle to input 
-//       </button> <br /> <br /> <br />
+//       </button>  */}
+      
+//       <label htmlFor=" toggle"> Toggle to input </label>
+//       <input type="checkbox" name="" id="toggle" checked={showInput} onChange={inputToggle}/>
+//       <br /> <br /> <br />
 
 //       <button type="button" onClick={() => setToggle(!toggle)}>
 //         Click to text toggle 
@@ -74,14 +76,3 @@
 // export default CheckBos;
 
 
-
-
-import React from 'react'
-
-function Checkbos() {
-  return (
-    <div>Checkbos</div>
-  )
-}
-
-export default Checkbos

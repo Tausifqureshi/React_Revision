@@ -143,66 +143,64 @@
 
 
 
-//post request example fetch api.
-import React, { useState } from 'react';
+// //post request example fetch api.
+// import React, { useState } from 'react';
 
-function App() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [responseMsg, setResponseMsg] = useState('');
+// function App() {
+//   const [name, setName] = useState('');
+//   const [email, setEmail] = useState('');
+//   const [responseMsg, setResponseMsg] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
 
-    try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, email })
-      });
+//     try {
+//       const response = await fetch('https://jsonplaceholder.typicode.com/users', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({ name, email })
+//       });
 
-      const data = await response.json();
-      console.log('Server response:', data);
-      setResponseMsg('User created successfully!');
-    } catch (error) {
-      console.error('Error:', error);
-      setResponseMsg('Error occurred while creating user.');
-    }
-  };
+//       const data = await response.json();
+//       console.log('Server response:', data);
+//       setResponseMsg('User created successfully!');
+//     } catch (error) {
+//       console.error('Error:', error);
+//       setResponseMsg('Error occurred while creating user.');
+//     }
+//   };
 
-  return (
-    <div style={{ padding: '20px' }}>
-      <h1>Create User (with fetch)</h1>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          placeholder="Name"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          required
-        /><br /><br />
+//   return (
+//     <div style={{ padding: '20px' }}>
+//       <h1>Create User (with fetch)</h1>
+//       <form onSubmit={handleSubmit}>
+//         <input 
+//           type="text" 
+//           placeholder="Name"
+//           value={name}
+//           onChange={e => setName(e.target.value)}
+//           required
+//         /><br /><br />
         
-        <input 
-          type="email" 
-          placeholder="Email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required
-        /><br /><br />
+//         <input 
+//           type="email" 
+//           placeholder="Email"
+//           value={email}
+//           onChange={e => setEmail(e.target.value)}
+//           required
+//         /><br /><br />
         
-        <button type="submit">Submit</button>
-      </form>
+//         <button type="submit">Submit</button>
+//       </form>
 
-      {responseMsg && <p>{responseMsg}</p>}
-    </div>
-  );
-}
+//       {responseMsg && <p>{responseMsg}</p>}
+//     </div>
+//   );
+// }
 
-// export default App;
-
-
+// // export default App;
 
 
 
@@ -215,58 +213,60 @@ function App() {
 
 
 
-// Axios example post request
-import React, { useState } from 'react';
-import axios from 'axios';
 
-function App() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [responseMsg, setResponseMsg] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+// // Axios example post request
+// import React, { useState } from 'react';
+// import axios from 'axios';
 
-    try {
-      const response = await axios.post('https://jsonplaceholder.typicode.com/users', {
-        name: name,
-        email: email
-      });
+// function App() {
+//   const [name, setName] = useState('');
+//   const [email, setEmail] = useState('');
+//   const [responseMsg, setResponseMsg] = useState('');
 
-      console.log('POST response:', response.data);
-      setResponseMsg('User created successfully!');
-    } catch (error) {
-      console.error('Error in POST:', error);
-      setResponseMsg('Failed to create user.');
-    }
-  };
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
 
-  return (
-    <div style={{ padding: '20px' }}>
-      <h1>Create User (Axios POST)</h1>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        /><br /><br />
+//     try {
+//       const response = await axios.post('https://jsonplaceholder.typicode.com/users', {
+//         name: name,
+//         email: email
+//       });
 
-        <input 
-          type="email" 
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        /><br /><br />
+//       console.log('POST response:', response.data);
+//       setResponseMsg('User created successfully!');
+//     } catch (error) {
+//       console.error('Error in POST:', error);
+//       setResponseMsg('Failed to create user.');
+//     }
+//   };
 
-        <button type="submit">Submit</button>
-      </form>
+//   return (
+//     <div style={{ padding: '20px' }}>
+//       <h1>Create User (Axios POST)</h1>
+//       <form onSubmit={handleSubmit}>
+//         <input 
+//           type="text" 
+//           placeholder="Name"
+//           value={name}
+//           onChange={(e) => setName(e.target.value)}
+//           required
+//         /><br /><br />
 
-      {responseMsg && <p>{responseMsg}</p>}
-    </div>
-  );
-}
+//         <input 
+//           type="email" 
+//           placeholder="Email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//           required
+//         /><br /><br />
 
-// export default App;
+//         <button type="submit">Submit</button>
+//       </form>
+
+//       {responseMsg && <p>{responseMsg}</p>}
+//     </div>
+//   );
+// }
+
+// // export default App;
