@@ -56,13 +56,13 @@
 
 
 
-import React from 'react'
+// import React from 'react'
 
-function QueryExample() {
-  return (
-    <div>QueryExample</div>
-  )
-}
+// function QueryExample() {
+//   return (
+//     <div>QueryExample</div>
+//   )
+// }
 
-export default QueryExample
+// export default QueryExample
 

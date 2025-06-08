@@ -2,6 +2,7 @@
 import React, { useState } from "react";
  function Checkbos() {
   const [isChecked, setIsChecked] = useState(false);
+  // const myFirstName = "John"
 
   function handleCheckboxChange(e) {
     //  setIsChecked(e.target.checked);

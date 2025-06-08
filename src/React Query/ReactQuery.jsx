@@ -1,12 +1,17 @@
-import React, { useState } from "react";
-import QueryExample from "./QueryExample";
+import React from 'react'
 
 function ReactQuery() {
+
   return (
-    <>
-      <QueryExample />
-    </>
-  );
+    <div>
+    ReactQuery
+    <h1> lorm </h1>
+
+
+    </div>
+   
+  )
 }
 
-export default ReactQuery;
+export default ReactQuery
+

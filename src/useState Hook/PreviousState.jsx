@@ -31,8 +31,11 @@ function PreviousState() {
   //   };  
 
   const decreaseCount = () => {
+    if(count > 0){
     setCounter((previousState) => previousState - 1);
     // perviousState hai jo us hi ki ham ek callback function ki tara pass kar re hai.
+    }
+
   };
 
   return (

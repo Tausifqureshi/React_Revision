@@ -25,10 +25,10 @@
 
 
 // React me kaise handle karte hain?
-const [gender, setGender] = useState("");
-const handleRadioChange = (e) => {
-  setGender(e.target.value);
-};
+// const [gender, setGender] = useState("");
+// const handleRadioChange = (e) => {
+//   setGender(e.target.value);
+// };
 
 // ✔️ Har radio button ka value="..." hota hai
 // ✔️ checked={gender === "male"} jaisa comparison use hota hai
@@ -43,21 +43,21 @@ const handleRadioChange = (e) => {
 
 
 // ChatGPT SE liya hus sentex ---> 📌 Ab agar tu ye kare:
-if (e.target.checked) {
-  setGender(e.target.value);
-}
+// if (e.target.checked) {
+//   setGender(e.target.value);
+// }
 // Ye chalega, lekin pointless hai. Kyunki jab radio button change hota hai, tab hamesha checked === true hota hai.
 // To if (e.target.checked) likhne ka koi faida nahi
 
 
 
 // ChatGPT SE liya hus sentex ---> Radio buttons ka group hota hai — aur sirf ek hi active ho sakta hai
- <input
-  type="radio"
-  value="male"
-  checked={gender === "male"} // react is controlling this
-  onChange={(e) => setGender(e.target.value)} // sirf value use hoti hai
- /> 
+//  <input
+//   type="radio"
+//   value="male"
+//   checked={gender === "male"} // react is controlling this
+//   onChange={(e) => setGender(e.target.value)} // sirf value use hoti hai
+//  /> 
 
 // Agar tu e.target.checked use karega to wo to true hi aayega — lekin usse pata nahi chalega kaunsa radio select hua.Isliye hum value ka use karte hain.
 

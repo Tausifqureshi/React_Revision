@@ -55,43 +55,43 @@
 // 2. useMemo tab use hota hai jab aap kisi expensive calculation ko memoize karna chahte hain taaki baar-baar calculate na ho.
 
 
-import React, { useState, useMemo } from 'react';
+// import React, { useState, useMemo } from 'react';
    
-function ExpensiveCalculationComponent() {
-  const [count, setCount] = useState(0);
-  const [input, setInput] = useState('');
+// function ExpensiveCalculationComponent() {
+//   const [count, setCount] = useState(0);
+//   const [input, setInput] = useState('');
 
-  // 🚨 Ye heavy calculation hai, baar-baar nahi karna chahte
-  const expensiveCalculation = (num) => {
-    console.log("⏳ Calculating...");
-    for (let i = 0; i < 1000000000; i++) {} // Dummy loop to simulate slowness
-    return num * 2; // 👈 Ye ACTUAL VALUE return ho rahi hai function se
-  };
+//   // 🚨 Ye heavy calculation hai, baar-baar nahi karna chahte
+//   const expensiveCalculation = (num) => {
+//     console.log("⏳ Calculating...");
+//     for (let i = 0; i < 1000000000; i++) {} // Dummy loop to simulate slowness
+//     return num * 2; // 👈 Ye ACTUAL VALUE return ho rahi hai function se
+//   };
 
-  // ✅ useMemo ek VALUE return karta hai — yahan pe expensiveCalculation ka result
-  const memoizedValue = useMemo(() => {
-    // 👇 Ye VALUE return ho rahi hai useMemo se (sirf jab count change ho)
-    return expensiveCalculation(count);
-  }, [count]); // 🔁 Re-run only if count changes
+//   // ✅ useMemo ek VALUE return karta hai — yahan pe expensiveCalculation ka result
+//   const memoizedValue = useMemo(() => {
+//     // 👇 Ye VALUE return ho rahi hai useMemo se (sirf jab count change ho)
+//     return expensiveCalculation(count);
+//   }, [count]); // 🔁 Re-run only if count changes
 
-  return (
-    <div>
-      <h1>Count: {count}</h1>
+//   return (
+//     <div>
+//       <h1>Count: {count}</h1>
 
-      {/* 👇 Yahan memoized VALUE render ho rahi hai */}
-      <p>Expensive Calculation Result: {memoizedValue}</p>
+//       {/* 👇 Yahan memoized VALUE render ho rahi hai */}
+//       <p>Expensive Calculation Result: {memoizedValue}</p>
 
-      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+//       <button onClick={() => setCount(count + 1)}>Increment Count</button>
 
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Type something..."
-      />
-    </div>
-  );
-}
+//       <input
+//         type="text"
+//         value={input}
+//         onChange={(e) => setInput(e.target.value)}
+//         placeholder="Type something..."
+//       />
+//     </div>
+//   );
+// }
 
-export default ExpensiveCalculationComponent;
+// export default ExpensiveCalculationComponent;
 

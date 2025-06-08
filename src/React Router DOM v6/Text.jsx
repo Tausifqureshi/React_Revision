@@ -1,4 +1,4 @@
-<BrowserRouter>
+{/* <BrowserRouter>
 
   <Routes>  
     <Route path="/" element={<Home />} />
@@ -16,4 +16,4 @@
  {/* <Razorpay /> */}
 
 {/* MyState se Wrap q ke MyState ek provider hai context api ka use hora hai appcompoents ki MyState se Wrap kar re hai iska matlab ab app componets me jitne componets use hoge us me dircte value pass kar skate hai context api ka use kar ke q ke app componets prants hai ab sub ka. */}
-</BrowserRouter>
+// </BrowserRouter> */}

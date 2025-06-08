@@ -42,7 +42,7 @@
 
 
 import React, { useState } from 'react';
-function RadioButton() {
+function RadioButton(e) {
   const [selectedOption, setSelectedOption] = useState('Option 1');
   const [optionSelect, setOptionSelect] = useState("");
 

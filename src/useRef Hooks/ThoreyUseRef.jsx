@@ -15,25 +15,25 @@
 
 
 // ChatGPT Se Liya Hua Syntex ---> Example: DOM Element ko Refer karna.
-import React, { useRef, useEffect } from 'react';
+// import React, { useRef, useEffect } from 'react';
 
-function TextInputWithFocusButton() {
-  const inputEl = useRef(null);
+// function TextInputWithFocusButton() {
+//   const inputEl = useRef(null);
 
-  const onButtonClick = () => {
-    // `current` points to the mounted text input element
-    inputEl.current.focus();
-  };
+//   const onButtonClick = () => {
+//     // `current` points to the mounted text input element
+//     inputEl.current.focus();
+//   };
 
-  return (
-    <div>
-      <input ref={inputEl} type="text" />
-      <button onClick={onButtonClick}>Focus the input</button>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <input ref={inputEl} type="text" />
+//       <button onClick={onButtonClick}>Focus the input</button>
+//     </div>
+//   );
+// }
 
-export default TextInputWithFocusButton;
+// export default TextInputWithFocusButton;
 
 
 

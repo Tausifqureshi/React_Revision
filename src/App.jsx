@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"; 
 import PropsChap from "./props-file/PropsChap";
 import UserList from "./render-list/UserList";
 import EventChapter from "./eventChapter/EventChapter";
 import UseStateChap from "./useState Hook/UseStateChap";
 import PreviousState from "./useState Hook/PreviousState";
 import StateExampleArray from "./useState Hook/StateExampleArray";
-import StateExampleObject from "./useState Hook/StateExampleObject";
+import StateExampleObject from "./useState Hook/StateExampleObject";  
 import MultiStateComponent from "./useState Hook/MultiStateComponent";
 import PracticalUse from "./practical/PracticalUse";
 import ControlledComponent from "./controll vs uncontroll/ControlledComponent";
@@ -30,14 +30,18 @@ import Redux from "./Redux/Redux";
 import ReduxThunk from "./Redux Thunk/ReduxThunk";
 
 export default function App() {
-  // const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
-  // let firstName = "Tausif";
+  const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
+  let firstName = "Tausif";
+  
+
   return (
     <div>
       <h1> React Tutorial</h1>
+
+     <div>
       {/* <h1 className="container dymy"> Hello {firstName} </h1>
       <h1> Hello {lastName("Quraishi")} </h1> */}
-
+    
       {/* Evnet-componet-file */}
       {/* <EventChapter /> */}
 
@@ -50,6 +54,7 @@ export default function App() {
       {/* <StateExampleArray /> */}
       {/* <StateExampleObject /> */}
       {/* <MultiStateComponent /> */}
+        
 
       {/*useState-component-file end  */}
 
@@ -58,7 +63,7 @@ export default function App() {
 
       {/* Form-File */}
       {/* <Form /> */}
-      <RadioButton />
+      {/* <RadioButton /> */}
       {/* <Checkbos /> */}
       {/* <MultiInputForm /> */}
 
@@ -105,7 +110,8 @@ export default function App() {
       {/* React Query File use */}
       {/* <ReactQuery /> */}
 
-      {/* <Z /> */}\
+      {/* <Z /> */}
+      </div>
 
         
                 
