@@ -73,6 +73,7 @@ const handleChange = (e) => {
 
 
 
+
 // ========================================= bina e.target.checked ke use========================================= //
 // ChatGPT se liya hua syntex ---> Toggle kar re bina e.target.checked ke use karne ka
 // 1. Agar toggle true hai, to false ho jayega.

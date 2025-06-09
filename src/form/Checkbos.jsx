@@ -38,12 +38,8 @@ function  CheckBos() {
 
   const inputToggle = (e) => {
     //  Toggle to input 
-
     // setShowInput(!showInput);
-
     setShowInput(e.target.checked);
-
-    
   };
 
   return (
