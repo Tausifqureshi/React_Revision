@@ -77,19 +77,103 @@
 // react form hook 
 // validtion --> yap library 
 
-import React from 'react'
+// import React, { useState } from 'react'
 
 
-const Z = () => {
+// const Z = () => {
+//   const [isChecked, setIsChecked] = useState(false);
+
+//   return (
+//     <div>
+//     <h1>Hello</h1>
+//     {/* <input type="checkbox" name="" id="" checked={isChecked} onChange={(e)=>setIsChecked(e.target.checked)}/> */}
+//     <input type="checkbox" name="" id="" checked={isChecked} onChange={(e)=>setIsChecked(!isChecked)}/>
+
+//     <h1>{isChecked.toString()}</h1>
+//     <h1>{isChecked ? "Yes" : "No"}</h1>
+    
+
+//     </div>
+//   )
+// }
+
+// export default Z 
+
+
+
+import React, { useState , useEffect} from "react";
+function Z() {
+const [checkedItems, setCheckedItems] = useState(JSON.parse(localStorage.getItem("checkedItems")) || []);
+
+  const handleCheckboxChange = (e) => {
+   
+    // const  {name, checked} = e.target; // Destructuring to get name and checked state
+    // setCheckedItems((prev) => {
+    //   if (checked) {
+    //     return [...prev, name]; // Add the name if checked
+    //   } else {
+    //     return prev.filter((item) => item !== name); // Remove the name if unchecked
+    //   }
+    // });
+
+
+    const { value, checked } = e.target;
+    setCheckedItems((prev) => {
+      if (checked) {
+        return [...prev, value]; // Add the value if checked
+      } else {
+        return prev.filter((item) => item !== value); // Remove the value if unchecked
+      }
+    });
+
+   
+  };
+
+   // Save to localStorage
+    useEffect(() => {
+      localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+    }, [checkedItems]);
+
   return (
     <div>
-    <h1>Hello</h1>
+      <label>
+        <input
+          type="checkbox"
+          name="item1"
+          value="HTML "
+          onChange={handleCheckboxChange}
+        />
+        Item 1
+      </label>
 
+      <label>
+        <input
+          type="checkbox"
+          name="item2"
+        value="JavaScript"
+          onChange={handleCheckboxChange}
+        />
+        Item 2
+      </label>
+
+      <label>
+        <input
+          type="checkbox"
+          name="item3"
+          onChange={handleCheckboxChange}
+          value="React"
+        />
+        Item 3
+      </label>
+      <div>
+
+           <h1> itme print {checkedItems.join(", ")}</h1>
+      </div>
     </div>
-  )
+  );
 }
+export default Z;
 
-export default Z 
 
 //  z-stand --->  library 
 // react query ---> data fetching library 

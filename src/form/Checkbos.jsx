@@ -20,6 +20,7 @@
 //         Check me!
 //       </label>
 //       {isChecked ? <p>Toggle is ON</p> : <p>Toggle is OFF</p>}
+    // <h1>{isChecked.toString()}</h1> 
 //     </div>
 //   );
 // }

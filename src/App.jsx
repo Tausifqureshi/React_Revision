@@ -65,7 +65,7 @@ export default function App() {
       {/* Form-File */}
       {/* <Form /> */}
       {/* <RadioButton /> */}
-      <Checkbos />
+      {/* <Checkbos /> */}
       {/* <MultiInputForm /> */}
 
       {/* Practical-File */}
@@ -111,7 +111,7 @@ export default function App() {
       {/* React Query File use */}
       {/* <ReactQuery /> */}
 
-      {/* <Z /> */}
+      <Z />
       </div>
 
         
