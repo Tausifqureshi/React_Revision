@@ -84,4 +84,142 @@ export default RadioButton;
 
 
 
+// Object Best Practices
+
+// import React, { useState, useEffect } from "react";
+// ChatGPT --->  ❓Interviewer: formData.fruit ka kya matlab hai?
+// ✅Answer (Short & Smart):
+// "formData ek object hai jo form ka data store karta hai.
+// fruit uska key hai, jisme selected fruit ka value hota hai — jaise 'apple', 'banana' ya 'mango'.
+// Toh formData.fruit batata hai user ne konsa radio option select kiya."
+
+// 💡 Extra 1-liner (agar poocha jaye: kyun aise likha?)
+// "Radio buttons same name share karte hain, aur selected value formData.fruit me store hoti hai via onChange."
+
+
+// // function Z() {
+//   const [formData, setFormData] = useState(() => {
+//     const saved = localStorage.getItem("formData");
+//     return saved ? JSON.parse(saved) : {};
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+
+//     setFormData((prev) => ({
+//       ...prev,
+//       [name]: value,
+//     }));
+//   };
+
+//   useEffect(() => {
+//     localStorage.setItem("formData", JSON.stringify(formData));
+//   }, [formData]);
+
+//   return (
+//     <div>
+//       <label>
+//         <input
+//           type="radio"
+//           name="fruit"
+//           value="apple"
+//           checked={formData.fruit === "apple"}
+//           onChange={handleChange}
+//         />
+//         Apple
+//       </label>
+
+//       <label>
+//         <input
+//           type="radio"
+//           name="fruit"
+//           value="banana"
+//           checked={formData.fruit === "banana"}
+//           onChange={handleChange}
+//         />
+//         Banana
+//       </label>
+
+//       <label>
+//         <input
+//           type="radio"
+//           name="fruit"
+//           value="mango"
+//           checked={formData.fruit === "mango"}
+//           onChange={handleChange}
+//         />
+//         Mango
+//       </label>
+
+//       <p>Selected fruit: {formData.fruit}</p>
+//     </div>
+//   );
+// }
+
+// export default Z;
+
+
+
+
+
+// multiple radio button example string ke sath use bro. 
+import React, { useState, useEffect } from "react";
+
+function Z() {
+//   const [selectedOption, setSelectedOption] = useState(""); // initially koi select nahi
+const [selectedOption, setSelectedOption] = useState(() => {
+  return localStorage.getItem("selectedOption") || "";
+});
+
+
+  const handleChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
+//   Save data in local storage
+  useEffect(() => {
+    localStorage.setItem("selectedOption", selectedOption);
+  }, [selectedOption]);
+
+  return (
+    <div>
+      <label>
+        <input
+          type="radio"
+          name="fruit"
+          value="apple"
+          checked={selectedOption === "apple"}
+          onChange={handleChange}
+        />
+        Apple
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="fruit"
+          value="banana"
+          checked={selectedOption === "banana"}
+          onChange={handleChange}
+        />
+        Banana
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="fruit"
+          value="mango"
+          checked={selectedOption === "mango"}
+          onChange={handleChange}
+        />
+        Mango
+      </label>
+
+      <p>Selected fruit: {selectedOption}</p>
+    </div>
+  );
+}
+
+// export default Z;
 
