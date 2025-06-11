@@ -76,3 +76,164 @@ function  CheckBos() {
 export default CheckBos;
 
 
+
+
+
+
+
+
+// LocalStorge use Array 
+// import React, { useState , useEffect} from "react";
+// function Z() {
+// const [checkedItems, setCheckedItems] = useState(()=>{
+//   const savedItems = localStorage.getItem("checkedItems");
+//   return savedItems ? JSON.parse(savedItems) : [];
+// });
+
+//   const handleCheckboxChange = (e) => {
+   
+//     // const  {name, checked} = e.target; // Destructuring to get name and checked state
+//     // setCheckedItems((prev) => {
+//     //   if (checked) {
+//     //     return [...prev, name]; // Add the name if checked
+//     //   } else {
+//     //     return prev.filter((item) => item !== name); // Remove the name if unchecked
+//     //   }
+//     // });
+
+
+//     const { value, checked } = e.target;
+//     setCheckedItems((prev) => {
+//       if (checked) {
+//         return [...prev, value]; // Add the value if checked
+//       } else {
+//         return prev.filter((item) => item !== value); // Remove the value if unchecked
+//       }
+//     });
+
+   
+//   };
+
+//    // Save to localStorage
+//     useEffect(() => {
+//       localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+//     }, [checkedItems]);
+
+//   return (
+//     <div>
+//       <label>
+//         <input
+//           type="checkbox"
+//           name="item1"
+//           value="HTML "
+//           onChange={handleCheckboxChange}
+//         />
+//         Item 1
+//       </label>
+
+//       <label>
+//         <input
+//           type="checkbox"
+//           name="item2"
+//         value="JavaScript"
+//           onChange={handleCheckboxChange}
+//         />
+//         Item 2
+//       </label>
+
+//       <label>
+//         <input
+//           type="checkbox"
+//           name="item3"
+//           onChange={handleCheckboxChange}
+//           value="React"
+//         />
+//         Item 3
+//       </label>
+//       <div>
+
+//            <h1> itme print {checkedItems.join(", ")}</h1>
+//       </div>
+//     </div>
+//   );
+// }
+// export default Z;
+
+
+
+// Local Storage use object based checkbox.
+// import React, { useState, useEffect } from "react";
+
+// function Z() {
+//   const defaultValues = {
+//     html: false,
+//     css: false,
+//     js: false,
+//     react: false,
+//   };
+
+//   const [checkedItems, setCheckedItems] = useState(() => {
+//     const saved = localStorage.getItem("checkedItems");
+//     return saved ? JSON.parse(saved) : defaultValues;
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, checked } = e.target;
+//     setCheckedItems((prev) => ({
+//       ...prev,
+//       [name]: checked,
+//     }));
+//   };
+
+//   useEffect(() => {
+//     localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+//   }, [checkedItems]);
+
+//   return (
+//     <div>
+//       <h2>🔘 Object Based</h2>
+
+//       <label>
+//         <input
+//           type="checkbox"
+//           name="html"
+//           checked={checkedItems.html}
+//           onChange={handleChange}
+//         />
+//         HTML
+//       </label>
+//       <br />
+
+//       <label>
+//         <input
+//           type="checkbox"
+//           name="css"
+//           checked={checkedItems.css}
+//           onChange={handleChange}
+//         />
+//         CSS
+//       </label>
+//       <br />
+
+//       <label>
+//         <input
+//           type="checkbox"
+//           name="js"
+//           checked={checkedItems.js}
+//           onChange={handleChange}
+//         />
+//         JavaScript
+//       </label>
+
+//       <p>
+//         ✅ Checked Items:{" "}
+//         {Object.entries(checkedItems)
+//           .filter(([_, value]) => value)
+//           .map(([key]) => key.toUpperCase())
+//           .join(", ") || "None"}
+//       </p>
+//     </div>
+//   );
+// }
+
+// export default Z
