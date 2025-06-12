@@ -85,7 +85,6 @@ export default RadioButton;
 
 
 // Object Best Practices
-
 // import React, { useState, useEffect } from "react";
 // ChatGPT --->  ❓Interviewer: formData.fruit ka kya matlab hai?
 // ✅Answer (Short & Smart):
@@ -162,7 +161,7 @@ export default RadioButton;
 
 
 
-// multiple radio button example string ke sath use bro. 
+// multiple radio button example string ke sath use. 
 import React, { useState, useEffect } from "react";
 
 function Z() {
