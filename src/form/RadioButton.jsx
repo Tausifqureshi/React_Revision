@@ -86,13 +86,14 @@
 
 // Object Best Practices
 // import React, { useState, useEffect } from "react";
+
 // ChatGPT --->  ❓Interviewer: formData.fruit ka kya matlab hai?
 // ✅Answer (Short & Smart):
-// "formData ek object hai jo form ka data store karta hai.
-// fruit uska key hai, jisme selected fruit ka value hota hai — jaise 'apple', 'banana' ya 'mango'.
-// Toh formData.fruit batata hai user ne konsa radio option select kiya."
+// 1. "formData ek object hai jo form ka data store karta hai.
+// 2. fruit uska key hai, jisme selected fruit ka value hota hai — jaise 'apple', 'banana' ya 'mango'.
+// 3. Toh formData.fruit batata hai user ne konsa radio option select kiya."
 
-// 💡 Extra 1-liner (agar poocha jaye: kyun aise likha?)
+//  ChatGPT ---> Extra 1-liner (agar poocha jaye: kyun aise likha?)
 // "Radio buttons same name share karte hain, aur selected value formData.fruit me store hoti hai via onChange."
 
 
