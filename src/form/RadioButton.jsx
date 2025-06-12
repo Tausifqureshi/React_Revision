@@ -41,42 +41,42 @@
 
 
 
-import React, { useState } from 'react';
-function RadioButton(e) {
-  const [selectedOption, setSelectedOption] = useState('Option 1');
-  const [optionSelect, setOptionSelect] = useState("");
+// import React, { useState } from 'react';
+// function RadioButton(e) {
+//   const [selectedOption, setSelectedOption] = useState('Option 1');
+//   const [optionSelect, setOptionSelect] = useState("");
 
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+//   const handleOptionChange = (event) => {
+//     setSelectedOption(event.target.value);
+//   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // alert(`You have selected: ${selectedOption}`);
-    setOptionSelect(selectedOption)
-  };
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+//     // alert(`You have selected: ${selectedOption}`);
+//     setOptionSelect(selectedOption)
+//   };
 
-  return (
-<form onSubmit={handleSubmit}> 
+//   return (
+// <form onSubmit={handleSubmit}> 
 
-<h2>Select an option:</h2>
+// <h2>Select an option:</h2>
 
-<input type="radio" name="option" value="Option 1" checked={selectedOption === 'Option 1'} onChange={handleOptionChange} /> <label>Option 1</label>
+// <input type="radio" name="option" value="Option 1" checked={selectedOption === 'Option 1'} onChange={handleOptionChange} /> <label>Option 1</label>
 
-<input type="radio" name="option" value="Option 2" checked={selectedOption === 'Option 2'} onChange={handleOptionChange} /> <label>Option 2</label>
+// <input type="radio" name="option" value="Option 2" checked={selectedOption === 'Option 2'} onChange={handleOptionChange} /> <label>Option 2</label>
 
 
-<input type="radio" name="option" value="Option 3" checked={selectedOption === 'Option 3'}onChange={handleOptionChange} /> <label>Option 3</label>
+// <input type="radio" name="option" value="Option 3" checked={selectedOption === 'Option 3'}onChange={handleOptionChange} /> <label>Option 3</label>
 
-<p>You have selected: {optionSelect}</p>
+// <p>You have selected: {optionSelect}</p>
 
- <br /> <br /> 
-<button type="submit">Submit</button>
-    </form>
-  );
-}
+//  <br /> <br /> 
+// <button type="submit">Submit</button>
+//     </form>
+//   );
+// }
 
-export default RadioButton;
+// export default RadioButton;
 
 
 
@@ -163,11 +163,15 @@ export default RadioButton;
 
 // multiple radio button example string ke sath use. 
 import React, { useState, useEffect } from "react";
-
-function Z() {
+function RadioButton() {
 //   const [selectedOption, setSelectedOption] = useState(""); // initially koi select nahi
 const [selectedOption, setSelectedOption] = useState(() => {
   return localStorage.getItem("selectedOption") || "";
+  // Yeh ek function hai, lekin yeh sirf ek baar useState() ke initial value set karne ke liye chalti hai (matlab page load hone par). Iska fayda yeh hai ki agar tu direct likhe. toh bhi kaam karega — lekin dikkat yeh hai ki agar component baar-baar render ho raha hai aur agar tu direct expression likhta hai, to localStorage.getItem() har baar chalega (even jab uski zarurat nahi hai).
+
+// 1. ✅ Function diya to sirf ek baar chalega (initial render par).
+// 2. ❌ Direct likha to har render par evaluate hoga, jo avoid karte hain hum.
+
 });
 
 
@@ -220,4 +224,4 @@ const [selectedOption, setSelectedOption] = useState(() => {
   );
 }
 
-// export default Z;
+export default RadioButton;
