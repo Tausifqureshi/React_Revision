@@ -151,7 +151,17 @@
 //         Mango
 //       </label>
 
-//       <p>Selected fruit: {formData.fruit}</p>
+//    <p>Selected fruit: {formData.fruit}</p>
+
+// ❓ formData.fruit hi kyun likhte hain?
+// ✅ Short Answer:
+// formData ek object hai
+// fruit uska key hai
+// formData.fruit se value milti hai (e.g. "mango")
+// 👉 Agar aap sirf {formData} likhoge, to milega [object Object] ❌
+// 👉 Isliye hum likhte hain {formData.fruit} ✅
+
+
 //     </div>
 //   );
 // }

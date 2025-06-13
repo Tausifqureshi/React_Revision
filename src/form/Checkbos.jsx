@@ -169,7 +169,6 @@ export default CheckBos;
 //     html: false,
 //     css: false,
 //     js: false,
-//     react: false,
 //   };
 
 //   const [checkedItems, setCheckedItems] = useState(() => {
@@ -224,14 +223,8 @@ export default CheckBos;
 //         />
 //         JavaScript
 //       </label>
-
-//       <p>
-//         ✅ Checked Items:{" "}
-//         {Object.entries(checkedItems)
-//           .filter(([_, value]) => value)
-//           .map(([key]) => key.toUpperCase())
-//           .join(", ") || "None"}
-//       </p>
+  // <p>Selected Items: {Object.keys(checkedItems).map((item) => item.toUpperCase()).join(", ")} </p>
+  
 //     </div>
 //   );
 // }

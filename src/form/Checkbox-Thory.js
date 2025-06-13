@@ -66,7 +66,7 @@ const handleChange = (e) => {
 
 
 
-//====Checkbox and radio button me value me ham state varible name q nhi dete checked me dete hai state varible====//
+//===Checkbox and radio button me value me ham state varixble name q nhi dete checked me dete hai state varible ===//
 
 // chatGPT se liya hua syntex --->  Tera Sawal ----> Radio/Checkbox me value me hum state ka naam kyun nahi dete.Jabki text input me value={state} likhte hain. input ka code thory.js me diya hua hai.
 
@@ -76,7 +76,7 @@ const handleChange = (e) => {
 
 // ========================================= bina e.target.checked ke use========================================= //
 // ChatGPT se liya hua syntex ---> Toggle kar re bina e.target.checked ke use karne ka
-// 1. Agar toggle true hai, to false ho jayega.
+// 1. Agar toggle true hai, to false ho jayega.2
 // 2. Agar toggle false hai, to true ho jayega.
 // 3. Ye bhi toggle karne ka valid tarika hai, bas ye current state par dependent hai.
 
