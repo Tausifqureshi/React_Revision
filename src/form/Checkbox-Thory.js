@@ -67,12 +67,21 @@ const handleChange = (e) => {
 
 
 //===Checkbox and radio button me value me ham state varixble name q nhi dete checked me dete hai state varible ===//
+// chatGPT se liya hua syntex --->  Checkbox ek true/false value deta hai — checked hai ya nahi.
 
-// chatGPT se liya hua syntex --->  Tera Sawal ----> Radio/Checkbox me value me hum state ka naam kyun nahi dete.Jabki text input me value={state} likhte hain. input ka code thory.js me diya hua hai.
+{/* <input
+  type="checkbox"
+  name="terms"
+  checked={formData.terms}
+  onChange={handleChange}
+/> */}
 
+// 👉 Yahaan checked={true/false} hota hai, not value string.
 
-
-
+// 🔁 Reason:
+// checkbox.value se string milta hai (default = "on")
+// Lekin tum chahte ho true / false, isliye checked use karte ho.
+// ✅ Tum isko string bhi bana sakte ho agar multiple checkbox ho (jaise hobbies).
 
 // ========================================= bina e.target.checked ke use========================================= //
 // ChatGPT se liya hua syntex ---> Toggle kar re bina e.target.checked ke use karne ka
