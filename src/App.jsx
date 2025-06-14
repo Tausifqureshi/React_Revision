@@ -1,4 +1,4 @@
-import React from "react"; 
+import React, { useState } from "react"; 
 import PropsChap from "./props-file/PropsChap";
 import UserList from "./render-list/UserList";
 import EventChapter from "./eventChapter/EventChapter";
@@ -31,10 +31,13 @@ import Redux from "./Redux/Redux";
 import ReduxThunk from "./Redux Thunk/ReduxThunk";
 
 export default function App() {
+ const[toggle, setToggle] =  useState(true)
   const lastName = (name) => name.toUpperCase(); //function ko bhi render kar sakte hai JSX me niche.
   let firstName = "Tausif";
   
-
+function toggleHandler(){
+  setToggle(!toggle)
+}
   return (
     <div>
       <h1> React Tutorial</h1>
@@ -111,7 +114,10 @@ export default function App() {
       {/* React Query File use */}
       {/* <ReactQuery /> */}
 
-      <Z />
+
+       {toggle && <Z />}
+      <button onClick={toggleHandler}> Toggle Componet</button>
+      
       </div>
 
         

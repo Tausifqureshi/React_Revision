@@ -7,8 +7,10 @@
 
 
 
-import React, { useState } from 'react'
+import React, { useState,  } from 'react'
+import { useEffect } from 'react';
 function Z(){
+  console.log("Z");
   const [firstName, setFitstName] = useState("Tausif");
   function changeName(){
     // if (firstName === "Tausif") {
@@ -23,6 +25,14 @@ function Z(){
     setFitstName(firstName === "Tausif" ? "Qureshi" : "Tausif")
 
   }
+useEffect(()=>{
+  console.log("useEffect render ");
+
+  return () => {
+    console.log("useEffect cleanup");
+  }
+}, [])
+
 
   return(
     <>
