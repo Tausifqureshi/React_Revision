@@ -65,7 +65,7 @@ const handleChange = (e) => {
 
 
 
-
+      
 //===Checkbox and radio button me value me ham state varixble name q nhi dete checked me dete hai state varible ===//
 // chatGPT se liya hua syntex --->  checkbox ka kaam hai: true / false (tick kiya hai ya nahi). Isliye value nahi, balki checked use hota hai.
 
