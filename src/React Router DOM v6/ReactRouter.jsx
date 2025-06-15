@@ -21,9 +21,10 @@ const router = createBrowserRouter(
       {/* NavBarRoot component page ke har route me show hoga kyunki yeh parent component hai */}
 
       {/* Pehli baar jab koi page load hota hai, tab "/" path ki wajah se Home component hi dikhai dega, kyunki "/" root path ko represent karta hai.agar home type karte ho tu home nhi dhake ka click kane pe hi dehake ga */}
-      <Route path="home" element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="contact" element={<Contact />} />
+        <Route index element={<Home />} />   {/* 👈 Yeh line add karo */}
+       <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
 
       <Route
         path="post"
@@ -35,7 +36,7 @@ const router = createBrowserRouter(
       /> 
       {/* Is component ko ProtectedRoutes se wrap kar rahe hain. Agar user logged in hai, to hi post page show hoga, warna user ko login page par redirect kar diya jayega. */}
 
-      <Route path="PostDetails/:id" element={
+      <Route path="post/:id" element={
        <ProtectedRoutes>
        <PostDetails /> 
        </ProtectedRoutes>} />

@@ -12,11 +12,14 @@ function Posts({id, name}) {
       
   {/* ye Post page hai is components me share ke share post show hoge */}
 
-  <Link to={`/PostDetails/${id}`}> <h1> {name} </h1> </Link>
+  {/* <Link to={`/post/${id}`}> <h1> {name} </h1> </Link> */}
   {/* Id ko string me chang kar re hai q ke o integer me mil ri hai id. id se hi ham jis number ki post pe click only ohi single show hoga postdetails me*/}
  
-   <h1 onClick={()=>navigate(`/PostDetails/${id}`)}>{id}</h1>
-    {/* onClick={() => navigate(`/productsInfo/${item.id}`)} */}
+   {/* <h1 onClick={()=>navigate(`/post/${id}`)}>{id}</h1> */}
+   <Link to={id.toString()}><h1>{id}</h1></Link>
+   <h1>{name}</h1>
+
+
  
   </div>; 
   </>

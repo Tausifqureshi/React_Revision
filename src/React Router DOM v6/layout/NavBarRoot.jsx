@@ -10,7 +10,7 @@ function NavBarRoot() {
   function logOut (){
     setIsLogin(false); // Agar user login hai, toh navbar mein logout button dikhai dega. Logout karne par post components ka data nahi dikhai dega; user ko pehle login karna hoga.
 
-  }
+  } 
               
   return ( 
     <div className={styles.container}> 
@@ -74,3 +74,8 @@ export default NavBarRoot;
 // }
 
 // export default NavBarRoot;
+
+
+
+
+

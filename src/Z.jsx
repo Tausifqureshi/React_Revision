@@ -22,7 +22,10 @@ function Z(){
 
     // setFitstName(!firstName)
 
-    setFitstName(firstName === "Tausif" ? "Qureshi" : "Tausif")
+    setFitstName(firstName === "Tausif" ? "Qureshi" : "Tausif");
+    
+     
+
 
   }
 useEffect(()=>{
