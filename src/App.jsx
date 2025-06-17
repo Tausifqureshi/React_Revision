@@ -97,7 +97,7 @@ function toggleHandler(){
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}
-      <ReactRouter />
+      {/* <ReactRouter /> */}
 
       {/* React-Router New Features File */}
       {/* <NewFeatures /> */}
@@ -115,6 +115,7 @@ function toggleHandler(){
       {/* <ReactQuery /> */}
 
 
+       <Z />
        {/* {toggle && <Z />} */}
       {/* <button onClick={toggleHandler}> Toggle Componet</button> */}
       

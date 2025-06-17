@@ -31,16 +31,16 @@
 
 
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 function  CheckBos() {
-  const [toggle, setToggle] =useState(false);
-  const [inputValue, setInputValue] =useState("");
-  const [showInput, setShowInput] = useState(true); // input dikh raha hai ya nahi
+  const [toggle, setToggle] =useState(false); // text toggle karne ke liye
 
+  const [inputValue, setInputValue] =useState(""); //input ki value set karne ke liye
+  const [showInput, setShowInput] = useState(true); // Input toggle karne ke liye
   const inputToggle = (e) => {
     //  Toggle to input 
     // setShowInput(!showInput);
-    setShowInput(e.target.checked);
+    // setShowInput(e.target.checked);
   };
 
   return (
