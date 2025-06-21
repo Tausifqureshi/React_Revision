@@ -5,7 +5,7 @@
 // react query ---> data fetching library
 
 import React, { useState } from "react";
-import { useEffect } from "react";
+import { useEffect } from "react";           
 function Z() {
   console.log("Z");
   const [firstName, setFitstName] = useState("Tausif");
