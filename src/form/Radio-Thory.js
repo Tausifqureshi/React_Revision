@@ -7,7 +7,7 @@
 // 4. Isliye, React me radio buttons me state ko checked prop se bind karte hain.
 
 
-
+       
 
 //===Checkbox and radio button me value me ham state variable name q nhi dete checked me dete hai state varible ===//
 

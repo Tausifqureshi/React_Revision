@@ -8,7 +8,7 @@ function Login() {
  console.log("Login Page", location);
 const PreviousPathname  = location.state?. PreviousPathname || '/home'; // Iska matlab hai ke agar user jahan se login karne aaya hai, to login ke baad use wahi page par bheja jayega. Agar previous state (location) ki property available nahi hoti, to default "/home" page par redirect karenge warna jis page se user login ke liye aya hai us se wahi page pe bheja ajye ga login ke baad. Yeh kaam useLocation ke saath kiya jata hai.
  
- const navigate = useNavigate();
+ const navigate = useNavigate();     
  
  function userLogin (){
      setIsLogin(true); // Login ture hoga Navbar se Login bhi nhi show ho ga us ki jaga logout show hoga .

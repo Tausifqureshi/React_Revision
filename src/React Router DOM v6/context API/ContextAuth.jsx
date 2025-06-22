@@ -18,7 +18,7 @@ function ContextAuth({ children}) {
     </AuthContext.Provider>
   );
 }
-
+      
 
 export function useAuth(){ // Yeh function length code ko reduce karta hai, kyunki har component me useContext aur AuthContext ko baar-baar import karne ki zaroorat nahi padti.
 return useContext(AuthContext)
