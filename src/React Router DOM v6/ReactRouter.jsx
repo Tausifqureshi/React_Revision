@@ -13,7 +13,7 @@ import ProtectedRoutes from "./components/ProtectedRoutes";
 import Login from "./page/Login";
 import ContextAuth from "./context API/ContextAuth";
 // Humne "./page/index.js" file me saare components ko export kiya hai. Yahaan, hum destructuring ka use karke unhe import kar rahe hain, jise hum routes me use karenge.
-                                       
+                                             
 //Create Routers.
 const router = createBrowserRouter(     
   createRoutesFromElements(

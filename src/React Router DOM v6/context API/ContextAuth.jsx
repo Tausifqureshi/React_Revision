@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 
 export const AuthContext = createContext();
-function ContextAuth({ children}) {             
+function ContextAuth({ children}) {                 
   const [isLogin, setIsLogin] = useState(false);
 
 
