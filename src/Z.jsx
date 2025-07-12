@@ -31,7 +31,7 @@ function Z() {
     };
   }, []);
 
-  return (
+  return (    
     <>
       <h1> Parctice</h1>
       {/* <h2>{toggls ? "Qureshi" : "Tausif"}</h2> */}
