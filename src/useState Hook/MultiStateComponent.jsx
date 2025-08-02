@@ -6,7 +6,7 @@ const MultiStateComponent = () => {
   const [name, setName] = useState('John');
   const [isMarried, setIsMarried] = useState(false);
 
-  // Function to increase age
+  // Function to increase age 
   const increaseAge = () => {
     setAge(prevAge => prevAge + 1);
   };

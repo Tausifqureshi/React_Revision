@@ -1,61 +1,61 @@
 // Count Number Example.
-// import React, { useState } from "react";
+import React, { useState } from "react";
 
-// function UseStateChap() {
-//   // useState hook ek array return karta hai jisme do elements hote hain:
-//   // 1. State variable - jo current state value ko represent karta hai.
-//   // 2. Setter function - jo state ko update karne ke liye use hota hai.
+function UseStateChap() {
+  // useState hook ek array return karta hai jisme do elements hote hain:
+  // 1. State variable - jo current state value ko represent karta hai.
+  // 2. Setter function - jo state ko update karne ke liye use hota hai.
      
-//   const [count, setCount] = useState(0);
+  const [count, setCount] = useState(2);
 
-//   return (
-//     <div>
-//       <p>Current count: {count}</p>
-//       <button onClick={() => setCount(count + 1)}>Increment</button>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <p>Current count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
 
-// export default UseStateChap;  
+export default UseStateChap;  
 
 
 
 
 
 // Name Change Example.
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-function UseStateChap() {
+// function UseStateChap() {
 
-// const valueReturn = useState("Tausif");
-// console.log(valueReturn); //ek array return karta hai jism me 1index pe current value and 2index pe ek function hota hai jis ka use kar ke ham state ki value ko update kar sakte hai.
+// // const valueReturn = useState("Tausif");
+// // console.log(valueReturn); //ek array return karta hai jism me 1index pe current value and 2index pe ek function hota hai jis ka use kar ke ham state ki value ko update kar sakte hai.
   
-const [firstName, setFirstName ] = useState("Tausif");
- function handleClick(){
-    if (firstName === "Tausif") { // is se toggle kara re hai name chnage.
-        setFirstName("Quarishi"); //is function se value update kar re hai.
-    }else{
-        setFirstName("Tausif")
-    }
+// const [firstName, setFirstName ] = useState("Tausif");
+//  function handleClick(){
+//     if (firstName === "Tausif") { // is se toggle kara re hai name chnage.
+//         setFirstName("Quarishi"); //is function se value update kar re hai.
+//     }else{
+//         setFirstName("Tausif")
+//     }
 
-    // setFirstName(firstName === "Tausif" ? "Quarishi" : "Tausif")// Ternary operator 
+//     // setFirstName(firstName === "Tausif" ? "Quarishi" : "Tausif")// Ternary operator 
 
 
-    // setFirstName(!firstName)  //toggle karne ke liye.
+//     // setFirstName(!firstName)  //toggle karne ke liye.
      
 
     
-    }
-  return (
-    <>
-      {/* <h2>Current change your name: {firstName ? "Tausif" : "Quarishi"}</h2> */}
-      <h2>Current change your name: {firstName }</h2> 
-      <button onClick={handleClick}>Change</button>
-    </>
-  );
-}
+//     }
+//   return (
+//     <>
+//       {/* <h2>Current change your name: {firstName ? "Tausif" : "Quarishi"}</h2> */}
+//       <h2>Current change your name: {firstName }</h2> 
+//       <button onClick={handleClick}>Change</button>
+//     </>
+//   );
+// }
 
-export default UseStateChap;
+// export default UseStateChap;
 
 // ============================================== React useState ================================================= //
 // ChatGPT Se Liya Hua Syntex ---> React.js me useState ek hook hai jo functional components me state ko manage karne ke liye use hota hai. Isse aap apne component ke andar local state create kar sakte ho. Functional components React 16.8 se pehle state ko manage nahi kar sakte the, lekin hooks ke aane ke baad ye possible ho gaya hai.
