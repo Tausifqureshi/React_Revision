@@ -18,10 +18,10 @@ function Z() {
     //   setFitstName("Tausif")
     // }
 
-    // setToggls(!toggls); //toggle kanr ke liye 
+    setToggls(!toggls); //toggle kanr ke liye 
   
     // setFitstName(firstName === "Tausif" ? "Qureshi" : "Tausif");
-    setFitstName(!firstName);
+    // setFitstName(!firstName);
   }
   useEffect(() => {
     console.log("useEffect render ");
@@ -34,8 +34,8 @@ function Z() {
   return (    
     <>
       <h1> Parctice</h1>
-      {/* <h2>{toggls ? "Qureshi" : "Tausif"}</h2> */}
-      <h2>{firstName ? "Qureshi" : "Tausif" }</h2>
+      <h2>{toggls ? "Qureshi" : "Tausif"}</h2>
+      {/* <h2>{firstName ? "Qureshi" : "Tausif" }</h2> */}
 
       <button onClick={changeName}> Change Name</button>
     </>
