@@ -233,3 +233,29 @@ function AutoFocusInput() {
 }
 
 // export default AutoFocusInput;
+
+
+
+// ============================= useEffect me kab api call karna ya nhi karna ==================================== //
+// 1️⃣ Auto Data Load (page open hote hi call hoti hai → useEffect me) Ye wali APIs hamesha page khulte hi load hoti hain:
+
+// getProducts → Products ki list dikhane ke liye
+// getCategories → Category menu banane ke liye
+// getCart → Logged in user ka cart load karne ke liye
+// getCurrentUser / profile → User ka data dikhane ke liye
+// getOrders → Past orders history dikhane ke liye
+// getSettings → Website settings / banners / offers
+
+
+
+
+
+// 2️⃣ User Action Based Data (tabhi chale jab user kuch kare → button / form / event). Ye wali APIs tabhi hit hoti hain jab user kuch action kare:
+
+// loginUser → Jab login form submit kare
+// registerUser → Jab signup form submit kare
+// addToCart → Jab "Add to Cart" button dabaye
+// removeFromCart → Jab cart se item delete kare
+// placeOrder → Jab checkout kare
+// logoutUser → Jab logout button dabaye
+// updateProfile → Jab user profile update kare
