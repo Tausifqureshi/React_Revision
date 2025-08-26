@@ -11,7 +11,7 @@ import axios from "axios";
 //       throw Error(error.message);
 //     }
 //   });
-
+    
 export const fetchDatat = createAsyncThunk("todos/fetch", async () => {
   // const response = await axios.get("https://fakestoreapi.com/products");
   const response = await axios.get("http://localhost:800/todo");
