@@ -7,7 +7,7 @@ function ListTodos() {
   const dispatch = useDispatch();
 
   const { data:todos, loading, error } = useSelector((state) => state.myExampleTodos);
-  const todo = useSelector((state) => state.myExampleTodos.data); // Todos ko store se select karenge
+  const todo = useSelector((state) => state.myExampleTodos.data); // Todos ko store se select karenge   
   console.log("initial state mil ri hai", todo); 
     
   useSelector((state)=>{                    

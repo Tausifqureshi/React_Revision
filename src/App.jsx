@@ -53,7 +53,7 @@ function toggleHandler(){
       {/* <PropsChap /> */}
 
       {/*useState Hook-component-file start  */}
-      <UseStateChap />
+      {/* <UseStateChap /> */}
       {/* <PreviousState /> */}
       {/* <StateExampleArray /> */}
       {/* <StateExampleObject /> */}
@@ -109,7 +109,7 @@ function toggleHandler(){
       {/* <Redux />/ */}
 
       {/* Redux Thunk File use */}
-      {/* <ReduxThunk /> */}
+      <ReduxThunk />
 
       {/* React Query File use */}
       {/* <ReactQuery /> */}
