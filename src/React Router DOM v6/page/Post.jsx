@@ -33,7 +33,7 @@ function Post() {
         {data && <>{data.map((user) => <Posts key={user.id} {...user}/> )} </> }
        
         </div>
-      }          
+      }           
     </div>
   );
 }

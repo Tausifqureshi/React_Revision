@@ -13,7 +13,7 @@ function NavBarRoot() {
   } 
               
   return ( 
-    <div className={styles.container}> 
+    <div className={styles.container}>  
       <header className={styles.navbarContainer}>
         <nav>
           <ul className={styles.navList}>    

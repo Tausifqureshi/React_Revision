@@ -61,7 +61,7 @@ function PostDetails() {
   const [error, setError] = useState(null); // extra state for error
 
   async function fetchData() {
-    try {
+    try {  
       const response = await fetch(`${url}/${id}`);
       const responseData = await response.json();
 

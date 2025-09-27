@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Posts({id, name}) {
   const navigate = useNavigate();
-  
+    
   return <> 
   <h1> Posts Welecome </h1>
   <div style={{
@@ -17,6 +17,8 @@ function Posts({id, name}) {
  
    {/* <h1 onClick={()=>navigate(`/post/${id}`)}>{id}</h1> */}
    <Link to={id.toString()}><h1>{id}</h1></Link>
+
+   {/* <Link to={`/postDetails/${id}`}><h1>{id}</h1></Link> */}
    <h1>{name}</h1>
 
 
