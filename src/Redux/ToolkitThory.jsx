@@ -349,6 +349,27 @@ const counterSlices = createSlice({
 // 2. reducer ke andar key jo aap define karte hain (myCounterState), wahi key store me state ko represent karti hai. Isse hi aap state ko access karte hain.
 
 
+// ================================================ Redux Flow =================================================== //
+// ChatGPT Se Liya Hua Syntex ---> Redux flow redux aise kaam karta hai 
+
+// 1. Component me dispatch call hota hai → tum kisi action ko trigger karte ho.
+
+// 2. Dispatch action banata hai → ye action reducer ko bheja jata hai.
+
+// 3. Reducer me logic chalta hai → reducer decide karta hai kaise state update hogi.
+
+// 4. Store me naya state save hota hai → updated state global store me store ho jata hai.
+
+// 5. useSelector se component state leta hai → component ko nayi state mil jati hai.
+
+// 6. Component re-render hota hai → UI updated state ke saath dikhata hai.
+
+
+
+
+
+
+
 // =============================================================================================================== //
 
 
