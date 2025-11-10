@@ -6,15 +6,14 @@ const items = [
   { id: 2, name: "Banana" },
   { id: 3, name: "Cherry" },
 ];
-         
-function UserList() { 
-  return (      
-    <>  
+
+function UserList() {
+  return (
+    <>
       <>
         {/* Short syntax without return keyword */}
         {/* {items.map((valu) => ( <RenderList key={valu.id} number={valu.id} firstName={valu.name} />
       ))} */}
-
 
         {/* Full syntax with return keyword */}
         {/* {items.map((valu) => {
@@ -23,7 +22,7 @@ function UserList() {
           );
         })}  */}
 
-        {items.map((valu) => ( 
+        {items.map((valu) => (
           <RenderList key={valu.id} {...valu} />
         ))}
       </>
@@ -53,9 +52,9 @@ export default UserList;
 //     { id: 1, name: 'Apple' },
 //     { id: 2, name: 'Banana' },
 //     { id: 3, name: 'Cherry' },
-// ];        
- 
-// function UserList() {   
+// ];
+
+// function UserList() {
 //   return (
 //     <>
 //       {/* Short syntax without return keyword */}
