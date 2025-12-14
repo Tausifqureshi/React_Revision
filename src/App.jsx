@@ -97,7 +97,7 @@ function toggleHandler(){
       {/* <BasicForm /> */}
 
       {/* React-Router-File */}
-      <ReactRouter />
+      {/* <ReactRouter /> */}
 
       {/* React-Router New Features File */}
       {/* <NewFeatures /> */}
@@ -109,7 +109,8 @@ function toggleHandler(){
       {/* <Redux />/ */}
 
       {/* Redux Thunk File use */}
-      {/* <ReduxThunk /> */}
+      <ReduxThunk />
+      
 
       {/* React Query File use */}
       {/* <ReactQuery /> */}

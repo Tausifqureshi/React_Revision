@@ -90,6 +90,15 @@ export default CheckBos;
 //   return savedItems ? JSON.parse(savedItems) : [];
 // });
 
+// ✅ useEffect for getting items from localStorage on mount
+//  const [checkedItems, setCheckedItems] = useState([]);
+  // useEffect(() => {
+  //   const savedItems = localStorage.getItem("checkedItems");
+  //   if (savedItems) {
+  //     setCheckedItems(JSON.parse(savedItems));
+  //   }
+  // }, []);
+
 //   const handleCheckboxChange = (e) => {
    
 //     // const  {name, checked} = e.target; // Destructuring to get name and checked state
@@ -175,6 +184,16 @@ export default CheckBos;
 //     const saved = localStorage.getItem("checkedItems");
 //     return saved ? JSON.parse(saved) : defaultValues;
 //   });
+
+
+// UseEffect use tu aisa karna hoga.
+//  const [checkedItems, setCheckedItems] = useState(defaultValues);
+// useEffect(() => {
+//     // ✅ Get from localStorage when component mounts
+//     const saved = localStorage.getItem("checkedItems");
+//     if (saved) {
+//       // setCheckedItems(JSON.parse(saved));
+    // }
 
 //   const handleChange = (e) => {
 //     const { name, checked } = e.target;

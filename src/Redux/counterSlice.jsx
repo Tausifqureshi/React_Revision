@@ -53,7 +53,7 @@ export const counterSlice = createSlice({
       }
       return state; // Agar `count` 0 hai to wahi state return kar dete hain bina kisi change ke
     },
-
+ 
     // Reset reducer: `count` ko dobara 0 par set kar deta hai
     reset: (state, action) => {
       // state ko reset kar raha hai

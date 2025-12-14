@@ -11,14 +11,14 @@ import axios from "axios";
 //       throw Error(error.message);
 //     }
 //   });
-    
+
 export const fetchDatat = createAsyncThunk("todos/fetch", async () => {
   // const response = await axios.get("https://fakestoreapi.com/products");
   const response = await axios.get("http://localhost:800/todo");
   console.log("Respons Data Get", response.data);
   return response.data; // Response ke data ko return karein
 });
-    
+
 export const addTodos = createAsyncThunk("todos/add", async (title) => {
   const response = await axios.post("http://localhost:800/todo", {
     // post request hai ye.
@@ -42,6 +42,16 @@ export const toggleTodos = createAsyncThunk(
       completed: !completed, // Toggling the completed status
     });
     return response.data; // Return the updated todo
+  }
+);
+
+export const updateTodos = createAsyncThunk(
+  "todos/update",
+  async ({ id, title }) => {
+    const response = await axios.patch(`http://localhost:800/todo/${id}`, {
+      title,
+    });
+    return response.data; // updated todo
   }
 );
 
@@ -94,7 +104,13 @@ const thunkSlice = createSlice({
         // jo uperr axios me datat return kar re hai o is fulfiled wale me mile ga action.payload me
         console.log("actions mil ra hai yaha se fulfiled ka addTodos", action);
         state.loading = false; // Loading ko false set karna.
-        state.data.push(action.payload); // Add the new todo to the state
+        // state.data.push(action.payload); // Add the new todo to the state
+
+        return {
+          ...state,
+          data: [...state.data, action.payload], // Naya todo existing todos ke saath add karna
+        };
+
       })
       // `rejected` case, jab data fetch mein error aaye
       .addCase(addTodos.rejected, (state, action) => {
@@ -118,11 +134,18 @@ const thunkSlice = createSlice({
         // jo uperr axios me datat return kar re hai o is fulfiled wale me mile ga action.payload me
         console.log("actions mil ra hai yaha se fulfiled ka Delete", action);
         state.loading = false; // Loading ko false set karna.
-        state.data = state.data.filter((todo) => todo.id !== action.payload); // Deleted item ko state se hataen
+        // state.data = state.data.filter((todo) => todo.id !== action.payload); // Deleted item ko state se hataen
         // Right side (state.cart.filter(...)) kya karta hai? Yeh purane state.data ko lekar usme se filter lagata hai, matlab ek naya array banata hai jisme wo saare items hain jo condition match karte hain (yaani jinke id action.payload se alag hain).
 
         // Left side (state.data = ...) kya karta hai?
         // → Yeh naya filtered array ko state.cart me assign kar deta hai, matlab purana cart replace ho jata hai us naye array se.
+
+        // immutable Approach
+        return {
+          ...state,
+          data: state.data.filter((todo) => todo.id !== action.payload), // Deleted item ko state se hataen
+        };  
+
       })
       // `rejected` case, jab data fetch mein error aaye
       .addCase(deleteTodos.rejected, (state, action) => {
@@ -134,7 +157,7 @@ const thunkSlice = createSlice({
         state.error = action.error.message; // Error ko state mein store karna
       });
 
-    //Tggole Todos
+    // Toggle Todos
     builder
       .addCase(toggleTodos.pending, (state) => {
         state.loading = true; // Jab tak data load ho raha hai
@@ -149,16 +172,94 @@ const thunkSlice = createSlice({
           action
         );
         state.loading = false; // Loading ko false set karna.
-        state.data.forEach((todo) => {
-          if (todo.id === action.payload.id) {
-            todo.completed = action.payload.completed; // `completed` status toggle karein
+
+        //  Mutable Approach
+        // state.data.forEach((todo) => {
+        //   if (todo.id === action.payload.id) {
+        //     todo.completed = action.payload.completed; // `completed` status toggle karein
+        //   }
+        // });
+
+        //  mutable Approach
+        // const { id, completed } = action.payload;
+        // const todo = state.find((item) => item.id === id);
+        // if (todo) {
+        //   todo.completed = completed;
+        // }
+
+        // mutable Approach
+        // state.data.map((todo) => {
+        //   if (todo.id === action.payload.id) {
+        //     todo.completed = action.payload.completed; // `completed` status toggle karein
+        //   }
+        // });
+
+        // Immutable Approach
+        return {
+          ...state, data: state.data.map((todo) => {
+            if (todo.id === action.payload.id) {
+              return { ...todo, completed: action.payload.completed }; // `completed` status toggle karein
+            }
+            return todo;
           }
-        });
+          ),
+        };
+
       })
       // `rejected` case, jab data fetch mein error aaye
       .addCase(toggleTodos.rejected, (state, action) => {
         console.log(
           "actions mil ra hai yaha se reject ka Toggle Todos",
+          action.error
+        );
+        state.loading = false; // Loading ko false set karna
+        state.error = action.error.message; // Error ko state mein store karna
+      });
+
+    // Update Todos
+    builder
+      .addCase(updateTodos.pending, (state) => {
+        state.loading = true; // Jab tak data load ho raha hai
+        console.log("padding state Update Todos...");
+      })
+      // `fulfilled` case, jab data successfully fetch ho gaya ho
+      .addCase(updateTodos.fulfilled, (state, action) => {
+        // jo uperr axios me datat return kar re hai o is fulfiled wale me mile ga action.payload me
+        console.log(
+          "actions mil ra hai yaha se fulfiled ka Update Todos",
+          action
+        );
+        state.loading = false; // Loading ko false set karna.
+
+        // Mutable Approach
+        // state.data.forEach((todo) => {
+        //   if (todo.id === action.payload.id) {
+        //     todo.title = action.payload.title; // `title` ko update karein
+        //   }
+        // });
+
+        // Mutable Approach
+        // const { id, newTitle } = action.payload;
+        // const todo = state.find((item) => item.id === id);
+        // if (todo) {
+        //   todo.title = newTitle;
+        // }
+
+        // Immutable Approach
+        return {
+          ...state,
+          data: state.data.map((todo) => {
+            if (todo.id === action.payload.id) {
+              return { ...todo, title: action.payload.title }; // `title` ko update karein
+            }
+            return todo;
+          }),
+        };
+      })
+      // `rejected` case, jab data fetch mein error aaye
+      .addCase(updateTodos.rejected, (state, action) => {
+        console.log(
+          "actions mil ra hai yaha se reject ka Update Todos",
           action.error
         );
         state.loading = false; // Loading ko false set karna
