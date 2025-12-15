@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodos, updateTodos  } from "./thunkSlice";
 
@@ -35,6 +35,11 @@ function FormTodos() {
     setTitle(todo.title);
     setEditId(id);
   }
+
+    useEffect(() => {
+    window.setEditId = handleEdit;
+  }, [todos]);
+
   return (
     <>
     <form onSubmit={submitHandler}>
@@ -54,7 +59,7 @@ function FormTodos() {
       </div>
     </form>
      {/* 👇 handleEdit ko globally expose (simple way) */}
-      {(window.editTodoById = handleEdit)}
+      {/* {(window.editTodoById = handleEdit)} */}
     </>
   );
 }

@@ -82,8 +82,13 @@ const thunkSlice = createSlice({
         console.log("actions mil ra hai yaha se fulfiled ka", action.payload);
         state.loading = false; // Loading ko false set karna.
 
-        state.data = action.payload; // ✅ API se aaya hua data 'action.payload' me hota hai, usko 'state.data' me save kar rahe hain
+         state.data = action.payload; // ✅ API se aaya hua data 'action.payload' me hota hai, usko 'state.data' me save kar rahe hain
         //action.payload se data milra hai jo uperr axios se fetch kiya hai. us data ko ham data state me store karenge.
+
+        // return {
+        //   ...state,
+        //   data: action.payload, // API se aaya hua data 'action.payload' me hota hai, usko 'state.data' me save kar rahe hain
+        // };
       })
       // `rejected` case, jab data fetch mein error aaye
       .addCase(fetchDatat.rejected, (state, action) => {
@@ -104,12 +109,14 @@ const thunkSlice = createSlice({
         // jo uperr axios me datat return kar re hai o is fulfiled wale me mile ga action.payload me
         console.log("actions mil ra hai yaha se fulfiled ka addTodos", action);
         state.loading = false; // Loading ko false set karna.
-        // state.data.push(action.payload); // Add the new todo to the state
+         state.data.push(action.payload); // Add the new todo to the state
 
-        return {
-          ...state,
-          data: [...state.data, action.payload], // Naya todo existing todos ke saath add karna
-        };
+        //  immutable Approach
+        // return {
+        //   ...state,
+        //loading: false,
+        //   data: [...state.data, action.payload], // Naya todo existing todos ke saath add karna
+        // };
 
       })
       // `rejected` case, jab data fetch mein error aaye
@@ -134,17 +141,17 @@ const thunkSlice = createSlice({
         // jo uperr axios me datat return kar re hai o is fulfiled wale me mile ga action.payload me
         console.log("actions mil ra hai yaha se fulfiled ka Delete", action);
         state.loading = false; // Loading ko false set karna.
-        // state.data = state.data.filter((todo) => todo.id !== action.payload); // Deleted item ko state se hataen
+         state.data = state.data.filter((todo) => todo.id !== action.payload); // Deleted item ko state se hataen
         // Right side (state.cart.filter(...)) kya karta hai? Yeh purane state.data ko lekar usme se filter lagata hai, matlab ek naya array banata hai jisme wo saare items hain jo condition match karte hain (yaani jinke id action.payload se alag hain).
 
         // Left side (state.data = ...) kya karta hai?
         // → Yeh naya filtered array ko state.cart me assign kar deta hai, matlab purana cart replace ho jata hai us naye array se.
 
         // immutable Approach
-        return {
-          ...state,
-          data: state.data.filter((todo) => todo.id !== action.payload), // Deleted item ko state se hataen
-        };  
+        // return {
+        //   ...state,
+        //   data: state.data.filter((todo) => todo.id !== action.payload), // Deleted item ko state se hataen
+        // };  
 
       })
       // `rejected` case, jab data fetch mein error aaye
@@ -181,11 +188,11 @@ const thunkSlice = createSlice({
         // });
 
         //  mutable Approach
-        // const { id, completed } = action.payload;
-        // const todo = state.find((item) => item.id === id);
-        // if (todo) {
-        //   todo.completed = completed;
-        // }
+        const { id, completed } = action.payload;
+        const todo = state.find((item) => item.id === id);
+        if (todo) {
+          todo.completed = completed;
+        }
 
         // mutable Approach
         // state.data.map((todo) => {
@@ -195,15 +202,17 @@ const thunkSlice = createSlice({
         // });
 
         // Immutable Approach
-        return {
-          ...state, data: state.data.map((todo) => {
-            if (todo.id === action.payload.id) {
-              return { ...todo, completed: action.payload.completed }; // `completed` status toggle karein
-            }
-            return todo;
-          }
-          ),
-        };
+        // return {
+        //   ...state, 
+        // loading: false,
+        // data: state.data.map((todo) => {
+        //     if (todo.id === action.payload.id) {
+        //       return { ...todo, completed: action.payload.completed }; // `completed` status toggle karein
+        //     }
+        //     return todo;
+        //   }
+        //   ),
+        // };
 
       })
       // `rejected` case, jab data fetch mein error aaye
@@ -239,22 +248,22 @@ const thunkSlice = createSlice({
         // });
 
         // Mutable Approach
-        // const { id, newTitle } = action.payload;
-        // const todo = state.find((item) => item.id === id);
-        // if (todo) {
-        //   todo.title = newTitle;
-        // }
+        const { id, title } = action.payload;
+        const todo = state.data.find((item) => item.id === id);
+        if (todo) {
+          todo.title = title;
+        }
 
         // Immutable Approach
-        return {
-          ...state,
-          data: state.data.map((todo) => {
-            if (todo.id === action.payload.id) {
-              return { ...todo, title: action.payload.title }; // `title` ko update karein
-            }
-            return todo;
-          }),
-        };
+        // return {
+        //   ...state,
+        //   data: state.data.map((todo) => {
+        //     if (todo.id === action.payload.id) {
+        //       return { ...todo, title: action.payload.title }; // `title` ko update karein
+        //     }
+        //     return todo;
+        //   }),
+        // };
       })
       // `rejected` case, jab data fetch mein error aaye
       .addCase(updateTodos.rejected, (state, action) => {

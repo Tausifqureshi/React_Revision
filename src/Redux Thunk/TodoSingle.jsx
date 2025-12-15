@@ -23,11 +23,9 @@ function TodoSingle({ id, title, completed }) {
      <div  style={{display: "flex", justifyContent: "center", gap: "1rem" }}>
      <button onClick={handleDelete}> Delete</button>
      <button onClick={handleToggle}> Toggle </button>
+    <button onClick={() => window.editTodoById(id)}>Edit</button>
      </div>
-        {/* 🔥 EDIT */}
-      <button onClick={() => window.editTodoById(id)}>
-        Edit
-      </button>
+      
     </div>  
    
     </>
