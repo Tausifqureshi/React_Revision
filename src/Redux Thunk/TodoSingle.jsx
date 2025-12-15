@@ -24,7 +24,11 @@ function TodoSingle({ id, title, completed }) {
      <button onClick={handleDelete}> Delete</button>
      <button onClick={handleToggle}> Toggle </button>
      </div>
-    </div>
+        {/* 🔥 EDIT */}
+      <button onClick={() => window.editTodoById(id)}>
+        Edit
+      </button>
+    </div>  
    
     </>
   );

@@ -36,6 +36,7 @@ function FormTodos() {
     setEditId(id);
   }
   return (
+    <>
     <form onSubmit={submitHandler}>
       <div style={{width: "20rem", margin: "1rem"}}>
       <input 
@@ -47,9 +48,14 @@ function FormTodos() {
           setTitle(e.target.value);
         }}
       />
-      <button type="submit">Add Todos </button>
+      <button type="submit">
+      {editId ? "Update Todo" : "Add Todo"}
+      </button>
       </div>
     </form>
+     {/* 👇 handleEdit ko globally expose (simple way) */}
+      {(window.editTodoById = handleEdit)}
+    </>
   );
 }
 
