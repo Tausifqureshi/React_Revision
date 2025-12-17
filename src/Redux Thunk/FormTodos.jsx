@@ -12,7 +12,7 @@ function FormTodos() {
   function submitHandler(e){
     e.preventDefault();
     // dispatch(addTodos(title))
-    // setTitle("");
+    // setTitle("");   
 
     if(editId){
       // 🔥 EDIT DISPATCH
