@@ -45,7 +45,7 @@ function FormTodos() {
     <form onSubmit={submitHandler}>
       <div style={{width: "20rem", margin: "1rem"}}>
       <input 
-        type="text"
+        type="text"   
         name="title"
         id="title"
         value={title}
