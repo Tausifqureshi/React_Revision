@@ -94,7 +94,7 @@ function toggleHandler(){
 
       {/* Custom-Hook File*/}
       {/* <CustomHook /> */}
-      {/* <BasicForm /> */}
+      <BasicForm />
 
       {/* React-Router-File */}
       {/* <ReactRouter /> */}
@@ -109,7 +109,7 @@ function toggleHandler(){
       {/* <Redux />/ */}
 
       {/* Redux Thunk File use */}
-      <ReduxThunk />
+      {/* <ReduxThunk /> */}
       
 
       {/* React Query File use */}
